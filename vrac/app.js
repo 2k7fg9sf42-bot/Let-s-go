@@ -467,11 +467,11 @@ $('#guess-chip').addEventListener('click', () => {
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 const listen = $('#listen'), listenText = $('#listen-text'), listenGuess = $('#listen-guess');
 const IDLE = "Je t'écoute…";
-let rec = null, heard = '', silenceT = 0, maxT = 0, watchT = 0;
-// Sur certains iPhone (app installée sur l'écran d'accueil), la dictée intégrée ouvre le micro mais ne renvoie jamais rien.
-// Dans ce cas Vrac s'en souvient et passe directement par le micro du clavier, qui marche toujours.
-const SR_KEY = 'vrac.dicteeClavier';
-const srBroken = () => { try { return localStorage.getItem(SR_KEY) === '1'; } catch { return false; } };
+// App installée sur l'écran d'accueil : l'iPhone ne laisse la reconnaissance vocale marcher qu'une fois par ouverture.
+// Après chaque dictée, Vrac se recharge en un éclair pour remettre le micro à zéro.
+const STANDALONE = navigator.standalone === true || matchMedia('(display-mode: standalone)').matches;
+try { localStorage.removeItem('vrac.dicteeClavier'); } catch {}
+let rec = null, heard = '', live = false, cancelled = false, watchT = 0, maxT = 0;
 const kbHint = $('#kbhint');
 function showKbHint(on){ kbHint.hidden = !on; }
 function keyboardFallback(){ input.focus(); showKbHint(true); }
@@ -485,37 +485,63 @@ function showHeard(){
 }
 $('#mic').addEventListener('click', () => {
   hap();
-  if (!SR || srBroken()) return keyboardFallback();
+  if (!SR) return keyboardFallback();
+  if (live) return;
   try {
-    rec = new SR(); rec.lang = 'fr-FR'; rec.interimResults = true; rec.continuous = true;
-    heard = ''; showHeard(); listen.classList.add('on');
-    rec.onresult = e => {
+    const r = new SR(); rec = r;
+    r.lang = 'fr-FR'; r.interimResults = true; r.continuous = false; r.maxAlternatives = 1; // une phrase à la fois : le plus fiable sur iPhone
+    heard = ''; cancelled = false; live = true; showHeard(); listen.classList.add('on');
+    r.onresult = e => {
       clearTimeout(watchT);
-      let t = ''; for (const r of e.results) t += r[0].transcript; heard = t.replace(/\s+/g, ' ').trim(); showHeard();
-      clearTimeout(silenceT); silenceT = setTimeout(() => stopListening(true), 2200); // fini tout seul après un silence
+      let t = ''; for (const x of e.results) t += x[0].transcript; heard = t.replace(/\s+/g, ' ').trim(); showHeard();
     };
-    rec.onerror = ev => {
-      if (ev.error === 'not-allowed' || ev.error === 'service-not-allowed'){ stopListening(false); try { localStorage.setItem(SR_KEY, '1'); } catch {} toast('Touche la barre, puis le micro du clavier'); }
-      else if (ev.error === 'no-speech'){ stopListening(false); toast("Je n'ai rien entendu"); }
-      else if (ev.error !== 'aborted') stopListening(true);
-    };
-    rec.onend = () => { if (listen.classList.contains('on')) stopListening(true); };
-    rec.start();
-    clearTimeout(maxT); maxT = setTimeout(() => stopListening(true), 60000);
-    clearTimeout(watchT); watchT = setTimeout(() => { // rien reçu en 4 s : la dictée intégrée ne marche pas ici
-      if (heard) return;
-      stopListening(false);
-      try { localStorage.setItem(SR_KEY, '1'); } catch {}
-      toast('Dictée indisponible ici : touche la barre, puis le micro du clavier');
-    }, 4000);
-  } catch { listen.classList.remove('on'); keyboardFallback(); }
+    r.onerror = ev => { if (ev.error === 'not-allowed' || ev.error === 'service-not-allowed') { finish(false); toast('Micro non autorisé : touche la barre puis le micro du clavier'); } };
+    r.onend = () => finish(!cancelled); // fin de phrase (silence), Ranger, ou erreur : on range ce qui a été entendu
+    r.start();
+    clearTimeout(watchT); watchT = setTimeout(() => { if (!heard){ cancelled = true; try { r.stop(); } catch {} finish(false, "Je n'ai rien entendu, réessaie"); } }, 6000);
+    clearTimeout(maxT); maxT = setTimeout(() => { try { r.stop(); } catch {} }, 45000);
+  } catch { live = false; listen.classList.remove('on'); keyboardFallback(); }
 });
-function stopListening(commit){
-  clearTimeout(silenceT); clearTimeout(maxT); clearTimeout(watchT);
-  if (!listen.classList.contains('on')) return;
-  listen.classList.remove('on'); const r = rec; rec = null; try { r && r.abort(); } catch {}
+function finish(commit, msg){
+  clearTimeout(watchT); clearTimeout(maxT);
+  if (!live) return;
+  live = false; listen.classList.remove('on'); rec = null;
   const text = heard.trim(); heard = '';
-  if (commit && text){ if (pick.day !== null){ input.value = text; submit(); } else { hap(); ingest(text); } }
+  if (commit && text){
+    if (pick.day !== null){ input.value = text; submit(); return; } // part vers le Calendrier
+    hap();
+    const made = ingest(text, null, {silent: STANDALONE});
+    if (STANDALONE) freshen(made);
+    return;
+  }
+  if (msg) toast(msg);
+  if (STANDALONE) freshen([], msg);
+}
+function stopListening(commit){ // Ranger / Annuler / toucher l'écran
+  if (!live) return;
+  cancelled = !commit;
+  const r = rec;
+  try { r && r.stop(); } catch {}
+  setTimeout(() => finish(commit), 700); // si l'iPhone ne renvoie pas « fin », on ferme quand même
+}
+/* recharge en douceur et réaffiche la notification après */
+function freshen(made, msg){
+  try { sessionStorage.setItem('vrac.after', JSON.stringify({ids: made.map(m => m.id), msg: msg || '', filter})); } catch {}
+  document.body.style.transition = 'opacity .12s'; document.body.style.opacity = '0.001';
+  setTimeout(() => location.reload(), 130);
+}
+function afterFreshen(){
+  let a = null; try { a = JSON.parse(sessionStorage.getItem('vrac.after')); sessionStorage.removeItem('vrac.after'); } catch {}
+  if (!a) return;
+  if (a.filter) filter = a.filter;
+  const made = S.items.filter(i => a.ids.includes(i.id));
+  if (made.length){
+    landing = new Set(a.ids); render();
+    const kind = made[0].kind;
+    toast(made.length > 1 ? `${made.length} articles → ${KINDS[kind].label}` : (made[0].due ? `${KINDS[kind].one} · touche la cloche pour un rappel` : `Rangé dans ${KINDS[kind].label}`), cvar(kind), () => {
+      const ids = new Set(a.ids); S.items = S.items.filter(x => !ids.has(x.id)); save(); render();
+    }, made.length === 1 ? () => editItem(made[0].id) : null);
+  } else { render(); if (a.msg) toast(a.msg); }
 }
 $('#listen-done').addEventListener('click', e => { e.stopPropagation(); stopListening(true); });
 $('#listen-cancel').addEventListener('click', e => { e.stopPropagation(); stopListening(false); });
@@ -550,7 +576,7 @@ if (window.visualViewport){
   vv.addEventListener('resize', fit); vv.addEventListener('scroll', fit); fit();
 }
 
-render();
+render(); afterFreshen();
 document.addEventListener('visibilitychange', () => { if (!document.hidden) render(); });
 setInterval(() => { if (!document.hidden && !sheet.classList.contains('on')) render(); }, 60000);
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
