@@ -145,7 +145,7 @@ function ingest(text, forced, opts = {}){
   render();
   const d = $(`.drawer[data-k="${kind}"]`); if (d){ d.classList.remove('pulse'); void d.offsetWidth; d.classList.add('pulse'); }
   if (!opts.silent){
-    toast(made.length > 1 ? `${made.length} articles → ${KINDS[kind].label}` : `Rangé dans ${KINDS[kind].label}`, cvar(kind), () => {
+    toast(made.length > 1 ? `${made.length} articles → ${KINDS[kind].label}` : (due.due ? `${KINDS[kind].one} · touche la cloche pour un rappel` : `Rangé dans ${KINDS[kind].label}`), cvar(kind), () => {
       const ids = new Set(made.map(m => m.id)); S.items = S.items.filter(x => !ids.has(x.id)); save(); render();
     }, made.length === 1 ? () => editItem(made[0].id) : null);
   }
@@ -205,7 +205,7 @@ function card(i){
     <div class="card k-${i.kind} ${chk ? '' : 'nocheck'} ${i.done ? 'done':''} ${landing.has(i.id) ? 'landing':''}" style="--c:${cvar(i.kind)}">
       ${chk ? `<button type="button" class="chk" data-act="toggle" aria-label="Cocher"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></button>` : ''}
       <div><div class="txt">${txt}</div>
-      <div class="meta"><span class="tag"><i></i>${K.one}</span>${due ? `<span class="due ${due.cls}">${due.l}</span>` : ''}${url ? `<a class="link" href="${esc(url)}" target="_blank" rel="noopener">${esc(url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0])} ↗</a>` : ''}<span>${ago(i.t)}</span></div></div>
+      <div class="meta"><span class="tag"><i></i>${K.one}</span>${due ? `<button type="button" class="due ${due.cls} ${i.reminded ? 'rem' : ''}" data-act="remind" aria-label="Me le rappeler">${BELL}${due.l}</button>` : ''}${url ? `<a class="link" href="${esc(url)}" target="_blank" rel="noopener">${esc(url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0])} ↗</a>` : ''}<span>${ago(i.t)}</span></div></div>
     </div></div>`;
 }
 
@@ -217,6 +217,7 @@ listEl.addEventListener('click', e => {
   if (act){
     const a = act.dataset.act;
     if (a === 'toggle'){ const id = act.closest('.card-wrap').dataset.id; toggle(id); return; }
+    if (a === 'remind'){ remind(act.closest('.card-wrap').dataset.id); return; }
     if (a === 'share') return shareList();
     if (a === 'showdone'){ showDone = true; render(); return; }
     if (a === 'clear'){ const n = S.items.filter(i => i.done && (filter === 'all' || i.kind === filter)); const ids = new Set(n.map(i=>i.id)); S.items = S.items.filter(i => !ids.has(i.id)); save(); render(); toast(`${n.length} élément${n.length>1?'s':''} vidé${n.length>1?'s':''}`, null, () => { S.items.push(...n); save(); render(); }); return; }
@@ -242,7 +243,7 @@ function remove(id){
 let swiped = false;
 (() => {
   let w = null, c = null, x0 = 0, y0 = 0, dx = 0, lock = null;
-  listEl.addEventListener('touchstart', e => { const ww = e.target.closest('.card-wrap'); if (!ww || e.target.closest('.chk,a')) return; w = ww; c = $('.card', w); x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; dx = 0; lock = null; swiped = false; }, {passive:true});
+  listEl.addEventListener('touchstart', e => { const ww = e.target.closest('.card-wrap'); if (!ww || e.target.closest('.chk,a,[data-act]')) return; w = ww; c = $('.card', w); x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; dx = 0; lock = null; swiped = false; }, {passive:true});
   listEl.addEventListener('touchmove', e => {
     if (!w) return; const x = e.touches[0].clientX - x0, y = e.touches[0].clientY - y0;
     if (lock === null && (Math.abs(x) > 8 || Math.abs(y) > 8)) lock = Math.abs(x) > Math.abs(y) * 1.2 ? 'x' : 'y';
@@ -274,6 +275,7 @@ function editItem(id){
     <div class="field"><span>Échéance</span><div class="chips" id="e-d">
       <button type="button" class="chip" data-d="none">Aucune</button><button type="button" class="chip" data-d="0">Aujourd'hui</button><button type="button" class="chip" data-d="1">Demain</button><button type="button" class="chip" data-d="7">Dans 1 sem.</button>
     </div><input class="input" type="datetime-local" id="e-dt" style="margin-top:8px" value="${due ? iso(due) : ''}"></div>
+    <button type="button" class="btn remind" id="e-rem">${BELL}<span id="e-rem-l"></span></button>
     <div class="row-btns"><button type="button" class="btn danger" id="e-del">Supprimer</button>${navigator.share ? '<button type="button" class="btn ghost" id="e-sh">Partager</button>' : ''}<button type="button" class="btn" id="e-ok">OK</button></div>`, body => {
     const ta = $('#e-t', body); const grow = () => { ta.style.height = 'auto'; ta.style.height = Math.min(220, ta.scrollHeight + 2) + 'px'; }; grow(); ta.addEventListener('input', grow);
     const markDue = () => { $$('#e-d .chip', body).forEach(c => { const v = c.dataset.d; c.classList.toggle('on', v === 'none' ? !due : due && sod(due) === sod(Date.now()) + (+v)*864e5); }); $('#e-dt', body).value = due ? iso(due) : ''; };
@@ -287,6 +289,16 @@ function editItem(id){
       it.text = text; it.kind = kind; it.due = due || undefined; it.hasTime = due ? hasTime : undefined; save(); closeSheet(); render();
     });
     $('#e-del', body).addEventListener('click', () => { closeSheet(); remove(id); });
+    const remBtn = $('#e-rem', body);
+    const markRem = () => { remBtn.disabled = !due; $('#e-rem-l', body).textContent = !due ? 'Choisis une échéance pour un rappel' : it.reminded && it.due === due ? 'Rappel ajouté · le refaire' : 'Me le rappeler'; };
+    markRem();
+    body.addEventListener('click', e => { if (e.target.closest('#e-d,#e-k')) setTimeout(markRem); });
+    $('#e-dt', body).addEventListener('change', () => setTimeout(markRem));
+    remBtn.addEventListener('click', () => {
+      if (!due) return;
+      const text = ta.value.trim() || it.text;
+      it.text = text; it.kind = kind; it.due = due; it.hasTime = hasTime; save(); closeSheet(); render(); remind(id);
+    });
     const sh = $('#e-sh', body); sh && sh.addEventListener('click', () => navigator.share({text: ta.value}).catch(() => {}));
   });
 }
@@ -294,6 +306,17 @@ function shareList(){
   const items = S.items.filter(i => i.kind === 'achat' && !i.done);
   const text = 'À acheter :\n' + items.map(i => '◻︎ ' + i.text).join('\n');
   if (navigator.share) navigator.share({text}).catch(() => {}); else navigator.clipboard.writeText(text).then(() => toast('Liste copiée'));
+}
+
+/* ---------- rappels : passe par l'app Calendrier de l'iPhone ---------- */
+const BELL = '<svg viewBox="0 0 16 16" class="bell"><path d="M4 11.5V7.2a4 4 0 018 0v4.3l1 1.2H3z"/><path d="M6.6 14.2a1.5 1.5 0 002.8 0"/></svg>';
+function remind(id){
+  const it = S.items.find(x => x.id === id); if (!it || !it.due) return;
+  hap();
+  const q = new URLSearchParams({t: it.text, d: String(it.due), h: it.hasTime ? '1' : '0', id: it.id});
+  it.reminded = true; save(); render();
+  if (navigator.serviceWorker && navigator.serviceWorker.controller) location.href = 'rappel.ics?' + q;
+  else location.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(self.vracICS(it.text, it.due, it.hasTime, it.id));
 }
 
 /* ---------- réglages ---------- */
