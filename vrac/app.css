@@ -31,8 +31,8 @@ svg{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-l
 
 /* ===================== header ===================== */
 .top{display:flex;align-items:flex-end;justify-content:space-between;padding:10px 20px 6px;-webkit-user-select:none;user-select:none}
-.wordmark{font-family:var(--serif);font-style:italic;font-size:40px;line-height:.9;letter-spacing:-.02em;position:relative}
-.wordmark::after{content:"";position:absolute;right:-9px;top:4px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.wordmark{display:flex;align-items:baseline;font-family:var(--sans);font-weight:600;font-size:36px;line-height:1;letter-spacing:-.045em}
+.wordmark svg{width:28px;height:24px;margin-right:3px;stroke:var(--accent);stroke-width:5;transform:translateY(1px)}
 .date{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 .count{font-family:var(--mono);font-size:11px;color:var(--muted);padding-bottom:3px;text-align:right;line-height:1.5}
 .count b{color:var(--ink);font-weight:500}
