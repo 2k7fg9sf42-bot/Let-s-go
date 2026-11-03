@@ -3,12 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Sou &amp; Vrac</title>
-<meta name="theme-color" content="#F3F0E8">
+<title>Vrac</title>
+<meta name="theme-color" content="#0D0D10">
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
-:root{--bg:#F3F0E8;--card:#FBFAF6;--ink:#16140F;--ink-2:#4A463D;--muted:#8C877B;--line:rgba(22,20,15,.1);--sou:#FF5B2E;--vrac:#3B3BFF}
-@media (prefers-color-scheme:dark){:root{--bg:#100F0D;--card:#1A1916;--ink:#F3F0E8;--ink-2:#C9C4B8;--muted:#7D786D;--line:rgba(243,240,232,.1);--vrac:#7676FF}}
+:root{--bg:#0D0D10;--card:#18181D;--ink:#F1F0EC;--ink-2:#C2C1C8;--muted:#76757E;--line:rgba(241,240,236,.1);--vrac:#7676FF;color-scheme:dark}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Instrument Sans",-apple-system,system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
 main{max-width:560px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 48px) 20px 60px}
@@ -29,34 +28,25 @@ code{font-family:"JetBrains Mono",monospace;font-size:12.5px;background:var(--ca
 </head>
 <body>
 <main>
-  <h1>Sou &amp; Vrac</h1>
-  <p class="lead">Deux petites apps pour tous les jours. Ouvre-les dans Safari, puis Partager → « Sur l'écran d'accueil ».</p>
+  <h1>Vrac</h1>
+  <p class="lead">Vide ta tête, Vrac range. Tu parles ou tu écris, il classe tout seul : tâches, à acheter, idées, à voir, notes.</p>
 
-  <a class="app" href="sou/"><img src="sou/icon-180.png" alt=""><div><b>Sou</b><span>Tes dépenses, en deux gestes.</span></div><i>›</i></a>
-  <a class="app" href="vrac/"><img src="vrac/icon-180.png" alt=""><div><b>Vrac</b><span>Vide ta tête. Vrac range.</span></div><i>›</i></a>
+  <a class="app" href="vrac/"><img src="vrac/icon-180.png" alt=""><div><b>Ouvrir Vrac</b><span>Dans Safari, puis installe-la ↓</span></div><i>›</i></a>
 
-  <h2>Installer</h2>
+  <h2>Installer sur l'iPhone</h2>
   <ol>
-    <li>Ouvre l'app dans <b>Safari</b>.</li>
+    <li>Ouvre Vrac dans <b>Safari</b>.</li>
     <li>Touche <b>Partager</b>, puis <b>Sur l'écran d'accueil</b>. Laisse « Ouvrir en tant qu'app web » activé.</li>
-    <li>Elle s'ouvre en plein écran et fonctionne hors connexion. Tes données restent sur ton iPhone.</li>
+    <li>Elle s'ouvre en plein écran, marche hors connexion, et tes notes restent sur ton iPhone.</li>
   </ol>
 
-  <h2>Toucher le dos → Sou</h2>
+  <h2>Dicter</h2>
   <ol>
-    <li>App <b>Raccourcis</b> → nouveau raccourci → action <b>Ouvrir les URL</b>.</li>
-    <li>URL : <code>webapp://2k7fg9sf42-bot.github.io/Let-s-go/sou/</code></li>
-    <li>Réglages → Accessibilité → Toucher → <b>Toucher le dos</b> → Toucher deux fois → choisis ce raccourci. Deux petits tapotements au dos de l'iPhone et Sou s'ouvre.</li>
+    <li>Touche le <b>rond bleu</b> en bas, autorise le micro la première fois.</li>
+    <li>Parle. Vrac affiche ce qu'il entend et où il va le ranger.</li>
+    <li>Tais-toi deux secondes (ou touche « Ranger ») : c'est classé.</li>
   </ol>
-
-  <h2>Toucher le dos → Vrac (dictée)</h2>
-  <ol>
-    <li>Action <b>Dicter le texte</b> (langue : français).</li>
-    <li>Action <b>Encoder en URL</b> sur le texte dicté.</li>
-    <li>Action <b>Ouvrir les URL</b> : <code>webapp://2k7fg9sf42-bot.github.io/Let-s-go/vrac/?t=</code> suivi de la variable <i>Texte encodé</i>.</li>
-    <li>Assigne-le à <b>Toucher trois fois</b> (Sou garde les deux tapotements). Tu tapotes, tu parles, c'est rangé.</li>
-  </ol>
-  <p class="note">Autres façons de lancer : « Dis Siri, Vrac » (le nom du raccourci), un widget Raccourcis sur l’écran d’accueil, ou un bouton dans le Centre de contrôle. Bonus : coche « Afficher dans la feuille de partage » sur le raccourci Vrac (entrée : texte, URL) pour envoyer un lien YouTube ou un article dans « À voir » en un geste.</p>
+  <p class="note">Si la dictée de l'app n'est pas disponible, Vrac ouvre le clavier : touche son micro pour dicter.</p>
 </main>
 </body>
 </html>

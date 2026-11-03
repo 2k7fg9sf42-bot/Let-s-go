@@ -69,8 +69,13 @@ function learn(text, kind){
 
 /* découpe « acheter du lait, des œufs et du pain » en 3 articles */
 function splitPurchases(text){
-  let t = text.trim().replace(/^(il (me )?faut |faut |penser à |pense à |ne pas oublier (d'|de )|n'oublie pas (d'|de ))?(acheter|racheter|courses?\s*:?|liste de courses\s*:?|à acheter\s*:?)\s*/i, '');
+  let t = text.trim().replace(/^(il (me )?faut |faut |penser à |pense à |ne pas oublier (d'|de )|n'oublie pas (d'|de ))?(acheter|racheter|prendre|courses?\s*:?|liste de courses\s*:?|à acheter\s*:?)\s*/i, '');
   const parts = t.split(/\s*(?:,|;|\n|\s+et\s+|\s+puis\s+|\s+plus\s+|\s+avec\s+)\s*/i).map(s => s.trim()).filter(Boolean);
+  // dictée sans virgules : « des pâtes du parmesan du basilic » → coupe devant chaque article
+  if (!/[,;\n]/.test(t)) for (let i = parts.length - 1; i >= 0; i--){
+    const sub = parts[i].split(/\s+(?=(?:du|des|de la|de l'|de l’|un|une|quelques)\s)/i).map(x => x.trim()).filter(Boolean);
+    if (sub.length > 1) parts.splice(i, 1, ...sub);
+  }
   const clean = s => cap(s.replace(/^(du|de la|de l'|des|un|une|le|la|les|l'|d'|quelques|deux|trois)\s*/i, '').replace(/[.!]+$/, '').trim());
   if (parts.length >= 2 && parts.every(p => p.split(/\s+/).length <= 6)) return parts.map(clean).filter(Boolean);
   return [clean(t) || cap(text.trim())];
@@ -125,7 +130,7 @@ const ago = t => { const s = (Date.now() - t)/1000; if (s < 60) return "à l'ins
 /* ---------- ajout ---------- */
 function analyze(text, forced){
   const kind = forced || classify(text);
-  const parts = kind === 'achat' ? splitPurchases(text) : [cap(text.trim())];
+  const parts = kind === 'achat' ? splitPurchases(text) : [cap(kind === 'idee' ? (text.trim().replace(/^id[ée]e\s*:?\s*(de\s+|d['’]\s*)?/i, '') || text.trim()) : text.trim())];
   const due = kind === 'achat' ? {} : parseDue(text);
   return {kind, parts, due};
 }
@@ -292,14 +297,9 @@ function shareList(){
 }
 
 /* ---------- réglages ---------- */
-const APP_URL = location.origin + location.pathname.replace(/index\.html$/, '');
 function openSettings(){
-  const webapp = APP_URL.replace(/^https?:\/\//, 'webapp://');
   const learned = Object.keys(S.learn).length;
   openSheet(`<h3>Réglages</h3>
-    <div class="set-title">Raccourci « Dicter » · Toucher le dos</div>
-    <div class="set-group"><button type="button" class="set-row" id="s-copy"><span class="lbl mono" style="padding:12px 0">${esc(webapp)}?t=</span><span class="val">Copier</span></button></div>
-    <p class="set-note">Raccourcis : « Dicter le texte » → « Encoder en URL » → « Ouvrir les URL » avec ce lien suivi du texte encodé. Ajoute <span class="mono">&amp;c=achat</span> (tache, idee, voir, note) pour forcer un tiroir.</p>
     <div class="set-title">Le cerveau</div>
     <div class="set-group"><button type="button" class="set-row" id="s-forget"><span class="lbl">Oublier ce que Vrac a appris</span><span class="val">${learned} mot${learned>1?'s':''}</span></button></div>
     <p class="set-note">Quand tu changes le tiroir d'un élément, Vrac retient les mots pour mieux ranger la prochaine fois. Tout reste sur ton téléphone.</p>
@@ -309,7 +309,6 @@ function openSettings(){
       <label class="set-row"><span class="lbl">Restaurer une sauvegarde</span><span class="val">›</span><input type="file" id="s-imp" accept="application/json,.json" hidden></label>
       <button type="button" class="set-row" id="s-wipe" style="color:var(--hot)"><span class="lbl">Tout effacer</span></button>
     </div>`, body => {
-    $('#s-copy', body).addEventListener('click', async e => { try { await navigator.clipboard.writeText(webapp + '?t='); $('.val', e.currentTarget).textContent = 'Copié ✓'; hap(); } catch { prompt('Copie ce lien :', webapp + '?t='); } });
     $('#s-forget', body).addEventListener('click', e => { S.learn = {}; save(); $('.val', e.currentTarget).textContent = '0 mot'; hap(); });
     $('#s-bak', body).addEventListener('click', async () => {
       const name = `vrac-sauvegarde-${new Date().toISOString().slice(0,10)}.json`, file = new File([JSON.stringify(S)], name, {type:'application/json'});
@@ -355,26 +354,45 @@ $('#guess-chip').addEventListener('click', () => {
 
 /* ---------- dictée ---------- */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-const listen = $('#listen'), listenText = $('#listen-text');
-let rec = null, finalText = '';
+const listen = $('#listen'), listenText = $('#listen-text'), listenGuess = $('#listen-guess');
+const IDLE = "Je t'écoute…";
+let rec = null, heard = '', silenceT = 0, maxT = 0;
+function keyboardFallback(msg){ input.focus(); toast(msg || 'Touche le micro du clavier pour dicter'); }
+function showHeard(){
+  listenText.textContent = heard || IDLE;
+  listenText.classList.toggle('idle', !heard);
+  if (heard){ const a = analyze(heard); listenGuess.style.setProperty('--c', cvar(a.kind)); listenGuess.innerHTML = `<i></i>${KINDS[a.kind].one}${a.parts.length > 1 ? ` · ${a.parts.length} articles` : ''}${a.due.due ? ' · ' + dueLabel({due:a.due.due, hasTime:a.due.hasTime}).l : ''}`; listenGuess.hidden = false; }
+  else listenGuess.hidden = true;
+}
 $('#mic').addEventListener('click', () => {
   hap();
-  if (!SR){ input.focus(); toast('Touche le micro du clavier pour dicter'); return; }
+  if (!SR) return keyboardFallback();
   try {
     rec = new SR(); rec.lang = 'fr-FR'; rec.interimResults = true; rec.continuous = true;
-    finalText = ''; listenText.textContent = "Je t'écoute…"; listen.classList.add('on');
-    rec.onresult = e => { let interim = ''; finalText = ''; for (const r of e.results){ if (r.isFinal) finalText += r[0].transcript; else interim += r[0].transcript; } listenText.textContent = (finalText + interim).trim() || "Je t'écoute…"; };
-    rec.onerror = ev => { stopListening(false); if (ev.error === 'not-allowed' || ev.error === 'service-not-allowed'){ input.focus(); toast('Micro refusé : utilise celui du clavier'); } };
+    heard = ''; showHeard(); listen.classList.add('on');
+    rec.onresult = e => {
+      let t = ''; for (const r of e.results) t += r[0].transcript; heard = t.replace(/\s+/g, ' ').trim(); showHeard();
+      clearTimeout(silenceT); silenceT = setTimeout(() => stopListening(true), 2200); // fini tout seul après un silence
+    };
+    rec.onerror = ev => {
+      if (ev.error === 'not-allowed' || ev.error === 'service-not-allowed'){ stopListening(false); keyboardFallback('Micro non autorisé : utilise celui du clavier'); }
+      else if (ev.error === 'no-speech'){ stopListening(false); toast("Je n'ai rien entendu"); }
+      else if (ev.error !== 'aborted') stopListening(true);
+    };
     rec.onend = () => { if (listen.classList.contains('on')) stopListening(true); };
     rec.start();
-  } catch { listen.classList.remove('on'); input.focus(); }
+    clearTimeout(maxT); maxT = setTimeout(() => stopListening(true), 60000);
+  } catch { listen.classList.remove('on'); keyboardFallback(); }
 });
 function stopListening(commit){
-  const text = (listenText.textContent === "Je t'écoute…" ? '' : listenText.textContent).trim();
-  listen.classList.remove('on'); const r = rec; rec = null; try { r && r.stop(); } catch {}
+  clearTimeout(silenceT); clearTimeout(maxT);
+  if (!listen.classList.contains('on')) return;
+  listen.classList.remove('on'); const r = rec; rec = null; try { r && r.abort(); } catch {}
+  const text = heard.trim(); heard = '';
   if (commit && text){ hap(); ingest(text); }
 }
-listen.addEventListener('click', () => stopListening(true));
+$('#listen-done').addEventListener('click', e => { e.stopPropagation(); stopListening(true); });
+$('#listen-cancel').addEventListener('click', e => { e.stopPropagation(); stopListening(false); });
 
 /* ---------- sheet & toast ---------- */
 const sheet = $('#sheet'), scrim = $('#scrim'), sheetBody = $('#sheet-body');
@@ -401,27 +419,11 @@ $('#toast-text').addEventListener('click', () => { if (tapFn){ toastEl.classList
 const app = $('#app');
 if (window.visualViewport){
   const vv = window.visualViewport;
-  const fit = () => { app.style.height = vv.height + 'px'; app.style.transform = `translateY(${vv.offsetTop}px)`; document.body.classList.toggle('kb', vv.height < window.innerHeight - 120); };
+  const fit = () => { app.style.height = vv.height + 'px'; app.style.transform = `translateY(${vv.offsetTop}px)`; document.body.classList.toggle('kb', vv.height < window.innerHeight - 120); document.documentElement.style.setProperty('--kbh', Math.max(0, window.innerHeight - vv.height - vv.offsetTop) + 'px'); document.documentElement.style.setProperty('--dock-h', $('#dock').offsetHeight + 'px'); };
   vv.addEventListener('resize', fit); vv.addEventListener('scroll', fit); fit();
 }
 
-/* ---------- intents depuis Raccourcis : ?t=texte&c=tiroir ---------- */
-function handleIntent(){
-  const p = new URLSearchParams(location.search);
-  const t = p.get('t') || p.get('texte'); const c = p.get('c');
-  if (!p.has('t') && !p.has('texte')) return;
-  history.replaceState(null, '', location.pathname);
-  const sig = (t||'') + '|' + (c||'');
-  try { if (sessionStorage.getItem('vrac.last') === sig) return; sessionStorage.setItem('vrac.last', sig); } catch {}
-  if (!t || !t.trim()){ setTimeout(() => $('#mic').click(), 250); return; }
-  const forcedK = c && KINDS[norm(c)] ? norm(c) : null;
-  // plusieurs lignes = plusieurs entrées
-  const lines = t.split(/\n+/).map(s => s.trim()).filter(Boolean);
-  if (lines.length > 1 && !/^(acheter|courses)/i.test(lines[0])) lines.forEach((l, i) => ingest(l, forcedK, {silent: i < lines.length - 1}));
-  else ingest(t, forcedK);
-}
-
-render(); handleIntent();
+render();
 document.addEventListener('visibilitychange', () => { if (!document.hidden) render(); });
 setInterval(() => { if (!document.hidden && !sheet.classList.contains('on')) render(); }, 60000);
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});

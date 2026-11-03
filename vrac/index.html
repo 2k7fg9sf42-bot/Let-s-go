@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no, interactive-widget=resizes-content">
 <title>Vrac</title>
 <meta name="description" content="Vide ta tête. Vrac range.">
-<meta name="theme-color" content="#EEEDE8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0D0D10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0D0D10">
+<meta name="color-scheme" content="dark">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -44,8 +44,13 @@
 
 <div class="listen" id="listen" aria-hidden="true">
   <div class="listen-ring"><span></span><span></span><span></span></div>
-  <div class="listen-text" id="listen-text">Je t'écoute…</div>
-  <div class="listen-hint">Touche pour terminer</div>
+  <div class="listen-text idle" id="listen-text">Je t'écoute…</div>
+  <div class="listen-guess" id="listen-guess" hidden></div>
+  <div class="listen-actions">
+    <button type="button" class="listen-btn ghost" id="listen-cancel">Annuler</button>
+    <button type="button" class="listen-btn" id="listen-done">Ranger</button>
+  </div>
+  <div class="listen-hint">S'arrête tout seul quand tu te tais</div>
 </div>
 
 <div class="toast" id="toast" role="status"><span class="toast-dot"></span><span class="toast-text" id="toast-text"></span><button type="button" class="toast-undo" id="toast-undo">Annuler</button></div>

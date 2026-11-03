@@ -1,4 +1,4 @@
-const V = 'vrac-v1';
+const V = 'vrac-v2';
 const FILES = ['./', 'index.html', 'app.css', 'app.js', 'manifest.webmanifest', 'icon.svg', 'icon-180.png',
   '../fonts/fonts.css', '../fonts/instrument-sans-latin-400-normal.woff2', '../fonts/instrument-sans-latin-500-normal.woff2',
   '../fonts/instrument-sans-latin-600-normal.woff2', '../fonts/instrument-serif-latin-400-normal.woff2',
