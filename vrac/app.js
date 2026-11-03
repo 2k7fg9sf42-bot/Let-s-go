@@ -297,7 +297,7 @@ function openSettings(){
   const webapp = APP_URL.replace(/^https?:\/\//, 'webapp://');
   const learned = Object.keys(S.learn).length;
   openSheet(`<h3>Réglages</h3>
-    <div class="set-title">Raccourci « Dicter » pour l'Action Button</div>
+    <div class="set-title">Raccourci « Dicter » · Toucher le dos</div>
     <div class="set-group"><button type="button" class="set-row" id="s-copy"><span class="lbl mono" style="padding:12px 0">${esc(webapp)}?t=</span><span class="val">Copier</span></button></div>
     <p class="set-note">Raccourcis : « Dicter le texte » → « Encoder en URL » → « Ouvrir les URL » avec ce lien suivi du texte encodé. Ajoute <span class="mono">&amp;c=achat</span> (tache, idee, voir, note) pour forcer un tiroir.</p>
     <div class="set-title">Le cerveau</div>

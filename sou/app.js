@@ -359,9 +359,9 @@ function openSettings(){
     <p class="set-note">Sou calcule combien tu peux encore dépenser par jour jusqu'à la fin du mois.</p>
     <div class="set-title">Catégories · les 8 premières apparaissent à la saisie</div>
     <div class="set-group" id="s-cats">${S.cats.map((c,i) => `<button type="button" class="set-row" data-i="${i}" style="--c:${c.color}"><span class="g">${svg(c.icon)}</span><span class="lbl">${esc(c.name)}</span><span class="val">${i < 8 ? '' : 'masquée'} ›</span></button>`).join('')}</div>
-    <div class="set-title">Action Button &amp; Raccourcis</div>
+    <div class="set-title">Raccourci · Toucher le dos</div>
     <div class="set-group"><button type="button" class="set-row" id="s-copy"><span class="lbl" style="font-family:var(--mono);font-size:12px;word-break:break-all;padding:12px 0">${esc(webapp)}</span><span class="val">Copier</span></button></div>
-    <p class="set-note">Dans Raccourcis : action « Ouvrir les URL » avec ce lien, puis assigne le raccourci à l'Action Button. Ajoute <code>?m=12,50&amp;c=resto</code> pour enregistrer directement.</p>
+    <p class="set-note">Dans Raccourcis : action « Ouvrir les URL » avec ce lien, puis Réglages → Accessibilité → Toucher → Toucher le dos → Toucher deux fois → choisis le raccourci. Ajoute <code>?m=12,50&amp;c=resto</code> pour enregistrer directement.</p>
     <div class="set-title">Données · stockées uniquement sur ce téléphone</div>
     <div class="set-group">
       <button type="button" class="set-row" id="s-csv"><span class="lbl">Exporter en CSV</span><span class="val">Numbers, Excel ›</span></button>
