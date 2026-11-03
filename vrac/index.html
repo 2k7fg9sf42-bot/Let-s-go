@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no, interactive-widget=resizes-content">
+<title>Vrac</title>
+<meta name="description" content="Vide ta tête. Vrac range.">
+<meta name="theme-color" content="#EEEDE8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D0D10" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Vrac">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="app">
+  <header class="top">
+    <div class="brand">
+      <div class="wordmark">Vrac</div>
+      <div class="date" id="date">—</div>
+    </div>
+    <div class="count" id="count"></div>
+  </header>
+
+  <nav class="drawers" id="drawers" aria-label="Tiroirs"></nav>
+
+  <main class="list" id="list" aria-live="polite"></main>
+
+  <div class="dock" id="dock">
+    <div class="guess" id="guess" hidden><span class="guess-arrow">→</span><button type="button" class="guess-chip" id="guess-chip"></button><span class="guess-extra" id="guess-extra"></span></div>
+    <form class="capture" id="capture" autocomplete="off">
+      <textarea id="input" rows="1" placeholder="Vide ta tête…" enterkeyhint="send" aria-label="Nouvelle entrée"></textarea>
+      <button type="button" class="mic" id="mic" aria-label="Dicter"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0013 0M12 17.5V21"/></svg></button>
+      <button type="submit" class="send" id="send" aria-label="Envoyer"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+    </form>
+  </div>
+</div>
+
+<div class="listen" id="listen" aria-hidden="true">
+  <div class="listen-ring"><span></span><span></span><span></span></div>
+  <div class="listen-text" id="listen-text">Je t'écoute…</div>
+  <div class="listen-hint">Touche pour terminer</div>
+</div>
+
+<div class="toast" id="toast" role="status"><span class="toast-dot"></span><span class="toast-text" id="toast-text"></span><button type="button" class="toast-undo" id="toast-undo">Annuler</button></div>
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true"><div class="grip"></div><div class="sheet-body" id="sheet-body"></div></div>
+<label id="hap" aria-hidden="true" style="display:none"><input type="checkbox" switch></label>
+<script src="app.js"></script>
+</body>
+</html>

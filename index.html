@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sou &amp; Vrac</title>
+<meta name="theme-color" content="#F3F0E8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{--bg:#F3F0E8;--card:#FBFAF6;--ink:#16140F;--ink-2:#4A463D;--muted:#8C877B;--line:rgba(22,20,15,.1);--sou:#FF5B2E;--vrac:#3B3BFF}
+@media (prefers-color-scheme:dark){:root{--bg:#100F0D;--card:#1A1916;--ink:#F3F0E8;--ink-2:#C9C4B8;--muted:#7D786D;--line:rgba(243,240,232,.1);--vrac:#7676FF}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Instrument Sans",-apple-system,system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+main{max-width:560px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 48px) 20px 60px}
+h1{font-family:"Instrument Serif",serif;font-weight:400;font-style:italic;font-size:56px;line-height:1;letter-spacing:-.02em;margin:0 0 10px}
+.lead{color:var(--ink-2);font-size:17px;margin:0 0 36px}
+.app{display:flex;gap:16px;align-items:center;padding:16px;border-radius:22px;background:var(--card);border:1px solid var(--line);text-decoration:none;color:inherit;margin-bottom:10px}
+.app img{width:64px;height:64px;border-radius:15px;flex:none}
+.app b{font-family:"Instrument Serif",serif;font-weight:400;font-style:italic;font-size:28px;display:block;line-height:1.1}
+.app span{color:var(--muted);font-size:14px}
+.app i{margin-left:auto;font-style:normal;color:var(--muted);font-size:20px}
+h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:28px;margin:44px 0 12px}
+ol{padding-left:0;list-style:none;counter-reset:s;margin:0}
+ol li{counter-increment:s;position:relative;padding:0 0 14px 40px;color:var(--ink-2)}
+ol li::before{content:counter(s);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:13px;font-weight:600;display:grid;place-items:center}
+code{font-family:"JetBrains Mono",monospace;font-size:12.5px;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:2px 6px;word-break:break-all}
+.note{font-size:13.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Sou &amp; Vrac</h1>
+  <p class="lead">Deux petites apps pour tous les jours. Ouvre-les dans Safari, puis Partager → « Sur l'écran d'accueil ».</p>
+
+  <a class="app" href="sou/"><img src="sou/icon-180.png" alt=""><div><b>Sou</b><span>Tes dépenses, en deux gestes.</span></div><i>›</i></a>
+  <a class="app" href="vrac/"><img src="vrac/icon-180.png" alt=""><div><b>Vrac</b><span>Vide ta tête. Vrac range.</span></div><i>›</i></a>
+
+  <h2>Installer</h2>
+  <ol>
+    <li>Ouvre l'app dans <b>Safari</b>.</li>
+    <li>Touche <b>Partager</b>, puis <b>Sur l'écran d'accueil</b>. Laisse « Ouvrir en tant qu'app web » activé.</li>
+    <li>Elle s'ouvre en plein écran et fonctionne hors connexion. Tes données restent sur ton iPhone.</li>
+  </ol>
+
+  <h2>Action Button → Sou</h2>
+  <ol>
+    <li>App <b>Raccourcis</b> → nouveau raccourci → action <b>Ouvrir les URL</b>.</li>
+    <li>URL : <code>webapp://2k7fg9sf42-bot.github.io/Let-s-go/sou/</code></li>
+    <li>Réglages → <b>Bouton Action</b> → Raccourci → choisis-le.</li>
+  </ol>
+
+  <h2>Action Button → Vrac (dictée)</h2>
+  <ol>
+    <li>Action <b>Dicter le texte</b> (langue : français).</li>
+    <li>Action <b>Encoder en URL</b> sur le texte dicté.</li>
+    <li>Action <b>Ouvrir les URL</b> : <code>webapp://2k7fg9sf42-bot.github.io/Let-s-go/vrac/?t=</code> suivi de la variable <i>Texte encodé</i>.</li>
+    <li>Assigne-le à l'Action Button. Appui, tu parles, et c'est rangé.</li>
+  </ol>
+  <p class="note">Bonus : coche « Afficher dans la feuille de partage » sur le raccourci Vrac (entrée : texte, URL) pour envoyer un lien YouTube ou un article dans « À voir » en un geste.</p>
+</main>
+</body>
+</html>
