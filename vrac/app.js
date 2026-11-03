@@ -381,7 +381,7 @@ function submit(){
 }
 
 /* ---------- « + » : date et heure → directement dans le Calendrier ---------- */
-const pick = {day:null, time:null}; // day = minuit (ms), time = [h, m] ou null (toute la journée)
+const pick = {day:null, time:null, src:null}; // day = minuit (ms), time = [h, m] ou null (toute la journée)
 const whenEl = $('#when'), plusBtn = $('#plus');
 const fmtTime = ([h, m]) => h + 'h' + (m ? String(m).padStart(2, '0') : '');
 function pickDue(){
@@ -394,6 +394,7 @@ function dayLabel(day){
   return diff === 0 ? "Aujourd'hui" : diff === 1 ? 'Demain' : new Date(day).toLocaleDateString('fr-FR', {weekday:'short', day:'numeric'});
 }
 function renderWhen(){
+  const keep = ['#when-days','#when-times','#when-mins'].map(s => $(s).scrollLeft);
   const today = sod(Date.now()), iso = t => new Date(t - new Date(t).getTimezoneOffset()*6e4).toISOString().slice(0,10);
   let days = '';
   for (let i = 0; i < 8; i++){ const d = today + i*864e5; const x = new Date(d); x.setHours(12); const dd = sod(x.getTime());
@@ -403,16 +404,19 @@ function renderWhen(){
   if (pick.day !== null) days = `<button type="button" class="wchip clear" data-clear="1">Aucune</button>` + days;
   $('#when-days').innerHTML = days;
   const now = new Date(), inOne = new Date(Math.ceil((now.getTime() + 36e5) / 3e5) * 3e5);
-  const presets = [[8,0],[9,0],[12,0],[14,0],[18,0],[20,0]];
-  const same = t => pick.time && pick.time[0] === t[0] && pick.time[1] === t[1];
+  const hours = Array.from({length:16}, (_, i) => i + 7); // 7h → 22h
   let times = `<button type="button" class="wchip ${pick.day !== null && !pick.time ? 'on':''}" data-time="day">Journée <small>alerte 9h</small></button>`;
   times += `<button type="button" class="wchip" data-time="in1" data-h="${inOne.getHours()}" data-m="${inOne.getMinutes()}" data-d="${sod(inOne.getTime())}">Dans 1 h <small>${fmtTime([inOne.getHours(), inOne.getMinutes()])}</small></button>`;
-  times += presets.map(t => `<button type="button" class="wchip ${same(t) ? 'on':''}" data-time="${t[0]}:${t[1]}">${fmtTime(t)}</button>`).join('');
-  const customT = pick.time && !presets.some(same);
+  times += hours.map(h => `<button type="button" class="wchip ${pick.src === 'hour' && pick.time[0] === h ? 'on':''}" data-hour="${h}">${h}h</button>`).join('');
+  const customT = pick.time && pick.src === 'custom';
   times += `<label class="wchip ${customT ? 'on':''}">${customT ? fmtTime(pick.time) : 'Autre heure'}<input type="time" id="w-time"></label>`;
   $('#when-times').innerHTML = times;
+  const mins = $('#when-mins');
+  mins.hidden = pick.src !== 'hour';
+  if (pick.src === 'hour') mins.innerHTML = Array.from({length:12}, (_, i) => i * 5).map(m => `<button type="button" class="wchip ${pick.time[1] === m ? 'on':''}" data-min="${m}">${pick.time[0]}h${String(m).padStart(2,'0')}</button>`).join('');
+  ['#when-days','#when-times','#when-mins'].forEach((s, i) => $(s).scrollLeft = keep[i]);
   $('#w-date').addEventListener('change', e => { const v = e.target.value; if (!v) return; const [y,m,d] = v.split('-').map(Number); pick.day = new Date(y, m-1, d).getTime(); hap(); renderWhen(); renderPlus(); });
-  $('#w-time').addEventListener('change', e => { const v = e.target.value; if (!v) return; const [h,m] = v.split(':').map(Number); setTime([h, m]); });
+  $('#w-time').addEventListener('change', e => { const v = e.target.value; if (!v) return; const [h,m] = v.split(':').map(Number); pick.src = 'custom'; setTime([h, m]); });
 }
 function setTime(t){
   pick.time = t;
@@ -427,7 +431,7 @@ function renderPlus(){
   plusBtn.classList.toggle('open', !whenEl.hidden);
   form.classList.toggle('has', !!input.value.trim());
 }
-function resetPick(){ pick.day = null; pick.time = null; whenEl.hidden = true; renderPlus(); }
+function resetPick(){ pick.day = null; pick.time = null; pick.src = null; whenEl.hidden = true; renderPlus(); }
 plusBtn.addEventListener('pointerdown', e => e.preventDefault());
 $('#guess-when').addEventListener('pointerdown', e => e.preventDefault());
 $('#guess-when').addEventListener('click', e => { hap(); if (e.target.closest('.x')) return resetPick(); whenEl.hidden = false; renderWhen(); plusBtn.classList.add('open'); });
@@ -437,10 +441,15 @@ whenEl.addEventListener('click', e => {
   const c = e.target.closest('.wchip'); if (!c || c.tagName === 'LABEL') return;
   if (c.dataset.clear){ hap(); resetPick(); return; }
   if (c.dataset.day){ pick.day = +c.dataset.day; hap(); renderWhen(); renderPlus(); return; }
+  if (c.dataset.hour){ // heure choisie → la ligne des minutes apparaît
+    const h = +c.dataset.hour; pick.time = [h, 0]; pick.src = 'hour';
+    if (pick.day === null){ const d = new Date(); d.setHours(h, 55, 0, 0); pick.day = sod(d.getTime() < Date.now() ? d.getTime() + 864e5 : d.getTime()); }
+    hap(); renderWhen(); renderPlus(); $('#when-mins').scrollLeft = 0; return;
+  }
+  if (c.dataset.min !== undefined){ setTime([pick.time[0], +c.dataset.min]); return; }
   const t = c.dataset.time; if (!t) return;
-  if (t === 'day'){ if (pick.day === null) pick.day = sod(Date.now()); pick.time = null; hap(); whenEl.hidden = true; renderPlus(); setTimeout(() => input.focus(), 50); return; }
-  if (t === 'in1'){ pick.day = +c.dataset.d; setTime([+c.dataset.h, +c.dataset.m]); return; }
-  const [h, m] = t.split(':').map(Number); setTime([h, m]);
+  if (t === 'day'){ if (pick.day === null) pick.day = sod(Date.now()); pick.time = null; pick.src = null; hap(); whenEl.hidden = true; renderPlus(); setTimeout(() => input.focus(), 50); return; }
+  if (t === 'in1'){ pick.day = +c.dataset.d; pick.src = 'in1'; setTime([+c.dataset.h, +c.dataset.m]); return; }
 });
 function sendToCalendar(text, due, hasTime, id, ids){
   hap();
