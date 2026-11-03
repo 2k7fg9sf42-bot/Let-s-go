@@ -146,7 +146,7 @@ function ingest(text, forced, opts = {}){
   render();
   const d = $(`.drawer[data-k="${kind}"]`); if (d){ d.classList.remove('pulse'); void d.offsetWidth; d.classList.add('pulse'); }
   if (!opts.silent){
-    toast(made.length > 1 ? `${made.length} articles → ${KINDS[kind].label}` : (due.due ? `${KINDS[kind].one} · touche la cloche pour un rappel` : `Rangé dans ${KINDS[kind].label}`), cvar(kind), () => {
+    toast(made.length > 1 ? `${made.length} articles → ${KINDS[kind].label}` : (due.due ? `${KINDS[kind].one} · rappel envoyé au Calendrier` : `Rangé dans ${KINDS[kind].label}`), cvar(kind), () => {
       const ids = new Set(made.map(m => m.id)); S.items = S.items.filter(x => !ids.has(x.id)); save(); render();
     }, made.length === 1 ? () => editItem(made[0].id) : null);
   }
@@ -378,8 +378,14 @@ function submit(){
     if (made.length) sendToCalendar(v.length > 120 ? made[0].text : (made.length > 1 ? v : made[0].text), when.due, when.hasTime, made[0].id, made.map(m => m.id));
     return;
   }
-  ingest(v, forced);
+  const made = ingest(v, forced);
   input.value = ''; forced = null; autoGrow(); updateGuess();
+  // Une date dans la phrase (« demain 10h », « lundi ») : on l'envoie directement au Calendrier.
+  const it = made[0];
+  if (it && it.due && it.kind !== 'achat'){
+    if (it.due > Date.now()) sendToCalendar(made.length > 1 ? v : it.text, it.due, it.hasTime, it.id, made.map(m => m.id));
+    else if (it.hasTime) toast('Cette heure est déjà passée : pas de rappel');
+  }
 }
 
 /* ---------- « + » : date et heure → directement dans le Calendrier ---------- */
@@ -471,6 +477,41 @@ $('#guess-chip').addEventListener('click', () => {
 const vpop = $('#vpop'), vTxt = $('#vpop-txt'), vSub = $('#vpop-sub'), vBar = $('#vpop-bar'), vSend = $('#vpop-send'), vArrow = $('#vpop-arrow');
 const SILENCE = 2600; // ms sans nouveau mot avant l'envoi automatique
 let micMode = false, autoSend = true, silenceT = 0;
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+let srDead = false, rec = null, srHeard = false, srWatch = 0; // srDead : la dictée intégrée a lâché, on passe par le clavier jusqu'à la prochaine ouverture
+function popListen(){
+  vpop.hidden = false; vpop.classList.add('rec'); vArrow.hidden = true; vSend.hidden = true;
+  vTxt.textContent = "Je t'écoute… parle"; vSub.textContent = 'Écoute automatique'; vBar.classList.remove('run');
+}
+function srStop(){ clearTimeout(srWatch); const r = rec; rec = null; if (r){ r.onresult = r.onend = r.onerror = null; try { r.stop(); } catch {} } }
+function srFail(){ // rien reçu : bascule sur le micro du clavier (déjà ouvert)
+  srStop(); srDead = true;
+  if (micMode && !input.value.trim()) popWait();
+}
+function srStart(){
+  try {
+    const r = new SR(); rec = r; srHeard = false;
+    r.lang = 'fr-FR'; r.interimResults = true; r.continuous = false;
+    r.onresult = e => {
+      if (rec !== r) return;
+      clearTimeout(srWatch); srHeard = true;
+      let t = ''; for (const x of e.results) t += x[0].transcript;
+      input.value = t.replace(/\s+/g, ' ').trim(); autoGrow(); onDictated();
+    };
+    r.onerror = () => { if (rec === r && !srHeard) srFail(); };
+    r.onend = () => { if (rec !== r) return; rec = null; if (!srHeard) srFail(); };
+    r.start();
+    popListen();
+    srWatch = setTimeout(() => { if (!srHeard) srFail(); }, 3000);
+  } catch { srFail(); }
+}
+function onDictated(){ // nouveau texte reçu (dictée intégrée ou clavier)
+  clearTimeout(silenceT);
+  form.classList.toggle('has', !!input.value.trim());
+  if (!input.value.trim()){ popWait(); return; }
+  popRec();
+  if (autoSend) silenceT = setTimeout(() => { if (micMode && input.value.trim()){ micOff(); submit(); } }, SILENCE);
+}
 function popWait(){
   vpop.hidden = false; vpop.classList.remove('rec');
   vTxt.textContent = 'Touche le micro du clavier'; vArrow.hidden = false; vSend.hidden = true;
@@ -481,26 +522,25 @@ function popRec(){
   vpop.hidden = false; vpop.classList.add('rec'); vArrow.hidden = true; vSend.hidden = false;
   vTxt.textContent = v;
   const a = analyze(v, forced);
-  const extra = (a.parts.length > 1 ? ` · ${a.parts.length} articles` : '') + (pick.day !== null ? ' · 🔔 Calendrier' : '');
+  const extra = (a.parts.length > 1 ? ` · ${a.parts.length} articles` : '') + (pick.day !== null || (a.due.due && a.kind !== 'achat') ? ' · 🔔 Calendrier' : '');
   vSub.innerHTML = `<span class="k" style="--c:${cvar(a.kind)}"><i></i>${KINDS[a.kind].one}${extra}</span>` + (autoSend ? ' &nbsp;· envoi auto' : '');
   vBar.classList.remove('run');
   if (autoSend){ void vBar.offsetWidth; vBar.style.setProperty('--dur', SILENCE + 'ms'); vBar.classList.add('run'); }
 }
 function popHide(){ vpop.hidden = true; vBar.classList.remove('run'); clearTimeout(silenceT); }
-function micOff(){ micMode = false; popHide(); }
+function micOff(){ micMode = false; srStop(); popHide(); }
 $('#mic').addEventListener('click', () => {
   hap(); micMode = true; autoSend = true;
-  input.focus(); popWait();
+  input.focus(); // ouvre le clavier tout de suite (secours en un toucher)
+  if (SR && !srDead) srStart(); else popWait();
 });
 input.addEventListener('keydown', e => { // tu tapes au clavier : pas d'envoi automatique
-  if (micMode && e.key && e.key.length === 1){ autoSend = false; if (!vpop.hidden && input.value.trim()) popRec(); }
+  if (micMode && e.key && e.key.length === 1){ srStop(); autoSend = false; if (!vpop.hidden && input.value.trim()) popRec(); }
 });
 input.addEventListener('input', () => {
   if (!micMode) return;
-  clearTimeout(silenceT);
-  if (!input.value.trim()){ popWait(); return; }
-  popRec();
-  if (autoSend) silenceT = setTimeout(() => { if (micMode && input.value.trim()){ micOff(); submit(); } }, SILENCE);
+  if (rec && !srHeard) srStop(); // la dictée du clavier a pris le relais
+  onDictated();
 });
 input.addEventListener('blur', () => setTimeout(() => { if (document.activeElement !== input) micOff(); }, 200));
 vpop.addEventListener('pointerdown', e => e.preventDefault()); // garde le clavier ouvert
