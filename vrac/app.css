@@ -124,6 +124,11 @@ svg{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-l
 .plus.set svg{width:19px;height:19px}
 .plus.open .i-plus{transform:rotate(45deg)}
 .plus .i-plus{transition:transform .25s var(--ease)}
+.kbhint{display:flex;align-items:center;gap:8px;margin:0 4px 8px;padding:10px 14px;border-radius:16px;font-size:14px;font-weight:500;color:#fff;background:var(--accent);animation:gin .25s var(--ease)}
+.kbhint[hidden]{display:none}
+.kbhint svg{width:18px;height:18px;flex:none;stroke-width:2}
+.kbhint .arrow{margin-left:auto;font-size:18px;animation:nudge 1.2s var(--ease) infinite}
+@keyframes nudge{50%{transform:translate(3px,3px)}}
 .when{margin:0 0 8px;padding:10px 0 6px;border-radius:22px;background:var(--card);border:1px solid var(--line-2);box-shadow:0 10px 30px -14px rgba(0,0,0,.5);animation:gin .25s var(--ease)}
 .when[hidden]{display:none}
 .when-row{display:flex;gap:6px;overflow-x:auto;padding:0 10px 6px;scrollbar-width:none}

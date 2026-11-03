@@ -467,8 +467,16 @@ $('#guess-chip').addEventListener('click', () => {
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 const listen = $('#listen'), listenText = $('#listen-text'), listenGuess = $('#listen-guess');
 const IDLE = "Je t'écoute…";
-let rec = null, heard = '', silenceT = 0, maxT = 0;
-function keyboardFallback(msg){ input.focus(); toast(msg || 'Touche le micro du clavier pour dicter'); }
+let rec = null, heard = '', silenceT = 0, maxT = 0, watchT = 0;
+// Sur certains iPhone (app installée sur l'écran d'accueil), la dictée intégrée ouvre le micro mais ne renvoie jamais rien.
+// Dans ce cas Vrac s'en souvient et passe directement par le micro du clavier, qui marche toujours.
+const SR_KEY = 'vrac.dicteeClavier';
+const srBroken = () => { try { return localStorage.getItem(SR_KEY) === '1'; } catch { return false; } };
+const kbHint = $('#kbhint');
+function showKbHint(on){ kbHint.hidden = !on; }
+function keyboardFallback(){ input.focus(); showKbHint(true); }
+input.addEventListener('input', () => { if (input.value) showKbHint(false); });
+input.addEventListener('blur', () => setTimeout(() => showKbHint(false), 150));
 function showHeard(){
   listenText.textContent = heard || IDLE;
   listenText.classList.toggle('idle', !heard);
@@ -477,26 +485,33 @@ function showHeard(){
 }
 $('#mic').addEventListener('click', () => {
   hap();
-  if (!SR) return keyboardFallback();
+  if (!SR || srBroken()) return keyboardFallback();
   try {
     rec = new SR(); rec.lang = 'fr-FR'; rec.interimResults = true; rec.continuous = true;
     heard = ''; showHeard(); listen.classList.add('on');
     rec.onresult = e => {
+      clearTimeout(watchT);
       let t = ''; for (const r of e.results) t += r[0].transcript; heard = t.replace(/\s+/g, ' ').trim(); showHeard();
       clearTimeout(silenceT); silenceT = setTimeout(() => stopListening(true), 2200); // fini tout seul après un silence
     };
     rec.onerror = ev => {
-      if (ev.error === 'not-allowed' || ev.error === 'service-not-allowed'){ stopListening(false); keyboardFallback('Micro non autorisé : utilise celui du clavier'); }
+      if (ev.error === 'not-allowed' || ev.error === 'service-not-allowed'){ stopListening(false); try { localStorage.setItem(SR_KEY, '1'); } catch {} toast('Touche la barre, puis le micro du clavier'); }
       else if (ev.error === 'no-speech'){ stopListening(false); toast("Je n'ai rien entendu"); }
       else if (ev.error !== 'aborted') stopListening(true);
     };
     rec.onend = () => { if (listen.classList.contains('on')) stopListening(true); };
     rec.start();
     clearTimeout(maxT); maxT = setTimeout(() => stopListening(true), 60000);
+    clearTimeout(watchT); watchT = setTimeout(() => { // rien reçu en 4 s : la dictée intégrée ne marche pas ici
+      if (heard) return;
+      stopListening(false);
+      try { localStorage.setItem(SR_KEY, '1'); } catch {}
+      toast('Dictée indisponible ici : touche la barre, puis le micro du clavier');
+    }, 4000);
   } catch { listen.classList.remove('on'); keyboardFallback(); }
 });
 function stopListening(commit){
-  clearTimeout(silenceT); clearTimeout(maxT);
+  clearTimeout(silenceT); clearTimeout(maxT); clearTimeout(watchT);
   if (!listen.classList.contains('on')) return;
   listen.classList.remove('on'); const r = rec; rec = null; try { r && r.abort(); } catch {}
   const text = heard.trim(); heard = '';
@@ -504,6 +519,7 @@ function stopListening(commit){
 }
 $('#listen-done').addEventListener('click', e => { e.stopPropagation(); stopListening(true); });
 $('#listen-cancel').addEventListener('click', e => { e.stopPropagation(); stopListening(false); });
+listen.addEventListener('click', e => { if (!e.target.closest('button')) stopListening(!!heard); }); // toucher l'écran = sortir
 
 /* ---------- sheet & toast ---------- */
 const sheet = $('#sheet'), scrim = $('#scrim'), sheetBody = $('#sheet-body');
@@ -521,7 +537,7 @@ function toast(text, color, undo, onTap){
   $('#toast-text').textContent = text; toastEl.style.setProperty('--c', color || 'var(--accent)');
   undoFn = undo || null; tapFn = onTap || null; $('#toast-undo').hidden = !undo;
   toastEl.classList.remove('on'); void toastEl.offsetWidth; toastEl.classList.add('on');
-  clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove('on'), undo ? 4200 : 2000);
+  clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove('on'), undo ? 4200 : (text.length > 30 ? 4500 : 2000));
 }
 $('#toast-undo').addEventListener('click', e => { e.stopPropagation(); if (undoFn){ hap(); const f = undoFn; undoFn = null; f(); toastEl.classList.remove('on'); } });
 $('#toast-text').addEventListener('click', () => { if (tapFn){ toastEl.classList.remove('on'); tapFn(); } });
