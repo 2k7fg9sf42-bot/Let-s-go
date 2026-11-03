@@ -1,5 +1,5 @@
 importScripts('ics.js');
-const V = 'vrac-v7';
+const V = 'vrac-v8';
 const FILES = ['./', 'index.html', 'app.css', 'app.js', 'manifest.webmanifest', 'ics.js', 'icon.svg', 'icon-180.png',
   '../fonts/fonts.css', '../fonts/instrument-sans-latin-400-normal.woff2', '../fonts/instrument-sans-latin-500-normal.woff2',
   '../fonts/instrument-sans-latin-600-normal.woff2', '../fonts/instrument-serif-latin-400-normal.woff2',

@@ -39,7 +39,17 @@
       <div class="when-row" id="when-times"></div>
       <div class="when-row mins" id="when-mins" hidden></div>
     </div>
-    <div class="kbhint" id="kbhint" hidden><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0013 0M12 17.5V21"/></svg>Touche le micro du clavier, en bas à droite <span class="arrow">↘</span></div>
+    <div class="vpop" id="vpop" hidden>
+      <div class="vpop-row">
+        <span class="vpop-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0013 0M12 17.5V21"/></svg><i></i></span>
+        <span class="vpop-txt" id="vpop-txt">Touche le micro du clavier</span>
+        <span class="vpop-arrow" id="vpop-arrow">↘</span>
+        <button type="button" class="vpop-send" id="vpop-send" hidden>Envoyer</button>
+        <button type="button" class="vpop-x" id="vpop-x" aria-label="Fermer">✕</button>
+      </div>
+      <div class="vpop-sub" id="vpop-sub">En bas à droite, sous le clavier</div>
+      <div class="vpop-bar"><i id="vpop-bar"></i></div>
+    </div>
     <form class="capture" id="capture" autocomplete="off">
       <button type="button" class="plus" id="plus" aria-label="Date et heure du rappel"><svg viewBox="0 0 24 24" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span class="plus-l" id="plus-l"></span></button>
       <textarea id="input" rows="1" placeholder="Vide ta tête…" enterkeyhint="send" aria-label="Nouvelle entrée"></textarea>
@@ -47,17 +57,6 @@
       <button type="submit" class="send" id="send" aria-label="Envoyer"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
     </form>
   </div>
-</div>
-
-<div class="listen" id="listen" aria-hidden="true">
-  <div class="listen-ring"><span></span><span></span><span></span></div>
-  <div class="listen-text idle" id="listen-text">Je t'écoute…</div>
-  <div class="listen-guess" id="listen-guess" hidden></div>
-  <div class="listen-actions">
-    <button type="button" class="listen-btn ghost" id="listen-cancel">Annuler</button>
-    <button type="button" class="listen-btn" id="listen-done">Ranger</button>
-  </div>
-  <div class="listen-hint">S'arrête tout seul quand tu te tais</div>
 </div>
 
 <div class="toast" id="toast" role="status"><span class="toast-dot"></span><span class="toast-text" id="toast-text"></span><button type="button" class="toast-undo" id="toast-undo">Annuler</button></div>

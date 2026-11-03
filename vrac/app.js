@@ -347,6 +347,7 @@ let forced = null;
 function autoGrow(){ input.style.height = 'auto'; input.style.height = Math.min(132, input.scrollHeight) + 'px'; }
 function updateGuess(){
   const v = input.value.trim(); form.classList.toggle('has', !!v);
+  if (micMode && !vpop.hidden){ guess.hidden = true; return; } // le pop-up de dictée affiche déjà le tiroir
   const gw = $('#guess-when'), hasPick = typeof pick !== 'undefined' && pick.day !== null;
   gw.hidden = !hasPick;
   if (hasPick) gw.innerHTML = `${BELL}${dayLabel(pick.day)}${pick.time ? ' · ' + fmtTime(pick.time) : ''} <span class="x">✕</span>`;
@@ -366,6 +367,7 @@ form.addEventListener('submit', e => { e.preventDefault(); submit(); });
 $('#send').addEventListener('pointerdown', e => e.preventDefault()); // garde le clavier ouvert
 function submit(){
   const v = input.value.trim(); if (!v) return;
+  micOff();
   hap();
   if (forced) learn(v, forced);
   if (pick.day !== null){
@@ -463,89 +465,47 @@ $('#guess-chip').addEventListener('click', () => {
   const cur = analyze(input.value, forced).kind; forced = ORDER[(ORDER.indexOf(cur) + 1) % ORDER.length]; hap(); updateGuess();
 });
 
-/* ---------- dictée ---------- */
-const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-const listen = $('#listen'), listenText = $('#listen-text'), listenGuess = $('#listen-guess');
-const IDLE = "Je t'écoute…";
-// App installée sur l'écran d'accueil : l'iPhone ne laisse la reconnaissance vocale marcher qu'une fois par ouverture.
-// Après chaque dictée, Vrac se recharge en un éclair pour remettre le micro à zéro.
-const STANDALONE = navigator.standalone === true || matchMedia('(display-mode: standalone)').matches;
-try { localStorage.removeItem('vrac.dicteeClavier'); } catch {}
-let rec = null, heard = '', live = false, cancelled = false, watchT = 0, maxT = 0;
-const kbHint = $('#kbhint');
-function showKbHint(on){ kbHint.hidden = !on; }
-function keyboardFallback(){ input.focus(); showKbHint(true); }
-input.addEventListener('input', () => { if (input.value) showKbHint(false); });
-input.addEventListener('blur', () => setTimeout(() => showKbHint(false), 150));
-function showHeard(){
-  listenText.textContent = heard || IDLE;
-  listenText.classList.toggle('idle', !heard);
-  if (heard){ const a = analyze(heard); listenGuess.style.setProperty('--c', cvar(a.kind)); listenGuess.innerHTML = `<i></i>${KINDS[a.kind].one}${a.parts.length > 1 ? ` · ${a.parts.length} articles` : ''}${a.due.due ? ' · ' + dueLabel({due:a.due.due, hasTime:a.due.hasTime}).l : ''}`; listenGuess.hidden = false; }
-  else listenGuess.hidden = true;
+/* ---------- dictée : pop-up + micro du clavier d'Apple ---------- */
+// La reconnaissance vocale intégrée ne marche qu'une ou deux fois dans l'app installée sur iPhone.
+// On passe donc par la dictée du clavier, fiable à chaque fois, avec un pop-up qui guide et suit l'enregistrement.
+const vpop = $('#vpop'), vTxt = $('#vpop-txt'), vSub = $('#vpop-sub'), vBar = $('#vpop-bar'), vSend = $('#vpop-send'), vArrow = $('#vpop-arrow');
+const SILENCE = 2600; // ms sans nouveau mot avant l'envoi automatique
+let micMode = false, autoSend = true, silenceT = 0;
+function popWait(){
+  vpop.hidden = false; vpop.classList.remove('rec');
+  vTxt.textContent = 'Touche le micro du clavier'; vArrow.hidden = false; vSend.hidden = true;
+  vSub.textContent = 'En bas à droite, sous le clavier'; vBar.classList.remove('run');
 }
+function popRec(){
+  const v = input.value.trim();
+  vpop.hidden = false; vpop.classList.add('rec'); vArrow.hidden = true; vSend.hidden = false;
+  vTxt.textContent = v;
+  const a = analyze(v, forced);
+  const extra = (a.parts.length > 1 ? ` · ${a.parts.length} articles` : '') + (pick.day !== null ? ' · 🔔 Calendrier' : '');
+  vSub.innerHTML = `<span class="k" style="--c:${cvar(a.kind)}"><i></i>${KINDS[a.kind].one}${extra}</span>` + (autoSend ? ' &nbsp;· envoi auto' : '');
+  vBar.classList.remove('run');
+  if (autoSend){ void vBar.offsetWidth; vBar.style.setProperty('--dur', SILENCE + 'ms'); vBar.classList.add('run'); }
+}
+function popHide(){ vpop.hidden = true; vBar.classList.remove('run'); clearTimeout(silenceT); }
+function micOff(){ micMode = false; popHide(); }
 $('#mic').addEventListener('click', () => {
-  hap();
-  if (!SR) return keyboardFallback();
-  if (live) return;
-  try {
-    const r = new SR(); rec = r;
-    r.lang = 'fr-FR'; r.interimResults = true; r.continuous = false; r.maxAlternatives = 1; // une phrase à la fois : le plus fiable sur iPhone
-    heard = ''; cancelled = false; live = true; showHeard(); listen.classList.add('on');
-    r.onresult = e => {
-      clearTimeout(watchT);
-      let t = ''; for (const x of e.results) t += x[0].transcript; heard = t.replace(/\s+/g, ' ').trim(); showHeard();
-    };
-    r.onerror = ev => { if (ev.error === 'not-allowed' || ev.error === 'service-not-allowed') { finish(false); toast('Micro non autorisé : touche la barre puis le micro du clavier'); } };
-    r.onend = () => finish(!cancelled); // fin de phrase (silence), Ranger, ou erreur : on range ce qui a été entendu
-    r.start();
-    clearTimeout(watchT); watchT = setTimeout(() => { if (!heard){ cancelled = true; try { r.stop(); } catch {} finish(false, "Je n'ai rien entendu, réessaie"); } }, 6000);
-    clearTimeout(maxT); maxT = setTimeout(() => { try { r.stop(); } catch {} }, 45000);
-  } catch { live = false; listen.classList.remove('on'); keyboardFallback(); }
+  hap(); micMode = true; autoSend = true;
+  input.focus(); popWait();
 });
-function finish(commit, msg){
-  clearTimeout(watchT); clearTimeout(maxT);
-  if (!live) return;
-  live = false; listen.classList.remove('on'); rec = null;
-  const text = heard.trim(); heard = '';
-  if (commit && text){
-    if (pick.day !== null){ input.value = text; submit(); return; } // part vers le Calendrier
-    hap();
-    const made = ingest(text, null, {silent: STANDALONE});
-    if (STANDALONE) freshen(made);
-    return;
-  }
-  if (msg) toast(msg);
-  if (STANDALONE) freshen([], msg);
-}
-function stopListening(commit){ // Ranger / Annuler / toucher l'écran
-  if (!live) return;
-  cancelled = !commit;
-  const r = rec;
-  try { r && r.stop(); } catch {}
-  setTimeout(() => finish(commit), 700); // si l'iPhone ne renvoie pas « fin », on ferme quand même
-}
-/* recharge en douceur et réaffiche la notification après */
-function freshen(made, msg){
-  try { sessionStorage.setItem('vrac.after', JSON.stringify({ids: made.map(m => m.id), msg: msg || '', filter})); } catch {}
-  document.body.style.transition = 'opacity .12s'; document.body.style.opacity = '0.001';
-  setTimeout(() => location.reload(), 130);
-}
-function afterFreshen(){
-  let a = null; try { a = JSON.parse(sessionStorage.getItem('vrac.after')); sessionStorage.removeItem('vrac.after'); } catch {}
-  if (!a) return;
-  if (a.filter) filter = a.filter;
-  const made = S.items.filter(i => a.ids.includes(i.id));
-  if (made.length){
-    landing = new Set(a.ids); render();
-    const kind = made[0].kind;
-    toast(made.length > 1 ? `${made.length} articles → ${KINDS[kind].label}` : (made[0].due ? `${KINDS[kind].one} · touche la cloche pour un rappel` : `Rangé dans ${KINDS[kind].label}`), cvar(kind), () => {
-      const ids = new Set(a.ids); S.items = S.items.filter(x => !ids.has(x.id)); save(); render();
-    }, made.length === 1 ? () => editItem(made[0].id) : null);
-  } else { render(); if (a.msg) toast(a.msg); }
-}
-$('#listen-done').addEventListener('click', e => { e.stopPropagation(); stopListening(true); });
-$('#listen-cancel').addEventListener('click', e => { e.stopPropagation(); stopListening(false); });
-listen.addEventListener('click', e => { if (!e.target.closest('button')) stopListening(!!heard); }); // toucher l'écran = sortir
+input.addEventListener('keydown', e => { // tu tapes au clavier : pas d'envoi automatique
+  if (micMode && e.key && e.key.length === 1){ autoSend = false; if (!vpop.hidden && input.value.trim()) popRec(); }
+});
+input.addEventListener('input', () => {
+  if (!micMode) return;
+  clearTimeout(silenceT);
+  if (!input.value.trim()){ popWait(); return; }
+  popRec();
+  if (autoSend) silenceT = setTimeout(() => { if (micMode && input.value.trim()){ micOff(); submit(); } }, SILENCE);
+});
+input.addEventListener('blur', () => setTimeout(() => { if (document.activeElement !== input) micOff(); }, 200));
+vpop.addEventListener('pointerdown', e => e.preventDefault()); // garde le clavier ouvert
+vSend.addEventListener('click', () => { micOff(); submit(); });
+$('#vpop-x').addEventListener('click', () => { hap(); micOff(); });
 
 /* ---------- sheet & toast ---------- */
 const sheet = $('#sheet'), scrim = $('#scrim'), sheetBody = $('#sheet-body');
@@ -576,7 +536,7 @@ if (window.visualViewport){
   vv.addEventListener('resize', fit); vv.addEventListener('scroll', fit); fit();
 }
 
-render(); afterFreshen();
+render();
 document.addEventListener('visibilitychange', () => { if (!document.hidden) render(); });
 setInterval(() => { if (!document.hidden && !sheet.classList.contains('on')) render(); }, 60000);
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
