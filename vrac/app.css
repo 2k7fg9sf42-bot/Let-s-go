@@ -107,10 +107,33 @@ svg{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-l
 .guess-chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px;border-radius:99px;background:var(--card);border:1px solid var(--line-2);font-size:13px;font-weight:500;color:var(--ink)}
 .guess-chip i{width:7px;height:7px;border-radius:50%;background:var(--c)}
 .guess-chip::after{content:"⌄";font-size:12px;color:var(--muted);margin-left:1px;transform:translateY(-2px)}
+.guess-when{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px;border-radius:99px;margin-left:auto;font-family:var(--mono);font-size:11.5px;font-weight:500;color:var(--accent);background:color-mix(in srgb,var(--accent) 16%,transparent);border:1px solid color-mix(in srgb,var(--accent) 38%,transparent)}
+.guess-when[hidden],.guess-chip[hidden],.guess-arrow[hidden]{display:none}
+.guess-when .bell{width:12px;height:12px;stroke-width:1.8}
+.guess-when .x{opacity:.6;margin-left:2px}
 .guess-extra{font-family:var(--mono);font-size:11px}
-.capture{display:flex;align-items:flex-end;gap:6px;padding:6px 6px 6px 16px;border-radius:26px;background:var(--card);border:1px solid var(--line-2);box-shadow:0 10px 30px -14px rgba(0,0,0,.35)}
-.capture textarea{flex:1;border:0;outline:0;background:transparent;resize:none;font-size:17px;line-height:1.35;padding:10px 0;max-height:132px;min-height:44px}
+.capture{display:flex;align-items:flex-end;gap:6px;padding:6px;border-radius:26px;background:var(--card);border:1px solid var(--line-2);box-shadow:0 10px 30px -14px rgba(0,0,0,.35)}
+.capture textarea{flex:1;margin-left:4px;border:0;outline:0;background:transparent;resize:none;font-size:17px;line-height:1.35;padding:10px 0;max-height:132px;min-height:44px}
 .capture textarea::placeholder{color:var(--muted)}
+.plus{flex:none;height:44px;min-width:44px;border-radius:22px;display:flex;align-items:center;justify-content:center;gap:6px;background:var(--bg-2);color:var(--ink-2);border:1px solid var(--line);transition:transform .2s var(--spring),background .2s,color .2s}
+.plus svg{width:22px;height:22px}
+.plus:active{transform:scale(.9)}
+.plus .plus-l{display:none;font-family:var(--mono);font-size:12px;font-weight:500;white-space:nowrap}
+.plus.set{background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent);border-color:color-mix(in srgb,var(--accent) 40%,transparent)}
+.plus.set .plus-l{display:inline}
+.plus.set svg{width:19px;height:19px}
+.plus.open .i-plus{transform:rotate(45deg)}
+.plus .i-plus{transition:transform .25s var(--ease)}
+.when{margin:0 0 8px;padding:10px 0 6px;border-radius:22px;background:var(--card);border:1px solid var(--line-2);box-shadow:0 10px 30px -14px rgba(0,0,0,.5);animation:gin .25s var(--ease)}
+.when[hidden]{display:none}
+.when-row{display:flex;gap:6px;overflow-x:auto;padding:0 10px 6px;scrollbar-width:none}
+.when-row::-webkit-scrollbar{display:none}
+.wchip{position:relative;flex:none;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 13px;border-radius:99px;background:var(--bg-2);border:1px solid var(--line);font-size:14px;font-weight:500;color:var(--ink-2);white-space:nowrap;overflow:hidden}
+.wchip small{font-family:var(--mono);font-size:10.5px;color:var(--muted);font-weight:400}
+.wchip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.wchip.on small{color:rgba(255,255,255,.75)}
+.wchip.clear{color:var(--muted)}
+.wchip input{position:absolute;inset:0;opacity:0;width:100%;height:100%;font-size:16px}
 .mic,.send{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;transition:transform .2s var(--spring),background .2s,opacity .2s}
 .mic{background:var(--accent);color:var(--accent-ink)}
 .mic svg,.send svg{width:22px;height:22px}

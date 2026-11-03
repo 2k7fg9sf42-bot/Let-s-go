@@ -136,7 +136,8 @@ function analyze(text, forced){
 }
 function ingest(text, forced, opts = {}){
   text = String(text || '').trim(); if (!text) return [];
-  const {kind, parts, due} = analyze(text, forced);
+  let {kind, parts, due} = analyze(text, forced);
+  if (opts.due){ due = {due:opts.due, hasTime:!!opts.hasTime}; if (!forced && kind === 'note') kind = 'tache'; }
   const t = Date.now();
   const made = parts.map((p, i) => ({id:uid(), text:p, kind, t:t + i, done:false, raw: parts.length > 1 ? text : undefined, ...due}));
   S.items.push(...made); save();
@@ -312,11 +313,7 @@ function shareList(){
 const BELL = '<svg viewBox="0 0 16 16" class="bell"><path d="M4 11.5V7.2a4 4 0 018 0v4.3l1 1.2H3z"/><path d="M6.6 14.2a1.5 1.5 0 002.8 0"/></svg>';
 function remind(id){
   const it = S.items.find(x => x.id === id); if (!it || !it.due) return;
-  hap();
-  const q = new URLSearchParams({t: it.text, d: String(it.due), h: it.hasTime ? '1' : '0', id: it.id});
-  it.reminded = true; save(); render();
-  if (navigator.serviceWorker && navigator.serviceWorker.controller) location.href = 'rappel.ics?' + q;
-  else location.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(self.vracICS(it.text, it.due, it.hasTime, it.id));
+  sendToCalendar(it.text, it.due, it.hasTime, it.id, [it.id]);
 }
 
 /* ---------- réglages ---------- */
@@ -350,13 +347,17 @@ let forced = null;
 function autoGrow(){ input.style.height = 'auto'; input.style.height = Math.min(132, input.scrollHeight) + 'px'; }
 function updateGuess(){
   const v = input.value.trim(); form.classList.toggle('has', !!v);
-  if (!v){ guess.hidden = true; forced = null; return; }
+  const gw = $('#guess-when'), hasPick = typeof pick !== 'undefined' && pick.day !== null;
+  gw.hidden = !hasPick;
+  if (hasPick) gw.innerHTML = `${BELL}${dayLabel(pick.day)}${pick.time ? ' · ' + fmtTime(pick.time) : ''} <span class="x">✕</span>`;
+  if (!v){ forced = null; guess.hidden = !hasPick; $('#guess-chip').hidden = true; $('.guess-arrow').hidden = true; $('#guess-extra').textContent = ''; return; }
+  $('#guess-chip').hidden = false; $('.guess-arrow').hidden = false;
   const a = analyze(v, forced);
   guess.hidden = false;
   const gc = $('#guess-chip'); gc.style.setProperty('--c', cvar(a.kind)); gc.innerHTML = `<i></i>${KINDS[a.kind].one}`;
   const extra = [];
   if (a.parts.length > 1) extra.push(`${a.parts.length} articles`);
-  if (a.due.due) extra.push(dueLabel({due:a.due.due, hasTime:a.due.hasTime}).l);
+  if (a.due.due && !hasPick) extra.push(dueLabel({due:a.due.due, hasTime:a.due.hasTime}).l);
   $('#guess-extra').textContent = extra.join(' · ');
 }
 input.addEventListener('input', () => { autoGrow(); updateGuess(); });
@@ -367,8 +368,86 @@ function submit(){
   const v = input.value.trim(); if (!v) return;
   hap();
   if (forced) learn(v, forced);
+  if (pick.day !== null){
+    const when = pickDue();
+    if (when.due < Date.now() - 60000){ toast('Cette heure est déjà passée'); return; }
+    const made = ingest(v, forced, {due:when.due, hasTime:when.hasTime, silent:true});
+    input.value = ''; forced = null; resetPick(); autoGrow(); updateGuess();
+    if (made.length) sendToCalendar(v.length > 120 ? made[0].text : (made.length > 1 ? v : made[0].text), when.due, when.hasTime, made[0].id, made.map(m => m.id));
+    return;
+  }
   ingest(v, forced);
   input.value = ''; forced = null; autoGrow(); updateGuess();
+}
+
+/* ---------- « + » : date et heure → directement dans le Calendrier ---------- */
+const pick = {day:null, time:null}; // day = minuit (ms), time = [h, m] ou null (toute la journée)
+const whenEl = $('#when'), plusBtn = $('#plus');
+const fmtTime = ([h, m]) => h + 'h' + (m ? String(m).padStart(2, '0') : '');
+function pickDue(){
+  const d = new Date(pick.day);
+  if (pick.time) d.setHours(pick.time[0], pick.time[1], 0, 0); else d.setHours(12, 0, 0, 0);
+  return {due:d.getTime(), hasTime:!!pick.time};
+}
+function dayLabel(day){
+  const diff = Math.round((day - sod(Date.now())) / 864e5);
+  return diff === 0 ? "Aujourd'hui" : diff === 1 ? 'Demain' : new Date(day).toLocaleDateString('fr-FR', {weekday:'short', day:'numeric'});
+}
+function renderWhen(){
+  const today = sod(Date.now()), iso = t => new Date(t - new Date(t).getTimezoneOffset()*6e4).toISOString().slice(0,10);
+  let days = '';
+  for (let i = 0; i < 8; i++){ const d = today + i*864e5; const x = new Date(d); x.setHours(12); const dd = sod(x.getTime());
+    days += `<button type="button" class="wchip ${pick.day === dd ? 'on':''}" data-day="${dd}">${dayLabel(dd)}</button>`; }
+  const custom = pick.day !== null && (pick.day - today) / 864e5 > 7.5;
+  days += `<label class="wchip ${custom ? 'on':''}">${custom ? new Date(pick.day).toLocaleDateString('fr-FR',{day:'numeric',month:'short'}) : 'Autre date'}<input type="date" id="w-date" min="${iso(Date.now())}"></label>`;
+  if (pick.day !== null) days = `<button type="button" class="wchip clear" data-clear="1">Aucune</button>` + days;
+  $('#when-days').innerHTML = days;
+  const now = new Date(), inOne = new Date(Math.ceil((now.getTime() + 36e5) / 3e5) * 3e5);
+  const presets = [[8,0],[9,0],[12,0],[14,0],[18,0],[20,0]];
+  const same = t => pick.time && pick.time[0] === t[0] && pick.time[1] === t[1];
+  let times = `<button type="button" class="wchip ${pick.day !== null && !pick.time ? 'on':''}" data-time="day">Journée <small>alerte 9h</small></button>`;
+  times += `<button type="button" class="wchip" data-time="in1" data-h="${inOne.getHours()}" data-m="${inOne.getMinutes()}" data-d="${sod(inOne.getTime())}">Dans 1 h <small>${fmtTime([inOne.getHours(), inOne.getMinutes()])}</small></button>`;
+  times += presets.map(t => `<button type="button" class="wchip ${same(t) ? 'on':''}" data-time="${t[0]}:${t[1]}">${fmtTime(t)}</button>`).join('');
+  const customT = pick.time && !presets.some(same);
+  times += `<label class="wchip ${customT ? 'on':''}">${customT ? fmtTime(pick.time) : 'Autre heure'}<input type="time" id="w-time"></label>`;
+  $('#when-times').innerHTML = times;
+  $('#w-date').addEventListener('change', e => { const v = e.target.value; if (!v) return; const [y,m,d] = v.split('-').map(Number); pick.day = new Date(y, m-1, d).getTime(); hap(); renderWhen(); renderPlus(); });
+  $('#w-time').addEventListener('change', e => { const v = e.target.value; if (!v) return; const [h,m] = v.split(':').map(Number); setTime([h, m]); });
+}
+function setTime(t){
+  pick.time = t;
+  if (pick.day === null){ const d = new Date(); d.setHours(t[0], t[1], 0, 0); pick.day = sod(d.getTime() < Date.now() ? d.getTime() + 864e5 : d.getTime()); }
+  hap(); whenEl.hidden = true; renderPlus(); setTimeout(() => input.focus(), 50);
+}
+function renderPlus(){
+  const set = pick.day !== null;
+  plusBtn.classList.toggle('set', set);
+  plusBtn.innerHTML = set ? BELL : '<svg viewBox="0 0 24 24" class="i-plus"><path d="M12 5v14M5 12h14"/></svg>';
+  updateGuess();
+  plusBtn.classList.toggle('open', !whenEl.hidden);
+  form.classList.toggle('has', !!input.value.trim());
+}
+function resetPick(){ pick.day = null; pick.time = null; whenEl.hidden = true; renderPlus(); }
+plusBtn.addEventListener('pointerdown', e => e.preventDefault());
+$('#guess-when').addEventListener('pointerdown', e => e.preventDefault());
+$('#guess-when').addEventListener('click', e => { hap(); if (e.target.closest('.x')) return resetPick(); whenEl.hidden = false; renderWhen(); plusBtn.classList.add('open'); });
+plusBtn.addEventListener('click', () => { hap(); whenEl.hidden = !whenEl.hidden; if (!whenEl.hidden) renderWhen(); renderPlus(); });
+whenEl.addEventListener('pointerdown', e => { if (!e.target.closest('label')) e.preventDefault(); });
+whenEl.addEventListener('click', e => {
+  const c = e.target.closest('.wchip'); if (!c || c.tagName === 'LABEL') return;
+  if (c.dataset.clear){ hap(); resetPick(); return; }
+  if (c.dataset.day){ pick.day = +c.dataset.day; hap(); renderWhen(); renderPlus(); return; }
+  const t = c.dataset.time; if (!t) return;
+  if (t === 'day'){ if (pick.day === null) pick.day = sod(Date.now()); pick.time = null; hap(); whenEl.hidden = true; renderPlus(); setTimeout(() => input.focus(), 50); return; }
+  if (t === 'in1'){ pick.day = +c.dataset.d; setTime([+c.dataset.h, +c.dataset.m]); return; }
+  const [h, m] = t.split(':').map(Number); setTime([h, m]);
+});
+function sendToCalendar(text, due, hasTime, id, ids){
+  hap();
+  S.items.forEach(i => { if (ids.includes(i.id)) i.reminded = true; }); save(); render();
+  const q = new URLSearchParams({t: text, d: String(due), h: hasTime ? '1' : '0', id});
+  if (navigator.serviceWorker && navigator.serviceWorker.controller) location.href = 'rappel.ics?' + q;
+  else location.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(self.vracICS(text, due, hasTime, id));
 }
 $('#guess-chip').addEventListener('pointerdown', e => e.preventDefault());
 $('#guess-chip').addEventListener('click', () => {
@@ -412,7 +491,7 @@ function stopListening(commit){
   if (!listen.classList.contains('on')) return;
   listen.classList.remove('on'); const r = rec; rec = null; try { r && r.abort(); } catch {}
   const text = heard.trim(); heard = '';
-  if (commit && text){ hap(); ingest(text); }
+  if (commit && text){ if (pick.day !== null){ input.value = text; submit(); } else { hap(); ingest(text); } }
 }
 $('#listen-done').addEventListener('click', e => { e.stopPropagation(); stopListening(true); });
 $('#listen-cancel').addEventListener('click', e => { e.stopPropagation(); stopListening(false); });

@@ -33,8 +33,13 @@
   <main class="list" id="list" aria-live="polite"></main>
 
   <div class="dock" id="dock">
-    <div class="guess" id="guess" hidden><span class="guess-arrow">→</span><button type="button" class="guess-chip" id="guess-chip"></button><span class="guess-extra" id="guess-extra"></span></div>
+    <div class="guess" id="guess" hidden><span class="guess-arrow">→</span><button type="button" class="guess-chip" id="guess-chip"></button><span class="guess-extra" id="guess-extra"></span><button type="button" class="guess-when" id="guess-when" hidden></button></div>
+    <div class="when" id="when" hidden>
+      <div class="when-row" id="when-days"></div>
+      <div class="when-row" id="when-times"></div>
+    </div>
     <form class="capture" id="capture" autocomplete="off">
+      <button type="button" class="plus" id="plus" aria-label="Date et heure du rappel"><svg viewBox="0 0 24 24" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span class="plus-l" id="plus-l"></span></button>
       <textarea id="input" rows="1" placeholder="Vide ta tête…" enterkeyhint="send" aria-label="Nouvelle entrée"></textarea>
       <button type="button" class="mic" id="mic" aria-label="Dicter"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0013 0M12 17.5V21"/></svg></button>
       <button type="submit" class="send" id="send" aria-label="Envoyer"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
