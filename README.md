@@ -9,13 +9,13 @@ C'est une app web installable (PWA), 100 % gratuite : hébergée sur GitHub Page
 ## Fonctionnalités
 
 - **Liste** par semaine (« Cette semaine », « Semaine prochaine »…) et **vue calendrier** mensuelle.
-- Pour chaque soirée : heures des *early prelims*, *prelims* et *main card* en heure de Paris, avec les chaînes (les diffusions gratuites sont en vert).
+- Pour chaque soirée : **main event et co-main event** (noms complets) visibles directement, heures des *early prelims*, *prelims* et *main card* en heure de Paris, avec les chaînes (les diffusions gratuites sont en vert).
 - Fiche détaillée avec la **carte complète** : main event, combats pour un titre, catégories, palmarès.
 - **Prochaine soirée** mise en avant, avec un compte à rebours.
 - Filtres par organisation, recherche (combattant, événement, ville) et filtre « gratuit uniquement ».
 - **Abonnement agenda** (iPhone, Google Agenda, Outlook) : un calendrier pour toutes les orgas ou un par orga, mis à jour tout seul.
 - Bouton « Ajouter à mon agenda » sur chaque soirée (avec rappel 1 h avant).
-- Thème sombre et clair, fonctionne hors ligne, s'installe sur l'écran d'accueil.
+- Thème sombre et clair, fonctionne hors ligne, s'installe sur l'écran d'accueil (icône créée avec FLORA).
 
 ## Mise en ligne (une seule fois)
 

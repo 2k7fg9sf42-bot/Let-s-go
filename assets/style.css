@@ -254,3 +254,33 @@ dialog.sheet::backdrop { background: rgba(5, 7, 10, .6); backdrop-filter: blur(3
   .hero-sub { margin-bottom: 10px; }
   .hero-grid { gap: 12px; }
 }
+
+/* ---------- Main event / co-main event ---------- */
+.ev-tag { font: 600 15px/1 var(--body); text-transform: none; letter-spacing: 0; color: var(--muted); margin-left: 8px; }
+.bill { display: grid; gap: 5px; margin: 6px 0 12px; }
+.bill-row { display: grid; grid-template-columns: 84px 1fr; gap: 8px; align-items: baseline; }
+.bill-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); white-space: nowrap; }
+.bill-row.is-main .bill-label { color: color-mix(in srgb, var(--org) 75%, var(--text)); }
+.bill-names { min-width: 0; font-size: 14px; }
+.bill-names b { font-weight: 600; }
+.bill-row.is-main .bill-names { font-size: 15.5px; }
+.bill-row.is-main .bill-names b { font-weight: 700; }
+.bill-vs { color: var(--muted); font-size: 12px; margin: 0 6px; }
+.bill .title-belt { color: var(--warn); font-size: 12px; font-weight: 700; margin-left: 8px; white-space: nowrap; }
+.hero-bill { margin: 8px 0 14px; gap: 6px; }
+.hero-bill .bill-row { grid-template-columns: 96px 1fr; }
+.hero-bill .bill-row.is-main .bill-names { font-size: 19px; }
+.hero-bill .bill-names { font-size: 16px; }
+
+@media (max-width: 640px) {
+  .bill-row { grid-template-columns: 1fr; gap: 0; }
+  .bill-label { font-size: 10.5px; }
+  .hero-bill .bill-row { grid-template-columns: 1fr; }
+  .hero-bill .bill-row.is-main .bill-names { font-size: 17px; }
+  .ev-tag { display: block; margin: 4px 0 0; font-size: 13px; }
+}
+.brand .logo { border-radius: 10px; flex-shrink: 0; }
+@media (max-width: 640px) {
+  .seg { grid-template-columns: 86px 52px 1fr; }
+  .seg-label { font-size: 12.5px; white-space: nowrap; }
+}

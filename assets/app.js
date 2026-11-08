@@ -133,6 +133,7 @@
         if (segments.length === 1) segments[0].label = "Début";
         const main = segments.find((s) => s.key === "main") || segments[segments.length - 1];
         const me = e.fights.find((f) => f.main_event) || e.fights[0];
+        const co = e.fights.find((f) => f !== me);
         const haystack = [
           e.name, e.subtitle, e.venue, e.city, e.country, state.orgs[e.org]?.name, state.orgs[e.org]?.full_name,
           ...e.fights.flatMap((f) => [f.a.name, f.b.name]),
@@ -144,6 +145,7 @@
           mainDate: main ? main.date : new Date(e.start),
           day: dayKey(new Date(e.start)),
           me,
+          co,
           haystack,
           anyFree: segments.some((s) => s.channels.some((c) => c.free)),
         };
@@ -174,6 +176,32 @@
     if (e.me) return `${lastName(e.me.a.name)} vs. ${lastName(e.me.b.name)}`;
     return e.subtitle || "";
   }
+  // Sous-titre qui n'est pas déjà « X vs. Y » (ex. « London », « Unplugged »).
+  function tagline(e) {
+    return e.subtitle && !/\bvs\.?\b/i.test(e.subtitle) ? e.subtitle : "";
+  }
+
+  // Main event et co-main event, noms complets.
+  function billNode(e, extraClass = "") {
+    if (!e.me) {
+      const h = headline(e);
+      return h ? el("p", { class: "ev-main" }, h) : null;
+    }
+    const row = (label, f, isMain) => el("div", { class: `bill-row${isMain ? " is-main" : ""}` },
+      el("span", { class: "bill-label" }, label),
+      el("span", { class: "bill-names" },
+        el("b", {}, f.a.name),
+        el("span", { class: "bill-vs" }, "vs"),
+        el("b", {}, f.b.name),
+        f.title ? el("span", { class: "title-belt" }, "★ Titre") : null,
+      ),
+    );
+    return el("div", { class: `bill ${extraClass}`.trim() },
+      row("Main event", e.me, true),
+      e.co ? row("Co-main", e.co, false) : null,
+    );
+  }
+
   function lastName(n) {
     const parts = n.trim().split(/\s+/);
     return parts.length > 1 ? parts.slice(1).join(" ") : n;
@@ -199,7 +227,6 @@
 
   function eventCard(e) {
     const place = [e.city, e.country].filter(Boolean).join(", ");
-    const title = e.me?.title;
     return el("button", {
       class: "ev", type: "button", style: { "--org": orgColor(e.org) },
       onclick: () => openEvent(e),
@@ -209,15 +236,15 @@
         el("span", { class: "badge" }, orgName(e.org)),
         el("span", { class: "ev-place" }, place),
       ),
-      el("div", { class: "ev-title" }, e.name),
-      headline(e) ? el("p", { class: "ev-main" }, headline(e), title ? el("span", { class: "title-belt" }, "★ Titre") : null) : null,
+      el("div", { class: "ev-title" }, e.name, e.me && tagline(e) ? el("span", { class: "ev-tag" }, tagline(e)) : null),
+      billNode(e),
       el("div", { class: "segs" }, e.segments.map((s) => segRow(e, s))),
     );
   }
 
   function toast(msg) {
     const t = el("div", { class: "toast", role: "status" }, msg);
-    document.add(body, t);
+    document.body.append(t);
     setTimeout(() => t.remove(), 2200);
   }
 
@@ -240,7 +267,7 @@
     },
       el("div", { class: "hero-kicker" }, `${next.date.getTime() <= now ? "En ce moment" : "Prochaine soirée"} · ${orgName(next.org)}`),
       el("div", { class: "hero-title" }, next.name),
-      el("p", { class: "hero-sub" }, headline(next)),
+      next.me ? billNode(next, "hero-bill") : el("p", { class: "hero-sub" }, headline(next)),
       el("div", { class: "hero-grid" },
         el("div", {},
           el("div", { style: { fontWeight: 700, fontSize: "16px" } }, cap(fFull.format(next.date))),
@@ -459,7 +486,7 @@
           el("div", { class: "fighter" }, el("b", {}, f.a.name), el("span", {}, [f.a.record, f.a.country].filter(Boolean).join(" · "))),
           el("div", { class: "vs" },
             el("b", {}, "VS"),
-            f.main_event ? el("div", {}, "Main event") : null,
+            f.main_event ? el("div", {}, "Main event") : f === e.co ? el("div", {}, "Co-main event") : null,
             f.title ? el("div", { class: "belt" }, "★ Titre") : null,
             f.weight || "",
           ),
@@ -496,7 +523,7 @@
       headline(e),
       ...e.segments.map((s) => `${s.label} : ${s.estimated ? "≈" : ""}${time(s.date)} — ${s.channels.map((c) => c.name + (c.free ? " (gratuit)" : "")).join(", ")}`),
       "",
-      ...e.fights.slice(0, 6).map((f) => `${f.a.name} vs ${f.b.name}${f.weight ? ` (${f.weight})` : ""}`),
+      ...e.fights.slice(0, 6).map((f, i) => `${i === 0 ? "Main event : " : i === 1 ? "Co-main : " : ""}${f.a.name} vs ${f.b.name}${f.weight ? ` (${f.weight})` : ""}`),
       e.url || "",
     ].join("\n");
     const ics = [
@@ -513,7 +540,7 @@
       href: URL.createObjectURL(new Blob([ics], { type: "text/calendar;charset=utf-8" })),
       download: `${e.id}.ics`,
     });
-    document.add(body, a);
+    document.body.append(a);
     a.click();
     setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
   }

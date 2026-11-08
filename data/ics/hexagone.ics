@@ -9,17 +9,17 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:hexagone-2026-11-27-hexagone-mma-49@calendrier-mma
-DTSTAMP:20261108T010702Z
+DTSTAMP:20261108T011409Z
 DTSTART:20261127T180000Z
 DTEND:20261127T230000Z
 SUMMARY:[Hexagone] Hexagone MMA 49
 LOCATION:Glaz Arena\, Cesson-Sevigne\, France
 DESCRIPTION:Prelims : 19h00 (estimée) — RMC Sport\nMain card : 21h00 (
- estimée) — RMC Sport 1\n\nTheo Ulrich vs Davy Gallon (Poids légers)\n
- Anthony Morel vs Tamerlan Albiekov (Poids lourds)\nAntero dos Santos vs G
- eorges Ngoma (Poids coqs)\nVaclav Zemla vs Louis Banhiet (Poids mi-moyens
- )\nAllan Landouzy vs Benjamin Molnar (Poids coqs)\nKalim Mastouri vs Math
- ieu Abbe (Poids mi-moyens)\nhttps://www.sherdog.com/events/HXMMA-49-Hexag
- one-MMA-49-114109
+ estimée) — RMC Sport 1\n\nMain event : Theo Ulrich vs Davy Gallon (Poi
+ ds légers ★ titre)\nCo-main : Anthony Morel vs Tamerlan Albiekov (Poid
+ s lourds ★ titre)\nAntero dos Santos vs Georges Ngoma (Poids coqs)\nVac
+ lav Zemla vs Louis Banhiet (Poids mi-moyens)\nAllan Landouzy vs Benjamin 
+ Molnar (Poids coqs)\nKalim Mastouri vs Mathieu Abbe (Poids mi-moyens)\nht
+ tps://www.sherdog.com/events/HXMMA-49-Hexagone-MMA-49-114109
 END:VEVENT
 END:VCALENDAR

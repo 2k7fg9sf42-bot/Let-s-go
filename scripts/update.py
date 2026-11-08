@@ -579,8 +579,10 @@ def build_ics(events: list[dict], orgs: dict, title: str) -> str:
             desc.append(f"{s['label']} : {t}{' (estimée)' if s['estimated'] else ''} — {ch}")
         if ev["fights"]:
             desc.append("")
-            for f in ev["fights"][:6]:
-                desc.append(f"{f['a']['name']} vs {f['b']['name']}" + (f" ({f['weight']})" if f["weight"] else ""))
+            for i, f in enumerate(ev["fights"][:6]):
+                prefix = "Main event : " if i == 0 else "Co-main : " if i == 1 else ""
+                belt = " ★ titre" if f.get("title") else ""
+                desc.append(f"{prefix}{f['a']['name']} vs {f['b']['name']}" + (f" ({f['weight']}{belt})" if f["weight"] else belt))
         if ev.get("notes"):
             desc.append("")
             desc.append(ev["notes"])
