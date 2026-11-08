@@ -1,0 +1,114 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Calendrier MMA//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:MMA — UFC
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:ufc-2026-11-07-ufc-fight-night@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261107T220000Z
+DTEND:20261108T040000Z
+SUMMARY:[UFC] UFC Fight Night : Cortes Acosta vs. Walker
+LOCATION:Meta APEX\, Las Vegas\, États-Unis
+DESCRIPTION:Cortes Acosta vs. Walker\nPrelims : 23h00 — RMC Sport\nMain
+  card : 02h00 — RMC Sport 1\n\nWaldo Cortes Acosta vs Johnny Walker (Po
+ ids lourds)\nTatiana Suarez vs Virna Jandiroba (Poids pailles (F))\nDavey
+  Grant vs Elijah Smith (Poids coqs)\nBilly Elekana vs Lucas Fernando (Poi
+ ds mi-lourds)\nPriscila Cachoeira vs Nina Milošević (Poids coqs (F))\nM
+ itch Raposo vs Marcos Degli (Poids mouches)\n\nSur certaines soirées\, u
+ ne partie de la main card passe aussi en clair sur RMC Découverte.\nhttp
+ s://www.espn.com/mma/fightcenter/_/id/600061268
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-2026-11-14-ufc-334@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261114T220000Z
+DTEND:20261115T050000Z
+SUMMARY:[UFC] UFC 334 : Gane vs. Hokit
+LOCATION:Madison Square Garden\, New York\, États-Unis
+DESCRIPTION:Gane vs. Hokit\nEarly prelims : 23h00 — UFC Fight Pass\nPre
+ lims : 01h00 — RMC Sport\nMain card : 03h00 — RMC Sport 1\n\nCiryl Ga
+ ne vs Josh Hokit (Poids lourds)\nKayla Harrison vs Amanda Nunes (Poids co
+ qs (F))\nCaio Borralho vs Yousri Belgaroui (Poids moyens)\nUroš Medić v
+ s Kevin Holland (Poids mi-moyens)\nBilal Hasan vs Luis Gurule (Poids mouc
+ hes)\nStephen Thompson vs Charles Radtke (Poids mi-moyens)\n\nSur certain
+ es soirées\, une partie de la main card passe aussi en clair sur RMC Dé
+ couverte.\nhttps://www.espn.com/mma/fightcenter/_/id/600061400/league/ufc
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-2026-11-21-ufc-fight-night@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261121T150000Z
+DTEND:20261121T210000Z
+SUMMARY:[UFC] UFC Fight Night : Procházka vs. Stirling
+LOCATION:ABHA Arena\, Doha\, Qatar
+DESCRIPTION:Procházka vs. Stirling\nPrelims : 16h00 — RMC Sport\nMain 
+ card : 19h00 — RMC Sport 1\n\nJiří Procházka vs Navajo Stirling (Poi
+ ds mi-lourds)\nAljamain Sterling vs Kevin Vallejos (Poids plumes)\nDan Ho
+ oker vs Brian Ortega (Poids légers)\nKyoji Horiguchi vs Asu Almabayev (P
+ oids mouches)\nJared Cannonier vs Ikram Aliskerov (Poids moyens)\nAleksan
+ dre Topuria vs Santiago Luna (Poids coqs)\n\nSur certaines soirées\, une
+  partie de la main card passe aussi en clair sur RMC Découverte.\nhttps:
+ //www.espn.com/mma/fightcenter/_/id/600061665/league/ufc
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-2026-12-12-ufc-335@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261212T220000Z
+DTEND:20261213T050000Z
+SUMMARY:[UFC] UFC 335 : Oliveira vs. Lopes
+LOCATION:T-Mobile Arena\, Las Vegas\, États-Unis
+DESCRIPTION:Oliveira vs. Lopes\nEarly prelims : 23h00 — UFC Fight Pass\
+ nPrelims : 01h00 — RMC Sport\nMain card : 03h00 — RMC Sport 1\n\nChar
+ les Oliveira vs Diego Lopes (Poids légers)\nSergei Pavlovich vs Alex Per
+ eira (Poids lourds)\nJoe Pyfer vs Bo Nickal (Poids moyens)\nBrandon Moren
+ o vs Charles Johnson (Poids mouches)\nMaycee Barber vs Carli Judice (Poid
+ s mouches (F))\nQuentin Pasley vs Junior Tafa (Poids mi-lourds)\n\nSur ce
+ rtaines soirées\, une partie de la main card passe aussi en clair sur RM
+ C Découverte.\nhttps://www.espn.com/mma/fightcenter/_/id/600061401/leagu
+ e/ufc
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-2027-01-16-ufc-fight-night@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20270116T220000Z
+DTEND:20270117T010000Z
+SUMMARY:[UFC] UFC Fight Night : Dallas
+LOCATION:American Airlines Center\, Dallas\, États-Unis
+DESCRIPTION:Dallas\nMain card : 23h00 (estimée) — RMC Sport 1\n\nSur c
+ ertaines soirées\, une partie de la main card passe aussi en clair sur R
+ MC Découverte.\nhttps://www.espn.com/mma/fightcenter/_/id/600062421/leag
+ ue/ufc
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-2027-01-31-ufc-336@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20270131T020000Z
+DTEND:20270131T050000Z
+SUMMARY:[UFC] UFC 336 : Van vs. Kape
+LOCATION:Scotiabank Arena\, Toronto\, Canada
+DESCRIPTION:Van vs. Kape\nMain card : 03h00 — RMC Sport 1\n\nJoshua Van
+  vs Manel Kape (Poids mouches)\nCarlos Prates vs Michael Morales (Poids m
+ i-moyens)\n\nSur certaines soirées\, une partie de la main card passe au
+ ssi en clair sur RMC Découverte.\nhttps://www.espn.com/mma/fightcenter/_
+ /id/600062191/league/ufc
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-2027-02-06-ufc-fight-night@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20270206T220000Z
+DTEND:20270207T010000Z
+SUMMARY:[UFC] UFC Fight Night : Salkilld vs. Saint Denis
+LOCATION:Afterpay Arena\, Sydney\, Australie
+DESCRIPTION:Salkilld vs. Saint Denis\nMain card : 23h00 — RMC Sport 1\n
+ \nQuillan Salkilld vs Benoît Saint Denis (Poids légers)\nBogdan Guskov 
+ vs Robert Whittaker (Poids mi-lourds)\nKaan Ofli vs Joanderson Brito (Poi
+ ds plumes)\nMarwan Rahiki vs JooSang Yoo (Poids plumes)\n\nSur certaines 
+ soirées\, une partie de la main card passe aussi en clair sur RMC Décou
+ verte.\nhttps://www.espn.com/mma/fightcenter/_/id/600062420/league/ufc
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,41 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Calendrier MMA//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:MMA — RIZIN
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:rizin-2026-11-08-rizin-55@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261108T050000Z
+DTEND:20261108T080000Z
+SUMMARY:[RIZIN] Rizin 55
+LOCATION:LaLa Arena Tokyo-Bay\, Funabashi\, Japon
+DESCRIPTION:Main card : 06h00 (estimée) — Rizin.tv / TrillerTV (PPV)\n
+ \nMakoto Takahashi vs Tony Laramie (Poids mouches)\nNaoki Inoue vs Yrysbe
+ k Tilenov (Poids coqs)\nRyuya Fukuda vs Soo Chul Kim (Poids coqs)\nJinnos
+ uke Kashimura vs Shinobu Ota (Poids coqs)\nKaleo Meheula vs Kazuki Aimoto
+  (Poids plumes)\nJuntaro Ushiku vs Kaiwen Li (Poids plumes)\n\nPas de dif
+ fuseur TV régulier en France : streaming payant uniquement.\nhttps://www
+ .sherdog.com/events/Rizin-FF-Rizin-55-113794
+END:VEVENT
+BEGIN:VEVENT
+UID:rizin-2026-12-31-super-rizin-6@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261231T050000Z
+DTEND:20261231T080000Z
+SUMMARY:[RIZIN] Super Rizin 6 : Shiwasu no Owarinagoya Gekokujo Matsuri
+LOCATION:Vantelin Dome Nagoya\, Nagoya\, Japon
+DESCRIPTION:Shiwasu no Owarinagoya Gekokujo Matsuri\nMain card : 06h00 (e
+ stimée) — Rizin.tv / TrillerTV (PPV)\n\nRajabali Shaidullaev vs Kyoma 
+ Akimoto (Poids plumes)\nLuiz Gustavo vs Mikuru Asakura (Poids légers)\nS
+ aori Oshima vs Natalia Kuziutina (108lb Catchweight)\nTsuyoshi Kamiyama v
+ s King Edokpolo (Poids lourds)\nSeika Izawa vs Unknown Fighter\nChihiro S
+ uzuki vs Ren Sugiyama (Poids plumes)\n\nPas de diffuseur TV régulier en 
+ France : streaming payant uniquement.\nhttps://www.sherdog.com/events/Riz
+ in-FF-Super-Rizin-6-Shiwasu-no-Owarinagoya-Gekokujo-Matsuri-113795
+END:VEVENT
+END:VCALENDAR

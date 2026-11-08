@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Calendrier MMA//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:MMA — PFL
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:pfl-2026-11-14-pfl-dubai@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261114T140000Z
+DTEND:20261114T210000Z
+SUMMARY:[PFL] PFL Dubai : Nemkov vs. Bilostenniy
+LOCATION:Coca-Cola Arena\, Dubai\, Émirats arabes unis
+DESCRIPTION:Nemkov vs. Bilostenniy\nPrelims : 15h00 — RMC Sport\, YouTu
+ be PFL (gratuit)\nMain card : 19h00 — RMC Sport 1\n\nVadim Nemkov vs Se
+ rgei Bilostenniy (Poids lourds)\nPatrick Habirora vs Omar El Dafrawy (Poi
+ ds mi-moyens)\nPouya Rahmani vs Oleg Popov (Poids lourds)\nAbubakar Nurma
+ gomedov vs David Martinez (Poids mi-moyens)\nSergio Pettis vs Joji Goto\n
+ Shem Rock vs Connor Hughes (Poids légers)\nhttps://www.espn.com/mma/figh
+ tcenter/_/id/600061421/league/pfl
+END:VEVENT
+BEGIN:VEVENT
+UID:pfl-2026-12-19-pfl-lyon@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261219T160000Z
+DTEND:20261219T230000Z
+SUMMARY:[PFL] PFL Lyon : Lapilus vs. McKee
+LOCATION:LDLC Arena\, Lyon\, France
+DESCRIPTION:Lapilus vs. McKee\nPrelims : 17h00 — RMC Sport\, YouTube PF
+ L (gratuit)\nMain card : 21h00 — RMC Sport 1\n\nTaylor Lapilus vs Mitch
+  McKee (Poids coqs)\nBoris Mbarga Atangana vs Bryan Battle (Poids moyens)
+ \nAbdoul Abdouraguimov vs Andreeas Binder (Poids mi-moyens)\nFabian Edwar
+ ds vs Ilian Bouafia (Poids moyens)\nBaris Adiguzel vs Liam Gittins (Poids
+  coqs)\nBafode Gassama vs Coby Bradford (Poids mi-lourds)\nhttps://www.es
+ pn.com/mma/fightcenter/_/id/600061422/league/pfl
+END:VEVENT
+END:VCALENDAR

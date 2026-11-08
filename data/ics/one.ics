@@ -1,0 +1,84 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Calendrier MMA//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:MMA — ONE
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:one-2026-11-13-one-friday-fights-178@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261113T123000Z
+DTEND:20261113T153000Z
+SUMMARY:[ONE] ONE Friday Fights 178
+LOCATION:Lumpinee Boxing Stadium\, Bangkok\, Thaïlande
+DESCRIPTION:Main card : 13h30 (estimée) — YouTube ONE Championship (gr
+ atuit)\n\nLes ONE Friday Fights sont surtout des combats de Muay Thai et 
+ de kickboxing.\nhttps://www.sherdog.com/events/One-Championship-One-Frida
+ y-Fights-178-114883
+END:VEVENT
+BEGIN:VEVENT
+UID:one-2026-11-18-one-samurai-5@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261118T103000Z
+DTEND:20261118T133000Z
+SUMMARY:[ONE] ONE Samurai 5
+LOCATION:Ebara Wave Arena Ota\, Ota\, Japon
+DESCRIPTION:Main card : 11h30 (estimée) — RMC Sport\n\nJoshua Pacio vs
+  Keito Yamakita (Poids mouches)\nTatsumitsu Wada vs Jarred Brooks (Poids 
+ mouches)\nRyugo Takeuchi vs Brandon Hashimoto (Poids lourds)\nShosuke Kin
+ oshita vs Takuya Shibamura (Poids légers)\nhttps://www.sherdog.com/event
+ s/One-Championship-ONE-Samurai-5-114378
+END:VEVENT
+BEGIN:VEVENT
+UID:one-2026-11-20-one-friday-fights-179@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261120T123000Z
+DTEND:20261120T153000Z
+SUMMARY:[ONE] ONE Friday Fights 179
+LOCATION:Lumpinee Boxing Stadium\, Bangkok\, Thaïlande
+DESCRIPTION:Main card : 13h30 (estimée) — YouTube ONE Championship (gr
+ atuit)\n\nAllycia Hellen Rodrigues vs Charlotte Padie (Poids pailles)\n\n
+ Les ONE Friday Fights sont surtout des combats de Muay Thai et de kickbox
+ ing.\nhttps://www.sherdog.com/events/One-Championship-One-Friday-Fights-1
+ 79-114882
+END:VEVENT
+BEGIN:VEVENT
+UID:one-2026-12-02-one-samurai-6@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261202T103000Z
+DTEND:20261202T133000Z
+SUMMARY:[ONE] ONE Samurai 6
+LOCATION:Yokohama Buntai\, Yokohama\, Japon
+DESCRIPTION:Main card : 11h30 (estimée) — RMC Sport\n\nChihiro Sawada 
+ vs Anastasia Nikolakakos (Poids pailles)\nhttps://www.sherdog.com/events/
+ One-Championship-ONE-Samurai-6-114889
+END:VEVENT
+BEGIN:VEVENT
+UID:one-2026-12-19-one-on-prime-video-50@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261219T010000Z
+DTEND:20261219T040000Z
+SUMMARY:[ONE] ONE on Prime Video 50
+LOCATION:Lumpinee Boxing Stadium\, Bangkok\, Thaïlande
+DESCRIPTION:Main card : 02h00 (estimée) — RMC Sport\n\nKade Ruotolo vs
+  Rae Yoon Ok (Poids mi-moyens)\nMaurice Abevi vs Dzhabir Dzhabrailov (Poi
+ ds moyens)\n\nLes ONE Fight Night se déroulent à l'heure américaine : 
+ la soirée tombe dans la nuit en France.\nhttps://www.sherdog.com/events/
+ One-Championship-One-on-Prime-Video-50-115087
+END:VEVENT
+BEGIN:VEVENT
+UID:one-2027-01-15-one-friday-fights-185@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20270115T123000Z
+DTEND:20270115T153000Z
+SUMMARY:[ONE] ONE Friday Fights 185
+LOCATION:Lumpinee Boxing Stadium\, Bangkok\, Thaïlande
+DESCRIPTION:Main card : 13h30 (estimée) — YouTube ONE Championship (gr
+ atuit)\n\nElbek Alyshov vs Carlo Bumina-ang (Poids plumes)\n\nLes ONE Fri
+ day Fights sont surtout des combats de Muay Thai et de kickboxing.\nhttps
+ ://www.sherdog.com/events/One-Championship-One-Friday-Fights-185-115278
+END:VEVENT
+END:VCALENDAR

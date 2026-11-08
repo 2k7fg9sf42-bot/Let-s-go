@@ -1,0 +1,89 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Calendrier MMA//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:MMA — Oktagon
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:oktagon-2026-11-21-oktagon-98@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261121T170000Z
+DTEND:20261121T220000Z
+SUMMARY:[Oktagon] Oktagon 98 : Legierski vs. Buchinger
+LOCATION:Werk Arena\, Třinec\, Tchéquie
+DESCRIPTION:Legierski vs. Buchinger\nPrelims : 18h00 (estimée) — Oktag
+ on.tv\nMain card : 20h00 (estimée) — RMC Sport\, Oktagon.tv\n\nMateusz
+  Legierski vs Ivan Buchinger (Poids légers)\nTomasz Mudroch vs Jason Pon
+ et (163lb Catchweight)\nVeronika Smolkova vs Ivana Petrovic (Poids mouche
+ s)\nJakub Batfalsky vs Ayton De Paepe (Poids plumes)\nMatej Penaz vs Unkn
+ own Fighter (Poids moyens)\nHojat Khajevand vs Mateusz Janur (Poids moyen
+ s)\nhttps://www.sherdog.com/events/Oktagon-MMA-Oktagon-98-Legierski-vs-Bu
+ chinger-114298
+END:VEVENT
+BEGIN:VEVENT
+UID:oktagon-2026-12-05-oktagon-99@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261205T170000Z
+DTEND:20261205T220000Z
+SUMMARY:[Oktagon] Oktagon 99 : Aras vs. Flores
+LOCATION:Westfalenhalle\, Dortmund\, Allemagne
+DESCRIPTION:Aras vs. Flores\nPrelims : 18h00 (estimée) — Oktagon.tv\nM
+ ain card : 20h00 (estimée) — RMC Sport\, Oktagon.tv\n\nKasim Aras vs T
+ y Flores (Poids lourds)\nPatrick Vespaziani vs Nicolaj Wagner (Poids lour
+ ds)\nMarc Doussis vs Adam Palasz (Poids lourds)\nAli Gunduz vs Abdullah S
+ ultani (Poids coqs)\nEmir-Can Al vs Adam Havran (Poids mi-moyens)\nMurat 
+ Tuysuz vs Jan Stanovsky (Poids légers)\nhttps://www.sherdog.com/events/O
+ ktagon-MMA-Oktagon-99-Aras-vs-Flores-114299
+END:VEVENT
+BEGIN:VEVENT
+UID:oktagon-2026-12-29-oktagon-100@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261229T170000Z
+DTEND:20261229T220000Z
+SUMMARY:[Oktagon] Oktagon 100
+LOCATION:O2 Arena\, Prague\, Tchéquie
+DESCRIPTION:Prelims : 18h00 (estimée) — Oktagon.tv\nMain card : 20h00 
+ (estimée) — RMC Sport\, Oktagon.tv\n\nKrzysztof Jotko vs Makhmud Murad
+ ov (Poids moyens)\nKarlos Vemola vs Tomasz Narkun (Poids mi-lourds)\nRobi
+ n Fosum vs Marek Mazuch (Poids mi-lourds)\nhttps://www.sherdog.com/events
+ /Oktagon-MMA-Oktagon-100-114300
+END:VEVENT
+BEGIN:VEVENT
+UID:oktagon-2027-01-16-oktagon-101@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20270116T170000Z
+DTEND:20270116T220000Z
+SUMMARY:[Oktagon] Oktagon 101 : Dalaslan vs. Kinehan
+LOCATION:Hanns-Martin-Schleyer-Halle\, Stuttgart\, Allemagne
+DESCRIPTION:Dalaslan vs. Kinehan\nPrelims : 18h00 (estimée) — Oktagon.
+ tv\nMain card : 20h00 (estimée) — RMC Sport\, Oktagon.tv\n\nAlina Dala
+ slan vs Niamh Kinehan (Poids coqs)\nhttps://www.sherdog.com/events/Oktago
+ n-MMA-Oktagon-101-Dalaslan-vs-Kinehan-115071
+END:VEVENT
+BEGIN:VEVENT
+UID:oktagon-2027-01-30-oktagon-102@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20270130T170000Z
+DTEND:20270130T220000Z
+SUMMARY:[Oktagon] Oktagon 102 : Kincl vs. Humburger
+LOCATION:Home Credit Arena\, Liberec\, Tchéquie
+DESCRIPTION:Kincl vs. Humburger\nPrelims : 18h00 (estimée) — Oktagon.t
+ v\nMain card : 20h00 (estimée) — RMC Sport\, Oktagon.tv\n\nPatrik Kinc
+ l vs Dominik Humburger (Poids moyens)\nhttps://www.sherdog.com/events/Okt
+ agon-MMA-Oktagon-102-Kincl-vs-Humburger-115083
+END:VEVENT
+BEGIN:VEVENT
+UID:oktagon-2027-02-20-oktagon-103@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20270220T170000Z
+DTEND:20270220T220000Z
+SUMMARY:[Oktagon] Oktagon 103
+LOCATION:Wiener Stadthalle\, Vienna\, Autriche
+DESCRIPTION:Prelims : 18h00 (estimée) — Oktagon.tv\nMain card : 20h00 
+ (estimée) — RMC Sport\, Oktagon.tv\nhttps://www.sherdog.com/events/Okt
+ agon-MMA-Oktagon-103-115279
+END:VEVENT
+END:VCALENDAR

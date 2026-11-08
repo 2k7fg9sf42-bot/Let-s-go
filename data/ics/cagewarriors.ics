@@ -1,0 +1,72 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Calendrier MMA//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:MMA — Cage Warriors
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:cagewarriors-2026-11-14-cage-warriors-213@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261114T180000Z
+DTEND:20261114T230000Z
+SUMMARY:[Cage Warriors] Cage Warriors 213 : London
+LOCATION:BBC Studioworks Television Centre\, London\, Angleterre
+DESCRIPTION:London\nPrelims : 19h00 (estimée) — UFC Fight Pass\nMain c
+ ard : 21h00 (estimée) — RMC Sport\, UFC Fight Pass\n\nNik Bagley vs Br
+ uno Souza (Poids plumes)\nJawany Scott vs Willians Nogueira (Poids mouche
+ s)\nOllie Sarwa vs Ieuan Mackenzie (140lb Catchweight)\nShirzad Qadrian v
+ s Manoel Costa (Poids coqs)\nMarin Vetrila vs Stefano Catacoli (Poids lé
+ gers)\nSteven Hill vs Sado Ucar (Poids mi-moyens)\nhttps://www.sherdog.co
+ m/events/CW-213-Cage-Warriors-213-London-114779
+END:VEVENT
+BEGIN:VEVENT
+UID:cagewarriors-2026-11-27-cage-warriors-214@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261127T180000Z
+DTEND:20261127T230000Z
+SUMMARY:[Cage Warriors] Cage Warriors 214 : Unplugged
+LOCATION:BEC Arena\, Manchester\, Angleterre
+DESCRIPTION:Unplugged\nPrelims : 19h00 (estimée) — UFC Fight Pass\nMai
+ n card : 21h00 (estimée) — RMC Sport\, UFC Fight Pass\n\nAlexander Loo
+ f vs Oscar Ownsworth (Poids plumes)\nTanio Pagliariccio vs Igor Wojtas (P
+ oids mouches)\nJordan O'Neill vs Christopher Bajo (Poids mi-moyens)\nElsa
+  Cerezo vs Chloe Crozier (Poids mouches)\nNathanael Woods vs Angelo Maria
+  Terenzio (Poids mouches)\nMohamed El Karchouh vs Kevin Kehoe (150lb Catc
+ hweight)\nhttps://www.sherdog.com/events/CW-214-Cage-Warriors-214-Unplugg
+ ed-114549
+END:VEVENT
+BEGIN:VEVENT
+UID:cagewarriors-2026-11-28-cage-warriors-215@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261128T180000Z
+DTEND:20261128T230000Z
+SUMMARY:[Cage Warriors] Cage Warriors 215 : Manchester
+LOCATION:BEC Arena\, Manchester\, Angleterre
+DESCRIPTION:Manchester\nPrelims : 19h00 (estimée) — UFC Fight Pass\nMa
+ in card : 21h00 (estimée) — RMC Sport\, UFC Fight Pass\n\nIeuan Davies
+  vs Jordan Vucenic (Poids légers)\nShay Ingram vs Steffen Rossevatn (Poi
+ ds mi-moyens)\nOmiel Brown vs Konstantinos Ntelis (Poids légers)\nNathan
+  Fletcher vs Anderson Souza Soares (Poids coqs)\nAdam Cullen vs Jefferson
+  Andre (Poids légers)\nJack Humphries vs Alexandros Moumtzis (Poids coqs
+ )\nhttps://www.sherdog.com/events/CW-215-Cage-Warriors-215-Manchester-114
+ 550
+END:VEVENT
+BEGIN:VEVENT
+UID:cagewarriors-2026-12-05-cage-warriors-216@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261205T180000Z
+DTEND:20261205T230000Z
+SUMMARY:[Cage Warriors] Cage Warriors 216 : Newcastle
+LOCATION:Vertu Arena\, Newcastle\, Angleterre
+DESCRIPTION:Newcastle\nPrelims : 19h00 (estimée) — UFC Fight Pass\nMai
+ n card : 21h00 (estimée) — RMC Sport\, UFC Fight Pass\n\nGeorge Hardwi
+ ck vs Gavin Hughes (Poids légers)\nJustin Burlinson vs Farshad Nazarnia 
+ (Poids moyens)\nJack Foote vs Unknown Fighter (Poids coqs)\nChris Bungard
+  vs Unknown Fighter (Poids légers)\nLeon Armes vs Manny Akpan (148lb Cat
+ chweight)\nMilad Ahady vs Alexander O'Sullivan (Poids plumes)\nhttps://ww
+ w.sherdog.com/events/CW-216-Cage-Warriors-216-Newcastle-114629
+END:VEVENT
+END:VCALENDAR

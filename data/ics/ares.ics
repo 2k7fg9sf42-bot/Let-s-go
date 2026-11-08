@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Calendrier MMA//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:MMA — ARES
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:ares-2026-11-20-ares-45@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261120T183000Z
+DTEND:20261120T223000Z
+SUMMARY:[ARES] ARES 45 : Zebo vs. Baki 2
+LOCATION:Adidas Arena\, Paris\, France
+DESCRIPTION:Zebo vs. Baki 2\nPrelims : 19h30 (estimée) — Twitch Canal+
+  (gratuit)\nMain card : 20h30 (estimée) — Canal+ Sport 360\n\nJordan Z
+ ebo vs Baissangour Chamsoudinov (Poids mi-moyens)\nGhassen Jbalia vs Modi
+ bo Diakite (Poids coqs)\nAmir Aliev vs Adionai Maciel (Poids coqs)\nNimo 
+ Djagbo vs Nikodem Blazejewski (Poids mi-moyens)\nMarvin Caperan vs Bruno 
+ Pudins (Poids mi-moyens)\nSarah Moussaddak vs Dina da Silva Barbosa (Poid
+ s pailles)\nhttps://www.sherdog.com/events/ARES-45-Zebo-vs-Baki-2-112453
+END:VEVENT
+BEGIN:VEVENT
+UID:ares-2026-12-11-ares-46@calendrier-mma
+DTSTAMP:20261108T010702Z
+DTSTART:20261211T183000Z
+DTEND:20261211T223000Z
+SUMMARY:[ARES] ARES 46 : Jorand vs. Jendrasik
+LOCATION:Adidas Arena\, Paris\, France
+DESCRIPTION:Jorand vs. Jendrasik\nPrelims : 19h30 (estimée) — Twitch C
+ anal+ (gratuit)\nMain card : 20h30 (estimée) — Canal+ Sport 360\n\nJad
+ e Jorand vs Kinga Jendrasik (Poids pailles)\nAlexis Nicolas vs Bilal Bakh
+ ouche-Chareuf (Poids mi-moyens)\nJean Magny vs Unknown Fighter\nBogdan Oz
+ doev vs Unknown Fighter\nhttps://www.sherdog.com/events/ARES-46-Jorand-vs
+ -Jendrasik-114552
+END:VEVENT
+END:VCALENDAR
