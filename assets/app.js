@@ -6,6 +6,8 @@
   const LOCALE = "fr-FR";
   const STORE_KEY = "mma-cal-prefs-v1";
   const REGION_LABELS = { international: "Internationales", france: "France", europe: "Europe" };
+  // Dans une page claude.ai, le thème, les téléchargements et le mode hors ligne sont gérés par Claude.
+  const IN_CLAUDE = typeof window.claude !== "undefined";
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const el = (tag, attrs = {}, ...children) => {
@@ -102,6 +104,10 @@
 
   // ---------- Thème ----------
   function initTheme(prefs) {
+    if (IN_CLAUDE) {
+      $("#theme-btn").hidden = true;
+      return;
+    }
     const apply = (t) => document.documentElement.setAttribute("data-theme", t);
     const sys = window.matchMedia("(prefers-color-scheme: light)");
     apply(prefs.theme || (sys.matches ? "light" : "dark"));
@@ -111,7 +117,7 @@
     $("#theme-btn").addEventListener("click", () => {
       const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
       apply(next);
-      document.querySelector('meta[name="theme-color"]').setAttribute("content", next === "light" ? "#f4f5f8" : "#0d0f14");
+      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", next === "light" ? "#f4f5f8" : "#0d0f14");
       savePrefs({ theme: next });
     });
   }
@@ -498,11 +504,17 @@
       add(body, el("p", { class: "notice muted" }, "La carte des combats n'est pas encore annoncée."));
     }
 
-    add(body, el("div", { class: "actions" },
-      el("button", { class: "btn", type: "button", onclick: () => downloadIcs(e) }, "Ajouter à mon agenda"),
-      navigator.share ? el("button", { class: "btn ghost", type: "button", onclick: () => shareEvent(e) }, "Partager") : null,
-      e.url ? el("a", { class: "btn ghost", href: e.url, target: "_blank", rel: "noopener" }, `Voir sur ${e.source}`) : null,
-    ));
+    add(body, el("h3", {}, "Ajouter à mon agenda"),
+      el("div", { class: "actions" },
+        IN_CLAUDE ? null : el("button", { class: "btn", type: "button", onclick: () => downloadIcs(e) }, "iPhone / autre agenda (.ics)"),
+        el("a", { class: IN_CLAUDE ? "btn" : "btn ghost", href: googleCalUrl(e), target: "_blank", rel: "noopener" }, "Google Agenda"),
+        el("a", { class: "btn ghost", href: outlookUrl(e), target: "_blank", rel: "noopener" }, "Outlook"),
+      ),
+      el("div", { class: "actions" },
+        !IN_CLAUDE && navigator.share ? el("button", { class: "btn ghost", type: "button", onclick: () => shareEvent(e) }, "Partager") : null,
+        e.url ? el("a", { class: "btn ghost", href: e.url, target: "_blank", rel: "noopener" }, `Voir sur ${e.source}`) : null,
+      ),
+    );
     if (!dlg.open) dlg.showModal();
     body.scrollTop = 0;
   }
@@ -516,22 +528,52 @@
   // ---------- Fichiers .ics ----------
   const icsDate = (d) => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
   const icsEsc = (s) => String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
-  function downloadIcs(e) {
+  const eventEnd = (e) => {
     const main = e.segments.find((s) => s.key === "main") || e.segments[e.segments.length - 1];
-    const end = new Date(main.date.getTime() + 3 * 3600e3);
-    const desc = [
-      headline(e),
-      ...e.segments.map((s) => `${s.label} : ${s.estimated ? "≈" : ""}${time(s.date)} — ${s.channels.map((c) => c.name + (c.free ? " (gratuit)" : "")).join(", ")}`),
-      "",
-      ...e.fights.slice(0, 6).map((f, i) => `${i === 0 ? "Main event : " : i === 1 ? "Co-main : " : ""}${f.a.name} vs ${f.b.name}${f.weight ? ` (${f.weight})` : ""}`),
-      e.url || "",
-    ].join("\n");
+    return new Date(main.date.getTime() + 3 * 3600e3);
+  };
+  const eventSummary = (e) => `[${orgName(e.org)}] ${e.name}${headline(e) ? ` : ${headline(e)}` : ""}`;
+  const eventPlace = (e) => [e.venue, e.city, e.country].filter(Boolean).join(", ");
+  const eventDescription = (e) => [
+    ...e.segments.map((s) => `${s.label} : ${s.estimated ? "≈" : ""}${time(s.date)} — ${s.channels.map((c) => c.name + (c.free ? " (gratuit)" : "")).join(", ")}`),
+    "",
+    ...e.fights.slice(0, 6).map((f, i) => `${i === 0 ? "Main event : " : i === 1 ? "Co-main : " : ""}${f.a.name} vs ${f.b.name}${f.weight ? ` (${f.weight})` : ""}`),
+    e.url || "",
+  ].join("\n");
+
+  function googleCalUrl(e) {
+    const p = new URLSearchParams({
+      action: "TEMPLATE",
+      text: eventSummary(e),
+      dates: `${icsDate(e.date)}/${icsDate(eventEnd(e))}`,
+      details: eventDescription(e),
+      location: eventPlace(e),
+    });
+    return `https://calendar.google.com/calendar/render?${p}`;
+  }
+
+  function outlookUrl(e) {
+    const p = new URLSearchParams({
+      path: "/calendar/action/compose",
+      rru: "addevent",
+      subject: eventSummary(e),
+      startdt: e.date.toISOString(),
+      enddt: eventEnd(e).toISOString(),
+      body: eventDescription(e),
+      location: eventPlace(e),
+    });
+    return `https://outlook.live.com/calendar/0/deeplink/compose?${p}`;
+  }
+
+  function downloadIcs(e) {
+    const end = eventEnd(e);
+    const desc = eventDescription(e);
     const ics = [
       "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Calendrier MMA//FR", "BEGIN:VEVENT",
       `UID:${e.id}@calendrier-mma`, `DTSTAMP:${icsDate(new Date())}`,
       `DTSTART:${icsDate(e.date)}`, `DTEND:${icsDate(end)}`,
-      `SUMMARY:${icsEsc(`[${orgName(e.org)}] ${e.name}${headline(e) ? ` : ${headline(e)}` : ""}`)}`,
-      `LOCATION:${icsEsc([e.venue, e.city, e.country].filter(Boolean).join(", "))}`,
+      `SUMMARY:${icsEsc(eventSummary(e))}`,
+      `LOCATION:${icsEsc(eventPlace(e))}`,
       `DESCRIPTION:${icsEsc(desc)}`,
       "BEGIN:VALARM", "TRIGGER:-PT1H", "ACTION:DISPLAY", `DESCRIPTION:${icsEsc(e.name)}`, "END:VALARM",
       "END:VEVENT", "END:VCALENDAR",
@@ -615,7 +657,8 @@
     });
     $("#free-only").checked = state.freeOnly;
     $("#free-only").addEventListener("change", (ev) => { state.freeOnly = ev.target.checked; update(); });
-    $("#subscribe-btn").addEventListener("click", openSubscribe);
+    if (IN_CLAUDE) $("#subscribe-btn").hidden = true;
+    else $("#subscribe-btn").addEventListener("click", openSubscribe);
     for (const dlg of document.querySelectorAll("dialog")) {
       dlg.addEventListener("click", (ev) => { if (ev.target === dlg) dlg.close(); });
     }
@@ -637,7 +680,7 @@
         el("div", { class: "muted small" }, String(err)),
       ));
     }
-    if ("serviceWorker" in navigator && location.protocol === "https:") {
+    if (!IN_CLAUDE && "serviceWorker" in navigator && location.protocol === "https:") {
       navigator.serviceWorker.register("sw.js").catch(() => {});
     }
   }

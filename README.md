@@ -71,6 +71,12 @@ Pour lancer une mise à jour à la main : onglet **Actions** → **Run workflow*
 
 - **Pour toute une organisation** (nouvelle chaîne, horaires habituels…), modifie `config/organizations.json`. Tu peux aussi y ajouter une organisation : il suffit de trouver son adresse Sherdog (`sherdog.com/organizations/...`).
 
+## Version claude.ai (sans GitHub Pages)
+
+L'app est aussi publiée sur une page claude.ai, mise à jour chaque lundi par une tâche programmée dans Claude.
+`python3 scripts/build_artifact.py` fabrique `artifact/index.html` (styles et script intégrés) ; la page est publiée avec les fichiers `data/events.json` et `icons/icon-192.png`.
+Sur cette version, le thème suit celui de Claude, et l'ajout à l'agenda passe par Google Agenda ou Outlook (pas d'abonnement .ics).
+
 ## Structure
 
 ```

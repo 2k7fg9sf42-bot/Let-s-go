@@ -17,6 +17,24 @@
   color-scheme: dark;
 }
 
+/* Thème clair : réglage du système, ou choix explicite (bouton, ou thème de Claude). */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f4f5f8;
+    --bg-2: #ffffff;
+    --card: #ffffff;
+    --card-2: #f1f3f7;
+    --line: #e1e5ec;
+    --text: #12151c;
+    --muted: #5e6778;
+    --accent: #e01e1e;
+    --free: #0f9d58;
+    --warn: #b7791f;
+    --shadow: 0 8px 24px rgba(20, 24, 33, .08);
+    color-scheme: light;
+  }
+}
+
 :root[data-theme="light"] {
   --bg: #f4f5f8;
   --bg-2: #ffffff;
@@ -33,7 +51,16 @@
 }
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+/* Bande sous la barre d'état du téléphone, pour que rien ne défile dessous. */
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; z-index: 30;
+  height: env(safe-area-inset-top, 0px); background: var(--bg);
+}
 body {
   margin: 0;
   background: var(--bg);
@@ -43,19 +70,22 @@ body {
 }
 a { color: inherit; }
 button { font: inherit; color: inherit; }
-.wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+.wrap {
+  max-width: 980px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
 .muted { color: var(--muted); }
 .small { font-size: 13px; }
 [hidden] { display: none !important; }
 
 /* ---------- En-tête ---------- */
 .top {
-  position: sticky; top: 0; z-index: 20;
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
   background: color-mix(in srgb, var(--bg) 85%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
-  padding-top: env(safe-area-inset-top);
 }
 .top-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 10px; padding-bottom: 10px; }
 .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
@@ -284,3 +314,5 @@ dialog.sheet::backdrop { background: rgba(5, 7, 10, .6); backdrop-filter: blur(3
   .seg { grid-template-columns: 86px 52px 1fr; }
   .seg-label { font-size: 12.5px; white-space: nowrap; }
 }
+.sheet h3 + .actions { margin-top: 0; }
+.actions + .actions { margin-top: 10px; }
