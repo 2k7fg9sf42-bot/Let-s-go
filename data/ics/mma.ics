@@ -8,32 +8,8 @@ X-WR-TIMEZONE:Europe/Paris
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
-UID:oktagon-2026-11-11-oktagon@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20261111T170000Z
-DTEND:20261111T220000Z
-SUMMARY:[Oktagon] Oktagon : Cage Game 2
-LOCATION:Bobyhall Brno\, Brno\, Tchéquie
-DESCRIPTION:Cage Game 2\nPrelims : 18h00 (estimée) — Oktagon.tv\nMain 
- card : 20h00 (estimée) — RMC Sport\, Oktagon.tv\nhttps://www.sherdog.c
- om/events/Oktagon-MMA-Oktagon-Cage-Game-2-115319
-END:VEVENT
-BEGIN:VEVENT
-UID:one-2026-11-13-one-friday-fights-178@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20261113T123000Z
-DTEND:20261113T153000Z
-SUMMARY:[ONE] ONE Friday Fights 178
-LOCATION:Lumpinee Boxing Stadium\, Bangkok\, Thaïlande
-DESCRIPTION:Main card : 13h30 (estimée) — YouTube ONE Championship (gr
- atuit)\n\nMain event : Natakorn Kasorn vs Mathew Gesto (Poids mouches)\nC
- o-main : Su Hyun Kim vs Takumi Fukamachi (Poids plumes)\n\nLes ONE Friday
-  Fights sont surtout des combats de Muay Thai et de kickboxing.\nhttps://
- www.sherdog.com/events/One-Championship-One-Friday-Fights-178-114883
-END:VEVENT
-BEGIN:VEVENT
 UID:pfl-2026-11-14-pfl-dubai@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261114T140000Z
 DTEND:20261114T210000Z
 SUMMARY:[PFL] PFL Dubai : Nemkov vs. Bilostenniy
@@ -48,7 +24,7 @@ DESCRIPTION:Nemkov vs. Bilostenniy\nPrelims : 15h00 — RMC Sport\, YouTu
 END:VEVENT
 BEGIN:VEVENT
 UID:cagewarriors-2026-11-14-cage-warriors-213@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261114T180000Z
 DTEND:20261114T230000Z
 SUMMARY:[Cage Warriors] Cage Warriors 213 : London
@@ -64,7 +40,7 @@ DESCRIPTION:London\nPrelims : 19h00 (estimée) — UFC Fight Pass\nMain c
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-2026-11-14-ufc-334@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261114T220000Z
 DTEND:20261115T050000Z
 SUMMARY:[UFC] UFC 334 : Gane vs. Hokit
@@ -80,34 +56,8 @@ DESCRIPTION:Gane vs. Hokit\nEarly prelims : 23h00 — UFC Fight Pass\nPre
  id/600061400/league/ufc
 END:VEVENT
 BEGIN:VEVENT
-UID:one-2026-11-18-one-samurai-5@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20261118T103000Z
-DTEND:20261118T133000Z
-SUMMARY:[ONE] ONE Samurai 5
-LOCATION:Ebara Wave Arena Ota\, Ota\, Japon
-DESCRIPTION:Main card : 11h30 (estimée) — RMC Sport\n\nMain event : Jo
- shua Pacio vs Keito Yamakita (Poids mouches ★ titre)\nCo-main : Tatsumi
- tsu Wada vs Jarred Brooks (Poids mouches)\nRyugo Takeuchi vs Brandon Hash
- imoto (Poids lourds)\nShosuke Kinoshita vs Takuya Shibamura (Poids léger
- s)\nhttps://www.sherdog.com/events/One-Championship-ONE-Samurai-5-114378
-END:VEVENT
-BEGIN:VEVENT
-UID:one-2026-11-20-one-friday-fights-179@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20261120T123000Z
-DTEND:20261120T153000Z
-SUMMARY:[ONE] ONE Friday Fights 179
-LOCATION:Lumpinee Boxing Stadium\, Bangkok\, Thaïlande
-DESCRIPTION:Main card : 13h30 (estimée) — YouTube ONE Championship (gr
- atuit)\n\nMain event : Allycia Hellen Rodrigues vs Charlotte Padie (Poids
-  pailles)\n\nLes ONE Friday Fights sont surtout des combats de Muay Thai 
- et de kickboxing.\nhttps://www.sherdog.com/events/One-Championship-One-Fr
- iday-Fights-179-114882
-END:VEVENT
-BEGIN:VEVENT
 UID:ares-2026-11-20-ares-45@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261120T183000Z
 DTEND:20261120T223000Z
 SUMMARY:[ARES] ARES 45 : Zebo vs. Baki 2
@@ -123,7 +73,7 @@ DESCRIPTION:Zebo vs. Baki 2\nPrelims : 19h30 (estimée) — Twitch Canal+
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-2026-11-21-ufc-fight-night@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261121T150000Z
 DTEND:20261121T210000Z
 SUMMARY:[UFC] UFC Fight Night : Procházka vs. Stirling
@@ -139,24 +89,8 @@ DESCRIPTION:Procházka vs. Stirling\nPrelims : 16h00 — RMC Sport\nMain
  ue/ufc
 END:VEVENT
 BEGIN:VEVENT
-UID:oktagon-2026-11-21-oktagon-98@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20261121T170000Z
-DTEND:20261121T220000Z
-SUMMARY:[Oktagon] Oktagon 98 : Legierski vs. Buchinger
-LOCATION:Werk Arena\, Třinec\, Tchéquie
-DESCRIPTION:Legierski vs. Buchinger\nPrelims : 18h00 (estimée) — Oktag
- on.tv\nMain card : 20h00 (estimée) — RMC Sport\, Oktagon.tv\n\nMain ev
- ent : Mateusz Legierski vs Ivan Buchinger (Poids légers ★ titre)\nCo-m
- ain : Tomasz Mudroch vs Jason Ponet (163lb Catchweight)\nVeronika Smolkov
- a vs Ivana Petrovic (Poids mouches)\nJakub Batfalsky vs Ayton De Paepe (P
- oids plumes)\nMatej Penaz vs Unknown Fighter (Poids moyens)\nHojat Khajev
- and vs Mateusz Janur (Poids moyens)\nhttps://www.sherdog.com/events/Oktag
- on-MMA-Oktagon-98-Legierski-vs-Buchinger-114298
-END:VEVENT
-BEGIN:VEVENT
 UID:ksw-2026-11-21-ksw-123@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261121T190000Z
 DTEND:20261121T220000Z
 SUMMARY:[KSW] KSW 123 : Bartosinski vs. Lopaczyk
@@ -172,7 +106,7 @@ DESCRIPTION:Bartosinski vs. Lopaczyk\nMain card : 20h00 (estimée) — RM
 END:VEVENT
 BEGIN:VEVENT
 UID:cagewarriors-2026-11-27-cage-warriors-214@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261127T180000Z
 DTEND:20261127T230000Z
 SUMMARY:[Cage Warriors] Cage Warriors 214 : Unplugged
@@ -188,7 +122,7 @@ DESCRIPTION:Unplugged\nPrelims : 19h00 (estimée) — UFC Fight Pass\nMai
 END:VEVENT
 BEGIN:VEVENT
 UID:hexagone-2026-11-27-hexagone-mma-49@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261127T180000Z
 DTEND:20261127T230000Z
 SUMMARY:[Hexagone] Hexagone MMA 49
@@ -203,7 +137,7 @@ DESCRIPTION:Prelims : 19h00 (estimée) — RMC Sport\nMain card : 21h00 (
 END:VEVENT
 BEGIN:VEVENT
 UID:cagewarriors-2026-11-28-cage-warriors-215@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261128T180000Z
 DTEND:20261128T230000Z
 SUMMARY:[Cage Warriors] Cage Warriors 215 : Manchester
@@ -218,19 +152,8 @@ DESCRIPTION:Manchester\nPrelims : 19h00 (estimée) — UFC Fight Pass\nMa
  -Cage-Warriors-215-Manchester-114550
 END:VEVENT
 BEGIN:VEVENT
-UID:one-2026-12-02-one-samurai-6@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20261202T103000Z
-DTEND:20261202T133000Z
-SUMMARY:[ONE] ONE Samurai 6
-LOCATION:Yokohama Buntai\, Yokohama\, Japon
-DESCRIPTION:Main card : 11h30 (estimée) — RMC Sport\n\nMain event : Ch
- ihiro Sawada vs Anastasia Nikolakakos (Poids pailles ★ titre)\nhttps://
- www.sherdog.com/events/One-Championship-ONE-Samurai-6-114889
-END:VEVENT
-BEGIN:VEVENT
 UID:ufc-2026-12-05-ufc-fight-night@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261205T150000Z
 DTEND:20261205T210000Z
 SUMMARY:[UFC] UFC Fight Night : Adesanya vs Magomedov
@@ -246,23 +169,8 @@ DESCRIPTION:Adesanya vs Magomedov\nPrelims : 16h00 — RMC Sport\nMain ca
  gue/ufc
 END:VEVENT
 BEGIN:VEVENT
-UID:oktagon-2026-12-05-oktagon-99@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20261205T170000Z
-DTEND:20261205T220000Z
-SUMMARY:[Oktagon] Oktagon 99 : Aras vs. Flores
-LOCATION:Westfalenhalle\, Dortmund\, Allemagne
-DESCRIPTION:Aras vs. Flores\nPrelims : 18h00 (estimée) — Oktagon.tv\nM
- ain card : 20h00 (estimée) — RMC Sport\, Oktagon.tv\n\nMain event : Ka
- sim Aras vs Ty Flores (Poids lourds)\nCo-main : Patrick Vespaziani vs Nic
- olaj Wagner (Poids lourds)\nMarc Doussis vs Adam Palasz (Poids lourds)\nA
- li Gunduz vs Abdullah Sultani (Poids coqs)\nEmir-Can Al vs Adam Havran (P
- oids mi-moyens)\nMurat Tuysuz vs Jan Stanovsky (Poids légers)\nhttps://w
- ww.sherdog.com/events/Oktagon-MMA-Oktagon-99-Aras-vs-Flores-114299
-END:VEVENT
-BEGIN:VEVENT
 UID:cagewarriors-2026-12-05-cage-warriors-216@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261205T180000Z
 DTEND:20261205T230000Z
 SUMMARY:[Cage Warriors] Cage Warriors 216 : Newcastle
@@ -278,7 +186,7 @@ DESCRIPTION:Newcastle\nPrelims : 19h00 (estimée) — UFC Fight Pass\nMai
 END:VEVENT
 BEGIN:VEVENT
 UID:ares-2026-12-11-ares-46@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261211T183000Z
 DTEND:20261211T223000Z
 SUMMARY:[ARES] ARES 46 : Jorand vs. Jendrasik
@@ -292,7 +200,7 @@ DESCRIPTION:Jorand vs. Jendrasik\nPrelims : 19h30 (estimée) — Twitch C
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-2026-12-12-ufc-335@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261212T220000Z
 DTEND:20261213T050000Z
 SUMMARY:[UFC] UFC 335 : Oliveira vs. Lopes
@@ -308,21 +216,8 @@ DESCRIPTION:Oliveira vs. Lopes\nEarly prelims : 23h00 — UFC Fight Pass\
  er/_/id/600061401/league/ufc
 END:VEVENT
 BEGIN:VEVENT
-UID:one-2026-12-19-one-on-prime-video-50@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20261219T010000Z
-DTEND:20261219T040000Z
-SUMMARY:[ONE] ONE on Prime Video 50
-LOCATION:Lumpinee Boxing Stadium\, Bangkok\, Thaïlande
-DESCRIPTION:Main card : 02h00 (estimée) — RMC Sport\n\nMain event : Ka
- de Ruotolo vs Rae Yoon Ok (Poids mi-moyens)\nCo-main : Maurice Abevi vs D
- zhabir Dzhabrailov (Poids moyens)\n\nLes ONE Fight Night se déroulent à
-  l'heure américaine : la soirée tombe dans la nuit en France.\nhttps://
- www.sherdog.com/events/One-Championship-One-on-Prime-Video-50-115087
-END:VEVENT
-BEGIN:VEVENT
 UID:pfl-2026-12-19-pfl-lyon@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261219T160000Z
 DTEND:20261219T230000Z
 SUMMARY:[PFL] PFL Lyon : Lapilus vs. McKee
@@ -337,7 +232,7 @@ DESCRIPTION:Lapilus vs. McKee\nPrelims : 17h00 — RMC Sport\, YouTube PF
 END:VEVENT
 BEGIN:VEVENT
 UID:ksw-2026-12-19-ksw-124@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261219T190000Z
 DTEND:20261219T220000Z
 SUMMARY:[KSW] KSW 124 : Pawlak vs. Kuberski
@@ -351,63 +246,20 @@ DESCRIPTION:Pawlak vs. Kuberski\nMain card : 20h00 (estimée) — RMC Spo
  dog.com/events/KSW-124-Pawlak-vs-Kuberski-114438
 END:VEVENT
 BEGIN:VEVENT
-UID:oktagon-2026-12-29-oktagon-100@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20261229T170000Z
-DTEND:20261229T220000Z
-SUMMARY:[Oktagon] Oktagon 100
-LOCATION:O2 Arena\, Prague\, Tchéquie
-DESCRIPTION:Prelims : 18h00 (estimée) — Oktagon.tv\nMain card : 20h00 
- (estimée) — RMC Sport\, Oktagon.tv\n\nMain event : Krzysztof Jotko vs 
- Makhmud Muradov (Poids moyens ★ titre)\nCo-main : Karlos Vemola vs Toma
- sz Narkun (Poids mi-lourds)\nRobin Fosum vs Marek Mazuch (Poids mi-lourds
- )\nhttps://www.sherdog.com/events/Oktagon-MMA-Oktagon-100-114300
-END:VEVENT
-BEGIN:VEVENT
-UID:rizin-2026-12-31-super-rizin-6@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20261231T050000Z
-DTEND:20261231T080000Z
-SUMMARY:[RIZIN] Super Rizin 6 : Shiwasu no Owarinagoya Gekokujo Matsuri
-LOCATION:Vantelin Dome Nagoya\, Nagoya\, Japon
-DESCRIPTION:Shiwasu no Owarinagoya Gekokujo Matsuri\nMain card : 06h00 (e
- stimée) — Rizin.tv / TrillerTV (PPV)\n\nMain event : Rajabali Shaidull
- aev vs Kyoma Akimoto (Poids plumes ★ titre)\nCo-main : Luiz Gustavo vs 
- Mikuru Asakura (Poids légers)\nSaori Oshima vs Natalia Kuziutina (108lb 
- Catchweight ★ titre)\nTsuyoshi Kamiyama vs King Edokpolo (Poids lourds)
- \nSeika Izawa vs Unknown Fighter\nShinya Aoki vs Taisei Sakuraba (Poids l
- égers)\n\nPas de diffuseur TV régulier en France : streaming payant uni
- quement.\nhttps://www.sherdog.com/events/Rizin-FF-Super-Rizin-6-Shiwasu-n
- o-Owarinagoya-Gekokujo-Matsuri-113795
-END:VEVENT
-BEGIN:VEVENT
-UID:one-2027-01-15-one-friday-fights-185@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20270115T123000Z
-DTEND:20270115T153000Z
-SUMMARY:[ONE] ONE Friday Fights 185
-LOCATION:Lumpinee Boxing Stadium\, Bangkok\, Thaïlande
-DESCRIPTION:Main card : 13h30 (estimée) — YouTube ONE Championship (gr
- atuit)\n\nMain event : Elbek Alyshov vs Carlo Bumina-ang (Poids plumes 
- ★ titre)\n\nLes ONE Friday Fights sont surtout des combats de Muay Thai
-  et de kickboxing.\nhttps://www.sherdog.com/events/One-Championship-One-F
- riday-Fights-185-115278
-END:VEVENT
-BEGIN:VEVENT
-UID:oktagon-2027-01-16-oktagon-101@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20270116T170000Z
-DTEND:20270116T220000Z
-SUMMARY:[Oktagon] Oktagon 101 : Dalaslan vs. Kinehan
-LOCATION:Hanns-Martin-Schleyer-Halle\, Stuttgart\, Allemagne
-DESCRIPTION:Dalaslan vs. Kinehan\nPrelims : 18h00 (estimée) — Oktagon.
- tv\nMain card : 20h00 (estimée) — RMC Sport\, Oktagon.tv\n\nMain event
-  : Alina Dalaslan vs Niamh Kinehan (Poids coqs ★ titre)\nhttps://www.sh
- erdog.com/events/Oktagon-MMA-Oktagon-101-Dalaslan-vs-Kinehan-115071
+UID:hexagone-2027-01-08-hexagone-mma-50@calendrier-mma
+DTSTAMP:20261109T174619Z
+DTSTART:20270108T180000Z
+DTEND:20270108T230000Z
+SUMMARY:[Hexagone] Hexagone MMA 50
+LOCATION:Zenith Paris - La Villette\, Paris\, France
+DESCRIPTION:Prelims : 19h00 (estimée) — RMC Sport\nMain card : 21h00 (
+ estimée) — RMC Sport 1\n\nMain event : Nika Kobakhidze vs Damien Lapil
+ us (Poids plumes ★ titre)\nhttps://www.sherdog.com/events/HXMMA-50-Hexa
+ gone-MMA-50-115351
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-2027-01-16-ufc-fight-night@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20270116T220000Z
 DTEND:20270117T010000Z
 SUMMARY:[UFC] UFC Fight Night : Dallas
@@ -418,20 +270,8 @@ DESCRIPTION:Dallas\nMain card : 23h00 (estimée) — RMC Sport 1\n\nSur c
  ue/ufc
 END:VEVENT
 BEGIN:VEVENT
-UID:oktagon-2027-01-30-oktagon-102@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20270130T170000Z
-DTEND:20270130T220000Z
-SUMMARY:[Oktagon] Oktagon 102 : Kincl vs. Humburger
-LOCATION:Home Credit Arena\, Liberec\, Tchéquie
-DESCRIPTION:Kincl vs. Humburger\nPrelims : 18h00 (estimée) — Oktagon.t
- v\nMain card : 20h00 (estimée) — RMC Sport\, Oktagon.tv\n\nMain event 
- : Patrik Kincl vs Dominik Humburger (Poids moyens)\nhttps://www.sherdog.c
- om/events/Oktagon-MMA-Oktagon-102-Kincl-vs-Humburger-115083
-END:VEVENT
-BEGIN:VEVENT
 UID:ufc-2027-01-31-ufc-336@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20270131T020000Z
 DTEND:20270131T050000Z
 SUMMARY:[UFC] UFC 336 : Van vs. Kape
@@ -444,7 +284,7 @@ DESCRIPTION:Van vs. Kape\nMain card : 03h00 — RMC Sport 1\n\nMain event
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-2027-02-06-ufc-fight-night@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20270206T220000Z
 DTEND:20270207T010000Z
 SUMMARY:[UFC] UFC Fight Night : Salkilld vs. Saint Denis
@@ -458,19 +298,8 @@ DESCRIPTION:Salkilld vs. Saint Denis\nMain card : 23h00 — RMC Sport 1\n
  600062420/league/ufc
 END:VEVENT
 BEGIN:VEVENT
-UID:oktagon-2027-02-20-oktagon-103@calendrier-mma
-DTSTAMP:20261109T160800Z
-DTSTART:20270220T170000Z
-DTEND:20270220T220000Z
-SUMMARY:[Oktagon] Oktagon 103
-LOCATION:Wiener Stadthalle\, Vienna\, Autriche
-DESCRIPTION:Prelims : 18h00 (estimée) — Oktagon.tv\nMain card : 20h00 
- (estimée) — RMC Sport\, Oktagon.tv\nhttps://www.sherdog.com/events/Okt
- agon-MMA-Oktagon-103-115279
-END:VEVENT
-BEGIN:VEVENT
 UID:cagewarriors-2027-04-03-cage-warriors@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20270403T160000Z
 DTEND:20270403T210000Z
 SUMMARY:[Cage Warriors] Cage Warriors : Seville

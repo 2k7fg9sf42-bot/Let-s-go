@@ -92,88 +92,6 @@
       "notes": ""
     },
     {
-      "id": "one",
-      "name": "ONE",
-      "full_name": "ONE Championship",
-      "color": "#f2b705",
-      "region": "international",
-      "sources": [
-        {
-          "type": "sherdog",
-          "org": "One-Championship-3877"
-        }
-      ],
-      "default_tz": "Asia/Bangkok",
-      "default_times": {
-        "main": "19:30"
-      },
-      "broadcast": {
-        "main": [
-          {
-            "name": "RMC Sport",
-            "free": false
-          }
-        ]
-      },
-      "rules": [
-        {
-          "match": "Friday Fights",
-          "broadcast": {
-            "main": [
-              {
-                "name": "YouTube ONE Championship",
-                "free": true
-              }
-            ]
-          },
-          "notes": "Les ONE Friday Fights sont surtout des combats de Muay Thai et de kickboxing."
-        },
-        {
-          "match": "Prime Video|Fight Night",
-          "tz": "America/New_York",
-          "default_times": {
-            "main": "20:00"
-          },
-          "broadcast": {
-            "main": [
-              {
-                "name": "RMC Sport",
-                "free": false
-              }
-            ]
-          },
-          "notes": "Les ONE Fight Night se déroulent à l'heure américaine : la soirée tombe dans la nuit en France."
-        }
-      ],
-      "notes": ""
-    },
-    {
-      "id": "rizin",
-      "name": "RIZIN",
-      "full_name": "Rizin Fighting Federation",
-      "color": "#e4007f",
-      "region": "international",
-      "sources": [
-        {
-          "type": "sherdog",
-          "org": "Rizin-Fighting-Federation-10333"
-        }
-      ],
-      "default_tz": "Asia/Tokyo",
-      "default_times": {
-        "main": "14:00"
-      },
-      "broadcast": {
-        "main": [
-          {
-            "name": "Rizin.tv / TrillerTV (PPV)",
-            "free": false
-          }
-        ]
-      },
-      "notes": "Pas de diffuseur TV régulier en France : streaming payant uniquement."
-    },
-    {
       "id": "ares",
       "name": "ARES",
       "full_name": "ARES Fighting Championship",
@@ -266,43 +184,6 @@
       "notes": ""
     },
     {
-      "id": "oktagon",
-      "name": "Oktagon",
-      "full_name": "Oktagon MMA",
-      "color": "#ff6a00",
-      "region": "europe",
-      "sources": [
-        {
-          "type": "sherdog",
-          "org": "Oktagon-MMA-5383"
-        }
-      ],
-      "default_tz": "Europe/Prague",
-      "default_times": {
-        "prelims": "18:00",
-        "main": "20:00"
-      },
-      "broadcast": {
-        "prelims": [
-          {
-            "name": "Oktagon.tv",
-            "free": false
-          }
-        ],
-        "main": [
-          {
-            "name": "RMC Sport",
-            "free": false
-          },
-          {
-            "name": "Oktagon.tv",
-            "free": false
-          }
-        ]
-      },
-      "notes": ""
-    },
-    {
       "id": "cagewarriors",
       "name": "Cage Warriors",
       "full_name": "Cage Warriors",
@@ -339,32 +220,6 @@
         ]
       },
       "notes": ""
-    },
-    {
-      "id": "brave",
-      "name": "Brave CF",
-      "full_name": "Brave Combat Federation",
-      "color": "#7b3fe4",
-      "region": "europe",
-      "sources": [
-        {
-          "type": "sherdog",
-          "org": "Brave-Combat-Federation-11227"
-        }
-      ],
-      "default_tz": "Asia/Bahrain",
-      "default_times": {
-        "main": "19:00"
-      },
-      "broadcast": {
-        "main": [
-          {
-            "name": "BRAVE TV (streaming)",
-            "free": false
-          }
-        ]
-      },
-      "notes": "Pas de diffuseur TV régulier en France."
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 Toutes les soirées MMA à venir, au même endroit : **date, heure de Paris, chaîne française, lieu et carte complète des combats**.
 
-Organisations suivies : **UFC, PFL (ex-Bellator), ONE, RIZIN, ARES, Hexagone MMA, KSW, Oktagon, Cage Warriors, Brave CF**.
+Organisations suivies : **UFC, PFL (ex-Bellator), ARES, Hexagone MMA, KSW, Cage Warriors**.
 
 C'est une app web installable (PWA), 100 % gratuite : hébergée sur GitHub Pages, mise à jour automatiquement **chaque lundi** par GitHub Actions.
 

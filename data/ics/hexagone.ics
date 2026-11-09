@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:hexagone-2026-11-27-hexagone-mma-49@calendrier-mma
-DTSTAMP:20261109T160800Z
+DTSTAMP:20261109T174619Z
 DTSTART:20261127T180000Z
 DTEND:20261127T230000Z
 SUMMARY:[Hexagone] Hexagone MMA 49
@@ -21,5 +21,17 @@ DESCRIPTION:Prelims : 19h00 (estimée) — RMC Sport\nMain card : 21h00 (
  lav Zemla vs Louis Banhiet (Poids mi-moyens)\nAllan Landouzy vs Benjamin 
  Molnar (Poids coqs)\nKalim Mastouri vs Mathieu Abbe (Poids mi-moyens)\nht
  tps://www.sherdog.com/events/HXMMA-49-Hexagone-MMA-49-114109
+END:VEVENT
+BEGIN:VEVENT
+UID:hexagone-2027-01-08-hexagone-mma-50@calendrier-mma
+DTSTAMP:20261109T174619Z
+DTSTART:20270108T180000Z
+DTEND:20270108T230000Z
+SUMMARY:[Hexagone] Hexagone MMA 50
+LOCATION:Zenith Paris - La Villette\, Paris\, France
+DESCRIPTION:Prelims : 19h00 (estimée) — RMC Sport\nMain card : 21h00 (
+ estimée) — RMC Sport 1\n\nMain event : Nika Kobakhidze vs Damien Lapil
+ us (Poids plumes ★ titre)\nhttps://www.sherdog.com/events/HXMMA-50-Hexa
+ gone-MMA-50-115351
 END:VEVENT
 END:VCALENDAR

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T16:07:02Z",
+ "generated_at": "2026-11-09T17:45:44Z",
  "timezone": "Europe/Paris",
  "horizon_days": 150,
  "organizations": {
@@ -16,20 +16,6 @@
    "color": "#c9a227",
    "region": "international",
    "notes": ""
-  },
-  "one": {
-   "name": "ONE",
-   "full_name": "ONE Championship",
-   "color": "#f2b705",
-   "region": "international",
-   "notes": ""
-  },
-  "rizin": {
-   "name": "RIZIN",
-   "full_name": "Rizin Fighting Federation",
-   "color": "#e4007f",
-   "region": "international",
-   "notes": "Pas de diffuseur TV régulier en France : streaming payant uniquement."
   },
   "ares": {
    "name": "ARES",
@@ -52,26 +38,12 @@
    "region": "europe",
    "notes": ""
   },
-  "oktagon": {
-   "name": "Oktagon",
-   "full_name": "Oktagon MMA",
-   "color": "#ff6a00",
-   "region": "europe",
-   "notes": ""
-  },
   "cagewarriors": {
    "name": "Cage Warriors",
    "full_name": "Cage Warriors",
    "color": "#b5121b",
    "region": "europe",
    "notes": ""
-  },
-  "brave": {
-   "name": "Brave CF",
-   "full_name": "Brave Combat Federation",
-   "color": "#7b3fe4",
-   "region": "europe",
-   "notes": "Pas de diffuseur TV régulier en France."
   }
  },
  "status": {
@@ -85,16 +57,6 @@
    "source": "espn",
    "count": 2
   },
-  "one": {
-   "ok": true,
-   "source": "sherdog",
-   "count": 6
-  },
-  "rizin": {
-   "ok": true,
-   "source": "sherdog",
-   "count": 1
-  },
   "ares": {
    "ok": true,
    "source": "sherdog",
@@ -103,135 +65,20 @@
   "hexagone": {
    "ok": true,
    "source": "sherdog",
-   "count": 1
+   "count": 2
   },
   "ksw": {
    "ok": true,
    "source": "sherdog",
    "count": 2
   },
-  "oktagon": {
-   "ok": true,
-   "source": "sherdog",
-   "count": 7
-  },
   "cagewarriors": {
    "ok": true,
    "source": "sherdog",
    "count": 5
-  },
-  "brave": {
-   "ok": true,
-   "source": "sherdog",
-   "count": 0
   }
  },
  "events": [
-  {
-   "id": "oktagon-2026-11-11-oktagon",
-   "org": "oktagon",
-   "name": "Oktagon",
-   "subtitle": "Cage Game 2",
-   "start": "2026-11-11T17:00:00Z",
-   "segments": [
-    {
-     "key": "prelims",
-     "label": "Prelims",
-     "start": "2026-11-11T17:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "Oktagon.tv",
-       "free": false
-      }
-     ]
-    },
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2026-11-11T19:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "RMC Sport",
-       "free": false
-      },
-      {
-       "name": "Oktagon.tv",
-       "free": false
-      }
-     ]
-    }
-   ],
-   "venue": "Bobyhall Brno",
-   "city": "Brno",
-   "country": "Tchéquie",
-   "fights": [],
-   "notes": "",
-   "url": "https://www.sherdog.com/events/Oktagon-MMA-Oktagon-Cage-Game-2-115319",
-   "source": "Sherdog"
-  },
-  {
-   "id": "one-2026-11-13-one-friday-fights-178",
-   "org": "one",
-   "name": "ONE Friday Fights 178",
-   "subtitle": "",
-   "start": "2026-11-13T12:30:00Z",
-   "segments": [
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2026-11-13T12:30:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "YouTube ONE Championship",
-       "free": true
-      }
-     ]
-    }
-   ],
-   "venue": "Lumpinee Boxing Stadium",
-   "city": "Bangkok",
-   "country": "Thaïlande",
-   "fights": [
-    {
-     "a": {
-      "name": "Natakorn Kasorn",
-      "record": "1-0-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Mathew Gesto",
-      "record": "3-1-0",
-      "country": ""
-     },
-     "weight": "Poids mouches",
-     "title": false,
-     "main_event": true,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Su Hyun Kim",
-      "record": "5-2-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Takumi Fukamachi",
-      "record": "3-1-0",
-      "country": ""
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    }
-   ],
-   "notes": "Les ONE Friday Fights sont surtout des combats de Muay Thai et de kickboxing.",
-   "url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-178-114883",
-   "source": "Sherdog"
-  },
   {
    "id": "pfl-2026-11-14-pfl-dubai",
    "org": "pfl",
@@ -984,144 +831,6 @@
    "source": "ESPN"
   },
   {
-   "id": "one-2026-11-18-one-samurai-5",
-   "org": "one",
-   "name": "ONE Samurai 5",
-   "subtitle": "",
-   "start": "2026-11-18T10:30:00Z",
-   "segments": [
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2026-11-18T10:30:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "RMC Sport",
-       "free": false
-      }
-     ]
-    }
-   ],
-   "venue": "Ebara Wave Arena Ota",
-   "city": "Ota",
-   "country": "Japon",
-   "fights": [
-    {
-     "a": {
-      "name": "Joshua Pacio",
-      "record": "24-5-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Keito Yamakita",
-      "record": "13-1-0",
-      "country": ""
-     },
-     "weight": "Poids mouches",
-     "title": true,
-     "main_event": true,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Tatsumitsu Wada",
-      "record": "26-14-2",
-      "country": ""
-     },
-     "b": {
-      "name": "Jarred Brooks",
-      "record": "21-6-0",
-      "country": ""
-     },
-     "weight": "Poids mouches",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Ryugo Takeuchi",
-      "record": "5-3-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Brandon Hashimoto",
-      "record": "8-2-0",
-      "country": ""
-     },
-     "weight": "Poids lourds",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Shosuke Kinoshita",
-      "record": "13-7-1",
-      "country": ""
-     },
-     "b": {
-      "name": "Takuya Shibamura",
-      "record": "6-1-0",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    }
-   ],
-   "notes": "",
-   "url": "https://www.sherdog.com/events/One-Championship-ONE-Samurai-5-114378",
-   "source": "Sherdog"
-  },
-  {
-   "id": "one-2026-11-20-one-friday-fights-179",
-   "org": "one",
-   "name": "ONE Friday Fights 179",
-   "subtitle": "",
-   "start": "2026-11-20T12:30:00Z",
-   "segments": [
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2026-11-20T12:30:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "YouTube ONE Championship",
-       "free": true
-      }
-     ]
-    }
-   ],
-   "venue": "Lumpinee Boxing Stadium",
-   "city": "Bangkok",
-   "country": "Thaïlande",
-   "fights": [
-    {
-     "a": {
-      "name": "Allycia Hellen Rodrigues",
-      "record": "0-0-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Charlotte Padie",
-      "record": "0-0-0",
-      "country": ""
-     },
-     "weight": "Poids pailles",
-     "title": false,
-     "main_event": true,
-     "segment": "main"
-    }
-   ],
-   "notes": "Les ONE Friday Fights sont surtout des combats de Muay Thai et de kickboxing.",
-   "url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-179-114882",
-   "source": "Sherdog"
-  },
-  {
    "id": "ares-2026-11-20-ares-45",
    "org": "ares",
    "name": "ARES 45",
@@ -1435,7 +1144,7 @@
      },
      "weight": "Poids coqs",
      "title": false,
-     "segment": "prelims",
+     "segment": "main",
      "main_event": false
     },
     {
@@ -1490,227 +1199,6 @@
    "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte.",
    "url": "https://www.espn.com/mma/fightcenter/_/id/600061665/league/ufc",
    "source": "ESPN"
-  },
-  {
-   "id": "oktagon-2026-11-21-oktagon-98",
-   "org": "oktagon",
-   "name": "Oktagon 98",
-   "subtitle": "Legierski vs. Buchinger",
-   "start": "2026-11-21T17:00:00Z",
-   "segments": [
-    {
-     "key": "prelims",
-     "label": "Prelims",
-     "start": "2026-11-21T17:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "Oktagon.tv",
-       "free": false
-      }
-     ]
-    },
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2026-11-21T19:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "RMC Sport",
-       "free": false
-      },
-      {
-       "name": "Oktagon.tv",
-       "free": false
-      }
-     ]
-    }
-   ],
-   "venue": "Werk Arena",
-   "city": "Třinec",
-   "country": "Tchéquie",
-   "fights": [
-    {
-     "a": {
-      "name": "Mateusz Legierski",
-      "record": "14-2-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Ivan Buchinger",
-      "record": "46-10-0",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": true,
-     "main_event": true,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Tomasz Mudroch",
-      "record": "9-2-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Jason Ponet",
-      "record": "26-20-1",
-      "country": ""
-     },
-     "weight": "163lb Catchweight",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Veronika Smolkova",
-      "record": "10-3-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Ivana Petrovic",
-      "record": "8-4-0",
-      "country": ""
-     },
-     "weight": "Poids mouches",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Jakub Batfalsky",
-      "record": "10-2-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Ayton De Paepe",
-      "record": "15-6-0",
-      "country": ""
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Matej Penaz",
-      "record": "11-1-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Unknown Fighter",
-      "record": "--",
-      "country": ""
-     },
-     "weight": "Poids moyens",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Hojat Khajevand",
-      "record": "10-6-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Mateusz Janur",
-      "record": "12-6-0",
-      "country": ""
-     },
-     "weight": "Poids moyens",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
-      "name": "Patrik Sebek",
-      "record": "4-1-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Adrian Hamerski",
-      "record": "4-3-0",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
-      "name": "James Hendin",
-      "record": "10-4-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Sayed Murtaza Sadat",
-      "record": "7-3-0",
-      "country": ""
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
-      "name": "Ondrej Raska",
-      "record": "12-10-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Dominic Schober",
-      "record": "16-15-0",
-      "country": ""
-     },
-     "weight": "Poids moyens",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
-      "name": "Dawid Smielowski",
-      "record": "12-3-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Arbi Mezhidov",
-      "record": "19-7-0",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
-      "name": "Michaela Hlavacikova",
-      "record": "1-1-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Marta Sos",
-      "record": "2-1-0",
-      "country": ""
-     },
-     "weight": "Poids mouches",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    }
-   ],
-   "notes": "",
-   "url": "https://www.sherdog.com/events/Oktagon-MMA-Oktagon-98-Legierski-vs-Buchinger-114298",
-   "source": "Sherdog"
   },
   {
    "id": "ksw-2026-11-21-ksw-123",
@@ -2497,51 +1985,6 @@
    "source": "Sherdog"
   },
   {
-   "id": "one-2026-12-02-one-samurai-6",
-   "org": "one",
-   "name": "ONE Samurai 6",
-   "subtitle": "",
-   "start": "2026-12-02T10:30:00Z",
-   "segments": [
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2026-12-02T10:30:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "RMC Sport",
-       "free": false
-      }
-     ]
-    }
-   ],
-   "venue": "Yokohama Buntai",
-   "city": "Yokohama",
-   "country": "Japon",
-   "fights": [
-    {
-     "a": {
-      "name": "Chihiro Sawada",
-      "record": "12-1-1",
-      "country": ""
-     },
-     "b": {
-      "name": "Anastasia Nikolakakos",
-      "record": "7-0-0",
-      "country": ""
-     },
-     "weight": "Poids pailles",
-     "title": true,
-     "main_event": true,
-     "segment": "main"
-    }
-   ],
-   "notes": "",
-   "url": "https://www.sherdog.com/events/One-Championship-ONE-Samurai-6-114889",
-   "source": "Sherdog"
-  },
-  {
    "id": "ufc-2026-12-05-ufc-fight-night",
    "org": "ufc",
    "name": "UFC Fight Night",
@@ -2773,195 +2216,6 @@
    "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte.",
    "url": "https://www.espn.com/mma/fightcenter/_/id/600062700/league/ufc",
    "source": "ESPN"
-  },
-  {
-   "id": "oktagon-2026-12-05-oktagon-99",
-   "org": "oktagon",
-   "name": "Oktagon 99",
-   "subtitle": "Aras vs. Flores",
-   "start": "2026-12-05T17:00:00Z",
-   "segments": [
-    {
-     "key": "prelims",
-     "label": "Prelims",
-     "start": "2026-12-05T17:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "Oktagon.tv",
-       "free": false
-      }
-     ]
-    },
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2026-12-05T19:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "RMC Sport",
-       "free": false
-      },
-      {
-       "name": "Oktagon.tv",
-       "free": false
-      }
-     ]
-    }
-   ],
-   "venue": "Westfalenhalle",
-   "city": "Dortmund",
-   "country": "Allemagne",
-   "fights": [
-    {
-     "a": {
-      "name": "Kasim Aras",
-      "record": "11-6-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Ty Flores",
-      "record": "15-5-0",
-      "country": ""
-     },
-     "weight": "Poids lourds",
-     "title": false,
-     "main_event": true,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Patrick Vespaziani",
-      "record": "6-4-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Nicolaj Wagner",
-      "record": "5-4-0",
-      "country": ""
-     },
-     "weight": "Poids lourds",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Marc Doussis",
-      "record": "10-5-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Adam Palasz",
-      "record": "10-5-0",
-      "country": ""
-     },
-     "weight": "Poids lourds",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Ali Gunduz",
-      "record": "7-1-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Abdullah Sultani",
-      "record": "5-2-0",
-      "country": ""
-     },
-     "weight": "Poids coqs",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Emir-Can Al",
-      "record": "3-3-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Adam Havran",
-      "record": "2-1-0",
-      "country": ""
-     },
-     "weight": "Poids mi-moyens",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Murat Tuysuz",
-      "record": "5-1-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Jan Stanovsky",
-      "record": "9-3-0",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
-      "name": "Altin Zenuni",
-      "record": "5-0-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Tomas Ciganik",
-      "record": "8-4-0",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
-      "name": "Moh Eter",
-      "record": "2-1-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Tomas Holecek",
-      "record": "1-1-0",
-      "country": ""
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
-      "name": "Furkan Ugur",
-      "record": "0-0-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Said Osmanov",
-      "record": "0-0-0",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    }
-   ],
-   "notes": "",
-   "url": "https://www.sherdog.com/events/Oktagon-MMA-Oktagon-99-Aras-vs-Flores-114299",
-   "source": "Sherdog"
   },
   {
    "id": "cagewarriors-2026-12-05-cage-warriors-216",
@@ -3487,67 +2741,6 @@
    "source": "ESPN"
   },
   {
-   "id": "one-2026-12-19-one-on-prime-video-50",
-   "org": "one",
-   "name": "ONE on Prime Video 50",
-   "subtitle": "",
-   "start": "2026-12-19T01:00:00Z",
-   "segments": [
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2026-12-19T01:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "RMC Sport",
-       "free": false
-      }
-     ]
-    }
-   ],
-   "venue": "Lumpinee Boxing Stadium",
-   "city": "Bangkok",
-   "country": "Thaïlande",
-   "fights": [
-    {
-     "a": {
-      "name": "Kade Ruotolo",
-      "record": "4-0-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Rae Yoon Ok",
-      "record": "17-6-0",
-      "country": ""
-     },
-     "weight": "Poids mi-moyens",
-     "title": false,
-     "main_event": true,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Maurice Abevi",
-      "record": "9-1-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Dzhabir Dzhabrailov",
-      "record": "7-0-0",
-      "country": ""
-     },
-     "weight": "Poids moyens",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    }
-   ],
-   "notes": "Les ONE Fight Night se déroulent à l'heure américaine : la soirée tombe dans la nuit en France.",
-   "url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-50-115087",
-   "source": "Sherdog"
-  },
-  {
    "id": "pfl-2026-12-19-pfl-lyon",
    "org": "pfl",
    "name": "PFL Lyon",
@@ -3862,423 +3055,60 @@
    "source": "Sherdog"
   },
   {
-   "id": "oktagon-2026-12-29-oktagon-100",
-   "org": "oktagon",
-   "name": "Oktagon 100",
+   "id": "hexagone-2027-01-08-hexagone-mma-50",
+   "org": "hexagone",
+   "name": "Hexagone MMA 50",
    "subtitle": "",
-   "start": "2026-12-29T17:00:00Z",
+   "start": "2027-01-08T18:00:00Z",
    "segments": [
     {
      "key": "prelims",
      "label": "Prelims",
-     "start": "2026-12-29T17:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "Oktagon.tv",
-       "free": false
-      }
-     ]
-    },
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2026-12-29T19:00:00Z",
+     "start": "2027-01-08T18:00:00Z",
      "estimated": true,
      "channels": [
       {
        "name": "RMC Sport",
        "free": false
-      },
-      {
-       "name": "Oktagon.tv",
-       "free": false
-      }
-     ]
-    }
-   ],
-   "venue": "O2 Arena",
-   "city": "Prague",
-   "country": "Tchéquie",
-   "fights": [
-    {
-     "a": {
-      "name": "Krzysztof Jotko",
-      "record": "30-6-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Makhmud Muradov",
-      "record": "30-8-0",
-      "country": ""
-     },
-     "weight": "Poids moyens",
-     "title": true,
-     "main_event": true,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Karlos Vemola",
-      "record": "39-9-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Tomasz Narkun",
-      "record": "22-7-0",
-      "country": ""
-     },
-     "weight": "Poids mi-lourds",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Robin Fosum",
-      "record": "2-1-1",
-      "country": ""
-     },
-     "b": {
-      "name": "Marek Mazuch",
-      "record": "8-4-0",
-      "country": ""
-     },
-     "weight": "Poids mi-lourds",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    }
-   ],
-   "notes": "",
-   "url": "https://www.sherdog.com/events/Oktagon-MMA-Oktagon-100-114300",
-   "source": "Sherdog"
-  },
-  {
-   "id": "rizin-2026-12-31-super-rizin-6",
-   "org": "rizin",
-   "name": "Super Rizin 6",
-   "subtitle": "Shiwasu no Owarinagoya Gekokujo Matsuri",
-   "start": "2026-12-31T05:00:00Z",
-   "segments": [
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2026-12-31T05:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "Rizin.tv / TrillerTV (PPV)",
-       "free": false
-      }
-     ]
-    }
-   ],
-   "venue": "Vantelin Dome Nagoya",
-   "city": "Nagoya",
-   "country": "Japon",
-   "fights": [
-    {
-     "a": {
-      "name": "Rajabali Shaidullaev",
-      "record": "20-0-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Kyoma Akimoto",
-      "record": "13-1-0",
-      "country": ""
-     },
-     "weight": "Poids plumes",
-     "title": true,
-     "main_event": true,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Luiz Gustavo",
-      "record": "16-4-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Mikuru Asakura",
-      "record": "20-6-0",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Saori Oshima",
-      "record": "17-7-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Natalia Kuziutina",
-      "record": "11-1-0",
-      "country": ""
-     },
-     "weight": "108lb Catchweight",
-     "title": true,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Tsuyoshi Kamiyama",
-      "record": "10-4-0",
-      "country": ""
-     },
-     "b": {
-      "name": "King Edokpolo",
-      "record": "4-0-0",
-      "country": ""
-     },
-     "weight": "Poids lourds",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Seika Izawa",
-      "record": "18-0-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Unknown Fighter",
-      "record": "--",
-      "country": ""
-     },
-     "weight": "",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Shinya Aoki",
-      "record": "49-13-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Taisei Sakuraba",
-      "record": "2-2-0",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Chihiro Suzuki",
-      "record": "13-6-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Ren Sugiyama",
-      "record": "3-3-0",
-      "country": ""
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Hiroya Kondo",
-      "record": "10-16-1",
-      "country": ""
-     },
-     "b": {
-      "name": "Joe Hiramoto",
-      "record": "4-2-0",
-      "country": ""
-     },
-     "weight": "Poids mouches",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Kyohei Takagi",
-      "record": "7-1-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Tatsuki Shinotsuka",
-      "record": "1-1-0",
-      "country": ""
-     },
-     "weight": "Poids mouches",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Daichi Tomizawa",
-      "record": "3-2-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Ryo Kawabata",
-      "record": "0-0-0",
-      "country": ""
-     },
-     "weight": "130lb Catchweight",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Yutaro Muramoto",
-      "record": "15-9-2",
-      "country": ""
-     },
-     "b": {
-      "name": "Erson Yamamoto",
-      "record": "7-8-0",
-      "country": ""
-     },
-     "weight": "Poids mouches",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Christian Akira Matsuo",
-      "record": "0-0-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Sora Kaneko",
-      "record": "0-0-0",
-      "country": ""
-     },
-     "weight": "Poids coqs",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    }
-   ],
-   "notes": "Pas de diffuseur TV régulier en France : streaming payant uniquement.",
-   "url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-6-Shiwasu-no-Owarinagoya-Gekokujo-Matsuri-113795",
-   "source": "Sherdog"
-  },
-  {
-   "id": "one-2027-01-15-one-friday-fights-185",
-   "org": "one",
-   "name": "ONE Friday Fights 185",
-   "subtitle": "",
-   "start": "2027-01-15T12:30:00Z",
-   "segments": [
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2027-01-15T12:30:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "YouTube ONE Championship",
-       "free": true
-      }
-     ]
-    }
-   ],
-   "venue": "Lumpinee Boxing Stadium",
-   "city": "Bangkok",
-   "country": "Thaïlande",
-   "fights": [
-    {
-     "a": {
-      "name": "Elbek Alyshov",
-      "record": "6-0-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Carlo Bumina-ang",
-      "record": "10-2-0",
-      "country": ""
-     },
-     "weight": "Poids plumes",
-     "title": true,
-     "main_event": true,
-     "segment": "main"
-    }
-   ],
-   "notes": "Les ONE Friday Fights sont surtout des combats de Muay Thai et de kickboxing.",
-   "url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-185-115278",
-   "source": "Sherdog"
-  },
-  {
-   "id": "oktagon-2027-01-16-oktagon-101",
-   "org": "oktagon",
-   "name": "Oktagon 101",
-   "subtitle": "Dalaslan vs. Kinehan",
-   "start": "2027-01-16T17:00:00Z",
-   "segments": [
-    {
-     "key": "prelims",
-     "label": "Prelims",
-     "start": "2027-01-16T17:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "Oktagon.tv",
-       "free": false
       }
      ]
     },
     {
      "key": "main",
      "label": "Main card",
-     "start": "2027-01-16T19:00:00Z",
+     "start": "2027-01-08T20:00:00Z",
      "estimated": true,
      "channels": [
       {
-       "name": "RMC Sport",
-       "free": false
-      },
-      {
-       "name": "Oktagon.tv",
+       "name": "RMC Sport 1",
        "free": false
       }
      ]
     }
    ],
-   "venue": "Hanns-Martin-Schleyer-Halle",
-   "city": "Stuttgart",
-   "country": "Allemagne",
+   "venue": "Zenith Paris - La Villette",
+   "city": "Paris",
+   "country": "France",
    "fights": [
     {
      "a": {
-      "name": "Alina Dalaslan",
-      "record": "6-0-0",
+      "name": "Nika Kobakhidze",
+      "record": "8-3-0",
       "country": ""
      },
      "b": {
-      "name": "Niamh Kinehan",
-      "record": "3-0-0",
+      "name": "Damien Lapilus",
+      "record": "23-15-3",
       "country": ""
      },
-     "weight": "Poids coqs",
+     "weight": "Poids plumes",
      "title": true,
      "main_event": true,
      "segment": "main"
     }
    ],
    "notes": "",
-   "url": "https://www.sherdog.com/events/Oktagon-MMA-Oktagon-101-Dalaslan-vs-Kinehan-115071",
+   "url": "https://www.sherdog.com/events/HXMMA-50-Hexagone-MMA-50-115351",
    "source": "Sherdog"
   },
   {
@@ -4308,67 +3138,6 @@
    "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte.",
    "url": "https://www.espn.com/mma/fightcenter/_/id/600062421/league/ufc",
    "source": "ESPN"
-  },
-  {
-   "id": "oktagon-2027-01-30-oktagon-102",
-   "org": "oktagon",
-   "name": "Oktagon 102",
-   "subtitle": "Kincl vs. Humburger",
-   "start": "2027-01-30T17:00:00Z",
-   "segments": [
-    {
-     "key": "prelims",
-     "label": "Prelims",
-     "start": "2027-01-30T17:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "Oktagon.tv",
-       "free": false
-      }
-     ]
-    },
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2027-01-30T19:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "RMC Sport",
-       "free": false
-      },
-      {
-       "name": "Oktagon.tv",
-       "free": false
-      }
-     ]
-    }
-   ],
-   "venue": "Home Credit Arena",
-   "city": "Liberec",
-   "country": "Tchéquie",
-   "fights": [
-    {
-     "a": {
-      "name": "Patrik Kincl",
-      "record": "30-12-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Dominik Humburger",
-      "record": "12-3-0",
-      "country": ""
-     },
-     "weight": "Poids moyens",
-     "title": false,
-     "main_event": true,
-     "segment": "main"
-    }
-   ],
-   "notes": "",
-   "url": "https://www.sherdog.com/events/Oktagon-MMA-Oktagon-102-Kincl-vs-Humburger-115083",
-   "source": "Sherdog"
   },
   {
    "id": "ufc-2027-01-31-ufc-336",
@@ -4523,50 +3292,6 @@
    "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte.",
    "url": "https://www.espn.com/mma/fightcenter/_/id/600062420/league/ufc",
    "source": "ESPN"
-  },
-  {
-   "id": "oktagon-2027-02-20-oktagon-103",
-   "org": "oktagon",
-   "name": "Oktagon 103",
-   "subtitle": "",
-   "start": "2027-02-20T17:00:00Z",
-   "segments": [
-    {
-     "key": "prelims",
-     "label": "Prelims",
-     "start": "2027-02-20T17:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "Oktagon.tv",
-       "free": false
-      }
-     ]
-    },
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2027-02-20T19:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "RMC Sport",
-       "free": false
-      },
-      {
-       "name": "Oktagon.tv",
-       "free": false
-      }
-     ]
-    }
-   ],
-   "venue": "Wiener Stadthalle",
-   "city": "Vienna",
-   "country": "Autriche",
-   "fights": [],
-   "notes": "",
-   "url": "https://www.sherdog.com/events/Oktagon-MMA-Oktagon-103-115279",
-   "source": "Sherdog"
   },
   {
    "id": "cagewarriors-2027-04-03-cage-warriors",
