@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-08T01:12:45Z",
+ "generated_at": "2026-11-09T16:07:02Z",
  "timezone": "Europe/Paris",
  "horizon_days": 150,
  "organizations": {
@@ -93,7 +93,7 @@
   "rizin": {
    "ok": true,
    "source": "sherdog",
-   "count": 2
+   "count": 1
   },
   "ares": {
    "ok": true,
@@ -113,12 +113,12 @@
   "oktagon": {
    "ok": true,
    "source": "sherdog",
-   "count": 6
+   "count": 7
   },
   "cagewarriors": {
    "ok": true,
    "source": "sherdog",
-   "count": 4
+   "count": 5
   },
   "brave": {
    "ok": true,
@@ -128,553 +128,47 @@
  },
  "events": [
   {
-   "id": "ufc-2026-11-07-ufc-fight-night",
-   "org": "ufc",
-   "name": "UFC Fight Night",
-   "subtitle": "Cortes Acosta vs. Walker",
-   "start": "2026-11-07T22:00:00Z",
+   "id": "oktagon-2026-11-11-oktagon",
+   "org": "oktagon",
+   "name": "Oktagon",
+   "subtitle": "Cage Game 2",
+   "start": "2026-11-11T17:00:00Z",
    "segments": [
     {
      "key": "prelims",
      "label": "Prelims",
-     "start": "2026-11-07T22:00:00Z",
-     "estimated": false,
+     "start": "2026-11-11T17:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "Oktagon.tv",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-11-11T19:00:00Z",
+     "estimated": true,
      "channels": [
       {
        "name": "RMC Sport",
        "free": false
-      }
-     ]
-    },
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2026-11-08T01:00:00Z",
-     "estimated": false,
-     "channels": [
+      },
       {
-       "name": "RMC Sport 1",
+       "name": "Oktagon.tv",
        "free": false
       }
      ]
     }
    ],
-   "venue": "Meta APEX",
-   "city": "Las Vegas",
-   "country": "États-Unis",
-   "fights": [
-    {
-     "a": {
-      "name": "Waldo Cortes Acosta",
-      "record": "17-4-0",
-      "country": "Dominican Republic"
-     },
-     "b": {
-      "name": "Johnny Walker",
-      "record": "23-10-0",
-      "country": "Brazil"
-     },
-     "weight": "Poids lourds",
-     "title": false,
-     "segment": "main",
-     "main_event": true
-    },
-    {
-     "a": {
-      "name": "Tatiana Suarez",
-      "record": "13-1-0",
-      "country": "USA"
-     },
-     "b": {
-      "name": "Virna Jandiroba",
-      "record": "23-4-0",
-      "country": "Brazil"
-     },
-     "weight": "Poids pailles (F)",
-     "title": false,
-     "segment": "main",
-     "main_event": false
-    },
-    {
-     "a": {
-      "name": "Davey Grant",
-      "record": "18-8-0",
-      "country": "England"
-     },
-     "b": {
-      "name": "Elijah Smith",
-      "record": "10-1-0",
-      "country": "USA"
-     },
-     "weight": "Poids coqs",
-     "title": false,
-     "segment": "main",
-     "main_event": false
-    },
-    {
-     "a": {
-      "name": "Billy Elekana",
-      "record": "10-2-0",
-      "country": "USA"
-     },
-     "b": {
-      "name": "Lucas Fernando",
-      "record": "14-3-0",
-      "country": "Brazil"
-     },
-     "weight": "Poids mi-lourds",
-     "title": false,
-     "segment": "main",
-     "main_event": false
-    },
-    {
-     "a": {
-      "name": "Priscila Cachoeira",
-      "record": "13-9-0",
-      "country": "Brazil"
-     },
-     "b": {
-      "name": "Nina Milošević",
-      "record": "9-1-0",
-      "country": "Serbia"
-     },
-     "weight": "Poids coqs (F)",
-     "title": false,
-     "segment": "main",
-     "main_event": false
-    },
-    {
-     "a": {
-      "name": "Mitch Raposo",
-      "record": "11-3-0",
-      "country": "USA"
-     },
-     "b": {
-      "name": "Marcos Degli",
-      "record": "15-3-0",
-      "country": "Brazil"
-     },
-     "weight": "Poids mouches",
-     "title": false,
-     "segment": "main",
-     "main_event": false
-    },
-    {
-     "a": {
-      "name": "Keiichiro Nakamura",
-      "record": "8-1-0",
-      "country": "Japan"
-     },
-     "b": {
-      "name": "Ollie Schmid",
-      "record": "4-3-0",
-      "country": "Hungary"
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "segment": "prelims",
-     "main_event": false
-    },
-    {
-     "a": {
-      "name": "Gabriel Lorenço",
-      "record": "8-2-0",
-      "country": "Brazil"
-     },
-     "b": {
-      "name": "Thomas Petersen",
-      "record": "12-5-0",
-      "country": "USA"
-     },
-     "weight": "Poids lourds",
-     "title": false,
-     "segment": "prelims",
-     "main_event": false
-    },
-    {
-     "a": {
-      "name": "Karine Silva",
-      "record": "20-7-0",
-      "country": "Brazil"
-     },
-     "b": {
-      "name": "Gabriella Fernandes",
-      "record": "11-5-0",
-      "country": "Brazil"
-     },
-     "weight": "Poids mouches (F)",
-     "title": false,
-     "segment": "prelims",
-     "main_event": false
-    },
-    {
-     "a": {
-      "name": "Jose Delano",
-      "record": "17-4-0",
-      "country": "Brazil"
-     },
-     "b": {
-      "name": "Murtazali Magomedov",
-      "record": "12-0-0",
-      "country": "Kyrgyzstan"
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "segment": "prelims",
-     "main_event": false
-    },
-    {
-     "a": {
-      "name": "Austin Bashi",
-      "record": "15-2-0",
-      "country": "USA"
-     },
-     "b": {
-      "name": "Carlos Calderon",
-      "record": "11-5-0",
-      "country": "El Salvador"
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "segment": "prelims",
-     "main_event": false
-    },
-    {
-     "a": {
-      "name": "Mantas Kondratavičius",
-      "record": "9-2-0",
-      "country": "Lithuania"
-     },
-     "b": {
-      "name": "Andre Petroski",
-      "record": "14-6-0",
-      "country": "USA"
-     },
-     "weight": "Poids moyens",
-     "title": false,
-     "segment": "prelims",
-     "main_event": false
-    },
-    {
-     "a": {
-      "name": "Seokhyeon Ko",
-      "record": "14-3-0",
-      "country": "South Korea"
-     },
-     "b": {
-      "name": "Wellington Turman",
-      "record": "18-9-0",
-      "country": "Brazil"
-     },
-     "weight": "Poids mi-moyens",
-     "title": false,
-     "segment": "prelims",
-     "main_event": false
-    },
-    {
-     "a": {
-      "name": "Jonny Parsons",
-      "record": "9-4-0",
-      "country": "USA"
-     },
-     "b": {
-      "name": "José Souza",
-      "record": "10-1-0",
-      "country": "Brazil"
-     },
-     "weight": "Poids mi-moyens",
-     "title": false,
-     "segment": "prelims",
-     "main_event": false
-    }
-   ],
-   "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte.",
-   "url": "https://www.espn.com/mma/fightcenter/_/id/600061268",
-   "source": "ESPN"
-  },
-  {
-   "id": "rizin-2026-11-08-rizin-55",
-   "org": "rizin",
-   "name": "Rizin 55",
-   "subtitle": "",
-   "start": "2026-11-08T05:00:00Z",
-   "segments": [
-    {
-     "key": "main",
-     "label": "Main card",
-     "start": "2026-11-08T05:00:00Z",
-     "estimated": true,
-     "channels": [
-      {
-       "name": "Rizin.tv / TrillerTV (PPV)",
-       "free": false
-      }
-     ]
-    }
-   ],
-   "venue": "LaLa Arena Tokyo-Bay",
-   "city": "Funabashi",
-   "country": "Japon",
-   "fights": [
-    {
-     "a": {
-      "name": "Makoto Takahashi",
-      "record": "23-5-1",
-      "country": ""
-     },
-     "b": {
-      "name": "Tony Laramie",
-      "record": "13-3-0",
-      "country": ""
-     },
-     "weight": "Poids mouches",
-     "title": true,
-     "main_event": true,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Naoki Inoue",
-      "record": "21-5-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Yrysbek Tilenov",
-      "record": "8-1-0",
-      "country": ""
-     },
-     "weight": "Poids coqs",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Ryuya Fukuda",
-      "record": "26-10-1",
-      "country": ""
-     },
-     "b": {
-      "name": "Soo Chul Kim",
-      "record": "24-9-1",
-      "country": ""
-     },
-     "weight": "Poids coqs",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Jinnosuke Kashimura",
-      "record": "12-6-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Shinobu Ota",
-      "record": "8-6-0",
-      "country": ""
-     },
-     "weight": "Poids coqs",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Kaleo Meheula",
-      "record": "6-4-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Kazuki Aimoto",
-      "record": "10-0-0",
-      "country": ""
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Juntaro Ushiku",
-      "record": "22-12-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Kaiwen Li",
-      "record": "17-8-0",
-      "country": ""
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Kyung Pyo Kim",
-      "record": "15-5-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Nurkhan Zhumagazy",
-      "record": "11-1-0",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Mac Papalii",
-      "record": "2-0-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Yukinori Akazawa",
-      "record": "8-6-0",
-      "country": ""
-     },
-     "weight": "Poids lourds",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Hiroaki Suzuki",
-      "record": "7-6-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Sei Min Kim",
-      "record": "7-1-0",
-      "country": ""
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Taichi Nakajima",
-      "record": "19-14-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Tsukasa Mizoguchi",
-      "record": "4-0-0",
-      "country": ""
-     },
-     "weight": "Poids coqs",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Tatsuya Saika",
-      "record": "14-8-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Daigo Kuramoto",
-      "record": "8-3-0",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Takumi Hamada",
-      "record": "7-0-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Sho Sekihara",
-      "record": "14-5-0",
-      "country": ""
-     },
-     "weight": "Poids mouches",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Rikiya Matsuzawa",
-      "record": "14-13-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Rio Kimura",
-      "record": "2-1-0",
-      "country": ""
-     },
-     "weight": "Poids mouches",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Jake Wilkins",
-      "record": "6-4-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Yajuro Yamasaki",
-      "record": "3-0-0",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Shunya Inoue",
-      "record": "0-0-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Saw Thwee Waw Thaunt",
-      "record": "1-1-0",
-      "country": ""
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
-      "name": "Naohiro Matsumoto",
-      "record": "8-7-1",
-      "country": ""
-     },
-     "b": {
-      "name": "Masachika Takahashi",
-      "record": "3-0-0",
-      "country": ""
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    }
-   ],
-   "notes": "Pas de diffuseur TV régulier en France : streaming payant uniquement.",
-   "url": "https://www.sherdog.com/events/Rizin-FF-Rizin-55-113794",
+   "venue": "Bobyhall Brno",
+   "city": "Brno",
+   "country": "Tchéquie",
+   "fights": [],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/Oktagon-MMA-Oktagon-Cage-Game-2-115319",
    "source": "Sherdog"
   },
   {
@@ -700,7 +194,40 @@
    "venue": "Lumpinee Boxing Stadium",
    "city": "Bangkok",
    "country": "Thaïlande",
-   "fights": [],
+   "fights": [
+    {
+     "a": {
+      "name": "Natakorn Kasorn",
+      "record": "1-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Mathew Gesto",
+      "record": "3-1-0",
+      "country": ""
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "main_event": true,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Su Hyun Kim",
+      "record": "5-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Takumi Fukamachi",
+      "record": "3-1-0",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    }
+   ],
    "notes": "Les ONE Friday Fights sont surtout des combats de Muay Thai et de kickboxing.",
    "url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-178-114883",
    "source": "Sherdog"
@@ -1122,6 +649,22 @@
       "country": ""
      },
      "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Tariq Pell",
+      "record": "8-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Wellington Lopes",
+      "record": "8-5-0",
+      "country": ""
+     },
+     "weight": "161lb Catchweight",
      "title": false,
      "main_event": false,
      "segment": "prelims"
@@ -1892,7 +1435,7 @@
      },
      "weight": "Poids coqs",
      "title": false,
-     "segment": "main",
+     "segment": "prelims",
      "main_event": false
     },
     {
@@ -2448,6 +1991,22 @@
     },
     {
      "a": {
+      "name": "Craig Rawlins",
+      "record": "5-6-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Graham Sheehan",
+      "record": "1-1-0",
+      "country": ""
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
       "name": "Mohamed El Karchouh",
       "record": "0-0-0",
       "country": ""
@@ -2460,7 +2019,55 @@
      "weight": "150lb Catchweight",
      "title": false,
      "main_event": false,
-     "segment": "main"
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Victor Yeo",
+      "record": "2-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Charlie Boulton",
+      "record": "4-1-0",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Jordan Molinari",
+      "record": "4-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Mariano Neto",
+      "record": "3-1-0",
+      "country": ""
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Chasen Blair",
+      "record": "7-4-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Nathan Jones",
+      "record": "17-13-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
     }
    ],
    "notes": "",
@@ -2854,8 +2461,8 @@
     },
     {
      "a": {
-      "name": "Jack McLoughlin",
-      "record": "1-1-0",
+      "name": "Jack Mcloughlin",
+      "record": "3-1-0",
       "country": ""
      },
      "b": {
@@ -2933,6 +2540,239 @@
    "notes": "",
    "url": "https://www.sherdog.com/events/One-Championship-ONE-Samurai-6-114889",
    "source": "Sherdog"
+  },
+  {
+   "id": "ufc-2026-12-05-ufc-fight-night",
+   "org": "ufc",
+   "name": "UFC Fight Night",
+   "subtitle": "Adesanya vs Magomedov",
+   "start": "2026-12-05T15:00:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-12-05T15:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-12-05T18:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport 1",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "ANB Arena",
+   "city": "Riyadh",
+   "country": "Arabie saoudite",
+   "fights": [
+    {
+     "a": {
+      "name": "Israel Adesanya",
+      "record": "24-6-0",
+      "country": "Nigeria"
+     },
+     "b": {
+      "name": "Shara Magomedov",
+      "record": "17-1-0",
+      "country": "Russia"
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": true
+    },
+    {
+     "a": {
+      "name": "Ian Machado Garry",
+      "record": "17-2-0",
+      "country": "Ireland"
+     },
+     "b": {
+      "name": "Yaroslav Amosov",
+      "record": "30-1-0",
+      "country": "Ukraine"
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Serghei Spivac",
+      "record": "18-7-0",
+      "country": "Moldova"
+     },
+     "b": {
+      "name": "Mario Pinto",
+      "record": "13-0-0",
+      "country": "Portugal"
+     },
+     "weight": "Poids lourds",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Levan Chokheli",
+      "record": "15-3-0",
+      "country": "Georgia"
+     },
+     "b": {
+      "name": "Islam Dulatov",
+      "record": "12-1-0",
+      "country": "Germany"
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Mairon Santos",
+      "record": "18-1-0",
+      "country": "Brazil"
+     },
+     "b": {
+      "name": "Akbar Abdullaev",
+      "record": "14-0-0",
+      "country": "Kyrgyzstan"
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Magomed Tuchalov",
+      "record": "7-0-0",
+      "country": "Russia"
+     },
+     "b": {
+      "name": "Ion Cutelaba",
+      "record": "20-12-1",
+      "country": "Moldova"
+     },
+     "weight": "Poids mi-lourds",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Bruno Silva",
+      "record": "15-9-2",
+      "country": "Brazil"
+     },
+     "b": {
+      "name": "Jafel Filho",
+      "record": "17-5-0",
+      "country": "Brazil"
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Uran Satybaldiev",
+      "record": "9-1-0",
+      "country": "Kyrgyzstan"
+     },
+     "b": {
+      "name": "Ivan Gnizditskiy",
+      "record": "7-0-0",
+      "country": "Russia"
+     },
+     "weight": "Poids mi-lourds",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Marco Tulio",
+      "record": "14-3-0",
+      "country": "Brazil"
+     },
+     "b": {
+      "name": "JunYong Park",
+      "record": "19-7-0",
+      "country": "South Korea"
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Pavel Andrusca",
+      "record": "9-0-0",
+      "country": "Moldova"
+     },
+     "b": {
+      "name": "Mehemmedeli Osmanli",
+      "record": "12-2-0",
+      "country": "Azerbaijan"
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Modestino Rodrigues",
+      "record": "8-1-0",
+      "country": "Brazil"
+     },
+     "b": {
+      "name": "Matthieu Letho Duclos",
+      "record": "11-3-0",
+      "country": "France"
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Abdul Hussein",
+      "record": "16-2-0",
+      "country": "Finland"
+     },
+     "b": {
+      "name": "Hecher Sosa",
+      "record": "15-1-0",
+      "country": "Spain"
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    }
+   ],
+   "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte.",
+   "url": "https://www.espn.com/mma/fightcenter/_/id/600062700/league/ufc",
+   "source": "ESPN"
   },
   {
    "id": "oktagon-2026-12-05-oktagon-99",
@@ -3159,8 +2999,8 @@
      ]
     }
    ],
-   "venue": "Vertu Arena",
-   "city": "Newcastle",
+   "venue": "Vertu Motors Arena",
+   "city": "Newcastle upon Tyne",
    "country": "Angleterre",
    "fights": [
     {
@@ -3218,11 +3058,11 @@
       "country": ""
      },
      "b": {
-      "name": "Unknown Fighter",
-      "record": "--",
+      "name": "Leon Aliu",
+      "record": "11-6-0",
       "country": ""
      },
-     "weight": "Poids légers",
+     "weight": "Poids mi-moyens",
      "title": false,
      "main_event": false,
      "segment": "main"
@@ -3378,7 +3218,7 @@
       "country": ""
      },
      "b": {
-      "name": "Julien Lopez",
+      "name": "Julien Pierre Lopez",
       "record": "7-6-1",
       "country": ""
      },
@@ -4220,6 +4060,22 @@
     },
     {
      "a": {
+      "name": "Shinya Aoki",
+      "record": "49-13-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Taisei Sakuraba",
+      "record": "2-2-0",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
       "name": "Chihiro Suzuki",
       "record": "13-6-0",
       "country": ""
@@ -4710,6 +4566,50 @@
    "fights": [],
    "notes": "",
    "url": "https://www.sherdog.com/events/Oktagon-MMA-Oktagon-103-115279",
+   "source": "Sherdog"
+  },
+  {
+   "id": "cagewarriors-2027-04-03-cage-warriors",
+   "org": "cagewarriors",
+   "name": "Cage Warriors",
+   "subtitle": "Seville",
+   "start": "2027-04-03T16:00:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2027-04-03T16:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2027-04-03T18:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      },
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "Seville",
+   "city": "Andalusia",
+   "country": "Espagne",
+   "fights": [],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/CW-Cage-Warriors-Seville-115317",
    "source": "Sherdog"
   }
  ]
