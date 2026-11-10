@@ -1,4 +1,6 @@
-# Calendrier MMA
+# FIGHTLY
+
+Le calendrier des soirées MMA.
 
 Toutes les soirées MMA à venir, au même endroit : **date, heure de Paris, chaîne française, lieu et carte complète des combats**.
 
@@ -15,7 +17,7 @@ C'est une app web installable (PWA), 100 % gratuite : hébergée sur GitHub Page
 - Filtres par organisation, recherche (combattant, événement, ville) et filtre « gratuit uniquement ».
 - **Abonnement agenda** (iPhone, Google Agenda, Outlook) : un calendrier pour toutes les orgas ou un par orga, mis à jour tout seul.
 - Bouton « Ajouter à mon agenda » sur chaque soirée (avec rappel 1 h avant).
-- Thème sombre et clair, fonctionne hors ligne, s'installe sur l'écran d'accueil (icône créée avec FLORA).
+- Thème sombre et clair, fonctionne hors ligne, s'installe sur l'écran d'accueil .
 
 ## Mise en ligne (une seule fois)
 
@@ -74,7 +76,7 @@ Pour lancer une mise à jour à la main : onglet **Actions** → **Run workflow*
 ## Version claude.ai (sans GitHub Pages)
 
 L'app est aussi publiée sur une page claude.ai, mise à jour chaque lundi par une tâche programmée dans Claude.
-`python3 scripts/build_artifact.py` fabrique `artifact/index.html` (styles et script intégrés) ; la page est publiée avec les fichiers `data/events.json` et `icons/icon-192.png`.
+`python3 scripts/build_artifact.py` fabrique `artifact/index.html` (styles et script intégrés) ; la page est publiée avec les fichiers `data/events.json` et `icons/logo-mark.png`.
 Sur cette version, le thème suit celui de Claude, et l'ajout à l'agenda passe par Google Agenda ou Outlook (pas d'abonnement .ics).
 
 ## Structure

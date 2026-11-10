@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T17:45:44Z",
+ "generated_at": "2026-11-10T16:36:44Z",
  "timezone": "Europe/Paris",
  "horizon_days": 150,
  "organizations": {
@@ -432,22 +432,22 @@
       "country": ""
      },
      "weight": "Poids mouches",
-     "title": false,
+     "title": true,
      "main_event": false,
      "segment": "main"
     },
     {
      "a": {
-      "name": "Ollie Sarwa",
-      "record": "9-1-0",
+      "name": "Tariq Pell",
+      "record": "8-2-0",
       "country": ""
      },
      "b": {
-      "name": "Ieuan Mackenzie",
-      "record": "6-3-0",
+      "name": "Wellington Lopes",
+      "record": "8-5-0",
       "country": ""
      },
-     "weight": "140lb Catchweight",
+     "weight": "161lb Catchweight",
      "title": false,
      "main_event": false,
      "segment": "main"
@@ -470,22 +470,6 @@
     },
     {
      "a": {
-      "name": "Marin Vetrila",
-      "record": "8-1-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Stefano Catacoli",
-      "record": "10-4-0",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
       "name": "Steven Hill",
       "record": "7-4-0",
       "country": ""
@@ -498,20 +482,20 @@
      "weight": "Poids mi-moyens",
      "title": false,
      "main_event": false,
-     "segment": "prelims"
+     "segment": "main"
     },
     {
      "a": {
-      "name": "Tariq Pell",
-      "record": "8-2-0",
+      "name": "Ollie Sarwa",
+      "record": "9-1-0",
       "country": ""
      },
      "b": {
-      "name": "Wellington Lopes",
-      "record": "8-5-0",
+      "name": "Ieuan Mackenzie",
+      "record": "6-3-0",
       "country": ""
      },
-     "weight": "161lb Catchweight",
+     "weight": "140lb Catchweight",
      "title": false,
      "main_event": false,
      "segment": "prelims"
@@ -523,11 +507,11 @@
       "country": ""
      },
      "b": {
-      "name": "Habib Samadi",
-      "record": "2-0-0",
+      "name": "Christos Ploumpis",
+      "record": "2-1-0",
       "country": ""
      },
-     "weight": "Poids mouches",
+     "weight": "130lb Catchweight",
      "title": false,
      "main_event": false,
      "segment": "prelims"
@@ -2323,22 +2307,6 @@
     },
     {
      "a": {
-      "name": "Leon Armes",
-      "record": "3-2-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Manny Akpan",
-      "record": "4-2-0",
-      "country": ""
-     },
-     "weight": "148lb Catchweight",
-     "title": false,
-     "main_event": false,
-     "segment": "main"
-    },
-    {
-     "a": {
       "name": "Milad Ahady",
       "record": "8-1-0",
       "country": ""
@@ -2351,7 +2319,7 @@
      "weight": "Poids plumes",
      "title": false,
      "main_event": false,
-     "segment": "prelims"
+     "segment": "main"
     },
     {
      "a": {
@@ -2435,22 +2403,6 @@
     },
     {
      "a": {
-      "name": "Jordan Stronge",
-      "record": "4-1-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Unknown Fighter",
-      "record": "--",
-      "country": ""
-     },
-     "weight": "Poids légers",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
       "name": "Geoff Pavey",
       "record": "3-3-0",
       "country": ""
@@ -2477,6 +2429,54 @@
       "country": ""
      },
      "weight": "Poids plumes",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Zanyar Kamaran",
+      "record": "1-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Kai Holmes",
+      "record": "3-2-0",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Leon Armes",
+      "record": "3-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Manny Akpan",
+      "record": "4-2-0",
+      "country": ""
+     },
+     "weight": "148lb Catchweight",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Jordan Stronge",
+      "record": "4-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Unknown Fighter",
+      "record": "--",
+      "country": ""
+     },
+     "weight": "Poids légers",
      "title": false,
      "main_event": false,
      "segment": "prelims"
@@ -2561,11 +2561,11 @@
       "country": ""
      },
      "b": {
-      "name": "Unknown Fighter",
-      "record": "--",
+      "name": "Kevin Cadoni",
+      "record": "1-1-0",
       "country": ""
      },
-     "weight": "",
+     "weight": "Poids mi-moyens",
      "title": false,
      "main_event": false,
      "segment": "main"
@@ -2863,7 +2863,7 @@
     {
      "a": {
       "name": "Bafode Gassama",
-      "record": "0-0-0",
+      "record": "4-0-0",
       "country": "France"
      },
      "b": {
