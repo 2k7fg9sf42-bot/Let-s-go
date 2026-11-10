@@ -1,5 +1,5 @@
 /* Service worker : l'app s'ouvre même hors ligne (avec les dernières données vues). */
-const VERSION = "fightly-v3";
+const VERSION = "fightly-v4";
 const SHELL = ["./", "index.html", "assets/style.css", "assets/app.js", "manifest.webmanifest", "icons/icon-192.png", "icons/logo-mark.png", "icons/favicon-64.png"];
 
 self.addEventListener("install", (e) => {

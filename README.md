@@ -15,7 +15,7 @@ C'est une app web installable (PWA), 100 % gratuite : hébergée sur GitHub Page
 - Fiche détaillée avec la **carte complète** : main event, combats pour un titre, catégories, palmarès.
 - **Prochaine soirée** mise en avant, avec un compte à rebours.
 - Filtres par organisation, recherche (combattant, événement, ville) et filtre « gratuit uniquement ».
-- **Abonnement agenda** (iPhone, Google Agenda, Outlook) : un calendrier pour toutes les orgas ou un par orga, mis à jour tout seul.
+- **Abonnement agenda** en un geste sur iPhone (app Calendrier) et sur Android (via Google Agenda), ou sur ordinateur (Outlook, Google Agenda) : un calendrier pour toutes les orgas ou un par orga, mis à jour tout seul.
 - Bouton « Ajouter à mon agenda » sur chaque soirée (avec rappel 1 h avant).
 - Thème sombre et clair, fonctionne hors ligne, s'installe sur l'écran d'accueil .
 
