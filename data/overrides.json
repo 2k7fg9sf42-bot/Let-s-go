@@ -1,0 +1,12 @@
+{
+  "_comment": "Corrections manuelles. 'match' = un morceau du nom de l'événement (sans tenir compte des majuscules). Tu peux préciser les heures (en heure de Paris, format AAAA-MM-JJTHH:MM), les chaînes, une note, ou masquer un événement avec \"hide\": true. Ces corrections sont appliquées à chaque mise à jour.",
+  "overrides": [
+    {
+      "_exemple": "Supprime le _ devant 'match' pour activer cet exemple.",
+      "_match": "ARES 45",
+      "times": {"prelims": "2026-11-20T19:30", "main": "2026-11-20T20:30"},
+      "broadcast": {"main": [{"name": "Canal+ Sport 360", "free": false}]},
+      "notes": "Exemple de note."
+    }
+  ]
+}

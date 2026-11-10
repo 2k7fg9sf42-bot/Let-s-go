@@ -1,0 +1,41 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Calendrier MMA//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:MMA — KSW
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:ksw-2026-11-21-ksw-123@calendrier-mma
+DTSTAMP:20261109T174619Z
+DTSTART:20261121T190000Z
+DTEND:20261121T220000Z
+SUMMARY:[KSW] KSW 123 : Bartosinski vs. Lopaczyk
+LOCATION:Netto Arena\, Szczecin\, Pologne
+DESCRIPTION:Bartosinski vs. Lopaczyk\nMain card : 20h00 (estimée) — RM
+ C Sport\n\nMain event : Adrian Bartosinski vs Tymoteusz Lopaczyk (Poids m
+ i-moyens ★ titre)\nCo-main : Valeriu Mircea vs Marcin Held (Poids lége
+ rs ★ titre)\nMadars Bertholds-Fleminas vs Mateusz Pawlik (Poids mi-moye
+ ns)\nTomasz Romanowski vs Igor Michaliszyn (Poids moyens)\nArtur Szczepan
+ iak vs Michal Hir (174lb Catchweight)\nAlain Van De Merckt vs Szymon Herr
+ mann (Poids moyens)\nhttps://www.sherdog.com/events/KSW-123-Bartosinski-v
+ s-Lopaczyk-114428
+END:VEVENT
+BEGIN:VEVENT
+UID:ksw-2026-12-19-ksw-124@calendrier-mma
+DTSTAMP:20261109T174619Z
+DTSTART:20261219T190000Z
+DTEND:20261219T220000Z
+SUMMARY:[KSW] KSW 124 : Pawlak vs. Kuberski
+LOCATION:PreZero Arena\, Gliwice\, Pologne
+DESCRIPTION:Pawlak vs. Kuberski\nMain card : 20h00 (estimée) — RMC Spo
+ rt\n\nMain event : Pawel Pawlak vs Piotr Kuberski (Poids moyens ★ titre
+ )\nCo-main : Patryk Kaczmarczyk vs Josef Stummer (Poids plumes ★ titre)
+ \nStefan Vojcak vs Artur Szpilka (Poids lourds ★ titre)\nRafal Haratyk 
+ vs Andi Vrtacic (Poids moyens)\nAdam Soldaev vs Hugo Deux (Poids légers)
+ \nSouheil Kaouchen vs Oleksii Polishchuk (Poids plumes)\nhttps://www.sher
+ dog.com/events/KSW-124-Pawlak-vs-Kuberski-114438
+END:VEVENT
+END:VCALENDAR

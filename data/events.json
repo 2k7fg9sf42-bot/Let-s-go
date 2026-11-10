@@ -1,0 +1,3341 @@
+{
+ "generated_at": "2026-11-09T17:45:44Z",
+ "timezone": "Europe/Paris",
+ "horizon_days": 150,
+ "organizations": {
+  "ufc": {
+   "name": "UFC",
+   "full_name": "Ultimate Fighting Championship",
+   "color": "#d20a0a",
+   "region": "international",
+   "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte."
+  },
+  "pfl": {
+   "name": "PFL",
+   "full_name": "Professional Fighters League (ex-Bellator)",
+   "color": "#c9a227",
+   "region": "international",
+   "notes": ""
+  },
+  "ares": {
+   "name": "ARES",
+   "full_name": "ARES Fighting Championship",
+   "color": "#2f6bff",
+   "region": "france",
+   "notes": ""
+  },
+  "hexagone": {
+   "name": "Hexagone",
+   "full_name": "Hexagone MMA",
+   "color": "#00a6a6",
+   "region": "france",
+   "notes": ""
+  },
+  "ksw": {
+   "name": "KSW",
+   "full_name": "Konfrontacja Sztuk Walki",
+   "color": "#8a8f98",
+   "region": "europe",
+   "notes": ""
+  },
+  "cagewarriors": {
+   "name": "Cage Warriors",
+   "full_name": "Cage Warriors",
+   "color": "#b5121b",
+   "region": "europe",
+   "notes": ""
+  }
+ },
+ "status": {
+  "ufc": {
+   "ok": true,
+   "source": "espn",
+   "count": 7
+  },
+  "pfl": {
+   "ok": true,
+   "source": "espn",
+   "count": 2
+  },
+  "ares": {
+   "ok": true,
+   "source": "sherdog",
+   "count": 2
+  },
+  "hexagone": {
+   "ok": true,
+   "source": "sherdog",
+   "count": 2
+  },
+  "ksw": {
+   "ok": true,
+   "source": "sherdog",
+   "count": 2
+  },
+  "cagewarriors": {
+   "ok": true,
+   "source": "sherdog",
+   "count": 5
+  }
+ },
+ "events": [
+  {
+   "id": "pfl-2026-11-14-pfl-dubai",
+   "org": "pfl",
+   "name": "PFL Dubai",
+   "subtitle": "Nemkov vs. Bilostenniy",
+   "start": "2026-11-14T14:00:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-11-14T14:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      },
+      {
+       "name": "YouTube PFL",
+       "free": true
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-11-14T18:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport 1",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "Coca-Cola Arena",
+   "city": "Dubai",
+   "country": "Émirats arabes unis",
+   "fights": [
+    {
+     "a": {
+      "name": "Vadim Nemkov",
+      "record": "20-2-0",
+      "country": "Russia"
+     },
+     "b": {
+      "name": "Sergei Bilostenniy",
+      "record": "15-4-0",
+      "country": "Russia"
+     },
+     "weight": "Poids lourds",
+     "title": false,
+     "segment": "main",
+     "main_event": true
+    },
+    {
+     "a": {
+      "name": "Patrick Habirora",
+      "record": "9-0-0",
+      "country": "Belgium"
+     },
+     "b": {
+      "name": "Omar El Dafrawy",
+      "record": "16-6-0",
+      "country": "Egypt"
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Pouya Rahmani",
+      "record": "6-0-0",
+      "country": "United Arab Emirates"
+     },
+     "b": {
+      "name": "Oleg Popov",
+      "record": "23-2-0",
+      "country": "Russia"
+     },
+     "weight": "Poids lourds",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Abubakar Nurmagomedov",
+      "record": "17-4-1",
+      "country": "Russia"
+     },
+     "b": {
+      "name": "David Martinez",
+      "record": "17-6-0",
+      "country": "Australia"
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Sergio Pettis",
+      "record": "25-8-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Joji Goto",
+      "record": "21-9-1",
+      "country": "Japan"
+     },
+     "weight": "",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Shem Rock",
+      "record": "12-3-1",
+      "country": "Ireland"
+     },
+     "b": {
+      "name": "Connor Hughes",
+      "record": "12-3-0",
+      "country": "England"
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Lewis McGrillen",
+      "record": "13-2-0",
+      "country": "England"
+     },
+     "b": {
+      "name": "Nawras Abzakh",
+      "record": "15-6-0",
+      "country": "Jordan"
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Khasan Magomedsharipov",
+      "record": "11-0-0",
+      "country": "Russia"
+     },
+     "b": {
+      "name": "Adam Borics",
+      "record": "20-4-0",
+      "country": "Hungary"
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Asaël Adjoudj",
+      "record": "11-1-0",
+      "country": "Algeria"
+     },
+     "b": {
+      "name": "Movlid Khaybulaev",
+      "record": "24-0-1",
+      "country": "Russia"
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Ernesto Rodriguez",
+      "record": "11-2-0",
+      "country": "Cuba"
+     },
+     "b": {
+      "name": "Rhys McKee",
+      "record": "15-7-1",
+      "country": "Ireland"
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Alexei Pergande",
+      "record": "8-0-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Akhmed Magomedov",
+      "record": "11-2-0",
+      "country": "Russia"
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Khamzat Abaev",
+      "record": "6-1-0",
+      "country": "Belgium"
+     },
+     "b": {
+      "name": "Leon Hill",
+      "record": "10-2-0",
+      "country": "Ireland"
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Denis Goltsov",
+      "record": "37-9-0",
+      "country": "Russia"
+     },
+     "b": {
+      "name": "Maxwell Djantou Nana",
+      "record": "9-2-0",
+      "country": "Cameroon"
+     },
+     "weight": "Poids lourds",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Khabib Nabiev",
+      "record": "12-0-0",
+      "country": "Russia"
+     },
+     "b": {
+      "name": "Styve Ngono",
+      "record": "8-1-0",
+      "country": "Cameroon"
+     },
+     "weight": "Poids mi-lourds",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Aleksandra Savicheva",
+      "record": "8-2-0",
+      "country": "Russia"
+     },
+     "b": {
+      "name": "Jacinta Austin",
+      "record": "9-2-0",
+      "country": "Australia"
+     },
+     "weight": "Poids pailles (F)",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    }
+   ],
+   "notes": "",
+   "url": "https://www.espn.com/mma/fightcenter/_/id/600061421/league/pfl",
+   "source": "ESPN"
+  },
+  {
+   "id": "cagewarriors-2026-11-14-cage-warriors-213",
+   "org": "cagewarriors",
+   "name": "Cage Warriors 213",
+   "subtitle": "London",
+   "start": "2026-11-14T18:00:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-11-14T18:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-11-14T20:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      },
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "BBC Studioworks Television Centre",
+   "city": "London",
+   "country": "Angleterre",
+   "fights": [
+    {
+     "a": {
+      "name": "Nik Bagley",
+      "record": "10-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Bruno Souza",
+      "record": "16-4-0",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": true,
+     "main_event": true,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Jawany Scott",
+      "record": "8-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Willians Nogueira",
+      "record": "9-3-0",
+      "country": ""
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Ollie Sarwa",
+      "record": "9-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Ieuan Mackenzie",
+      "record": "6-3-0",
+      "country": ""
+     },
+     "weight": "140lb Catchweight",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Shirzad Qadrian",
+      "record": "8-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Manoel Costa",
+      "record": "18-3-0",
+      "country": ""
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Marin Vetrila",
+      "record": "8-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Stefano Catacoli",
+      "record": "10-4-0",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Steven Hill",
+      "record": "7-4-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Sado Ucar",
+      "record": "20-9-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Tariq Pell",
+      "record": "8-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Wellington Lopes",
+      "record": "8-5-0",
+      "country": ""
+     },
+     "weight": "161lb Catchweight",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Bobby Chikavhu",
+      "record": "3-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Habib Samadi",
+      "record": "2-0-0",
+      "country": ""
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Ben Edwards",
+      "record": "1-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "James Wamsley",
+      "record": "0-1-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Callum Haughian",
+      "record": "2-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Will Fox",
+      "record": "0-0-0",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    }
+   ],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/CW-213-Cage-Warriors-213-London-114779",
+   "source": "Sherdog"
+  },
+  {
+   "id": "ufc-2026-11-14-ufc-334",
+   "org": "ufc",
+   "name": "UFC 334",
+   "subtitle": "Gane vs. Hokit",
+   "start": "2026-11-14T22:00:00Z",
+   "segments": [
+    {
+     "key": "early",
+     "label": "Early prelims",
+     "start": "2026-11-14T22:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-11-15T00:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-11-15T02:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport 1",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "Madison Square Garden",
+   "city": "New York",
+   "country": "États-Unis",
+   "fights": [
+    {
+     "a": {
+      "name": "Ciryl Gane",
+      "record": "14-2-0",
+      "country": "France"
+     },
+     "b": {
+      "name": "Josh Hokit",
+      "record": "10-0-0",
+      "country": "USA"
+     },
+     "weight": "Poids lourds",
+     "title": false,
+     "segment": "main",
+     "main_event": true
+    },
+    {
+     "a": {
+      "name": "Kayla Harrison",
+      "record": "19-1-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Amanda Nunes",
+      "record": "23-5-0",
+      "country": "Brazil"
+     },
+     "weight": "Poids coqs (F)",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Caio Borralho",
+      "record": "18-2-0",
+      "country": "Brazil"
+     },
+     "b": {
+      "name": "Yousri Belgaroui",
+      "record": "11-3-0",
+      "country": "Netherlands"
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Uroš Medić",
+      "record": "14-3-0",
+      "country": "Serbia"
+     },
+     "b": {
+      "name": "Kevin Holland",
+      "record": "29-15-0",
+      "country": "USA"
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Bilal Hasan",
+      "record": "10-0-0",
+      "country": "Indonesia"
+     },
+     "b": {
+      "name": "Luis Gurule",
+      "record": "11-4-0",
+      "country": "USA"
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Stephen Thompson",
+      "record": "17-9-1",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Charles Radtke",
+      "record": "12-5-0",
+      "country": "USA"
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Drew Dober",
+      "record": "29-15-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Chris Duncan",
+      "record": "15-3-0",
+      "country": "Scotland"
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Jim Miller",
+      "record": "39-19-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Terrance McKinney",
+      "record": "18-9-0",
+      "country": "USA"
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Donte Johnson",
+      "record": "9-0-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Cesar Almeida",
+      "record": "7-3-0",
+      "country": "Brazil"
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Jared Gordon",
+      "record": "21-9-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Melquizael Costa",
+      "record": "26-8-0",
+      "country": "Brazil"
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "segment": "early",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Macy Chiasson",
+      "record": "11-6-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Bia Mesquita",
+      "record": "8-0-0",
+      "country": "Brazil"
+     },
+     "weight": "Poids coqs (F)",
+     "title": false,
+     "segment": "early",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Adrian Yañez",
+      "record": "18-6-1",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Juan Diaz",
+      "record": "16-1-1",
+      "country": "Peru"
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "segment": "early",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Evan Elder",
+      "record": "10-2-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Samuel Sanches",
+      "record": "11-1-0",
+      "country": "Brazil"
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "segment": "early",
+     "main_event": false
+    }
+   ],
+   "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte.",
+   "url": "https://www.espn.com/mma/fightcenter/_/id/600061400/league/ufc",
+   "source": "ESPN"
+  },
+  {
+   "id": "ares-2026-11-20-ares-45",
+   "org": "ares",
+   "name": "ARES 45",
+   "subtitle": "Zebo vs. Baki 2",
+   "start": "2026-11-20T18:30:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-11-20T18:30:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "Twitch Canal+",
+       "free": true
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-11-20T19:30:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "Canal+ Sport 360",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "Adidas Arena",
+   "city": "Paris",
+   "country": "France",
+   "fights": [
+    {
+     "a": {
+      "name": "Jordan Zebo",
+      "record": "11-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Baissangour Chamsoudinov",
+      "record": "9-1-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": true,
+     "main_event": true,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Ghassen Jbalia",
+      "record": "6-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Modibo Diakite",
+      "record": "4-0-0",
+      "country": ""
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Amir Aliev",
+      "record": "8-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Adionai Maciel",
+      "record": "12-2-0",
+      "country": ""
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Nimo Djagbo",
+      "record": "1-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Nikodem Blazejewski",
+      "record": "0-1-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Marvin Caperan",
+      "record": "1-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Bruno Pudins",
+      "record": "0-1-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Sarah Moussaddak",
+      "record": "1-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Dina da Silva Barbosa",
+      "record": "3-2-0",
+      "country": ""
+     },
+     "weight": "Poids pailles",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Lamp Toure",
+      "record": "1-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Valeriu Asaftei",
+      "record": "1-0-0",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Alou Camara",
+      "record": "4-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Garcia Pinto Kinkela",
+      "record": "2-0-0",
+      "country": ""
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Ibrahima Wade",
+      "record": "3-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Jovan Todorovic",
+      "record": "2-1-0",
+      "country": ""
+     },
+     "weight": "Poids mi-lourds",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    }
+   ],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/ARES-45-Zebo-vs-Baki-2-112453",
+   "source": "Sherdog"
+  },
+  {
+   "id": "ufc-2026-11-21-ufc-fight-night",
+   "org": "ufc",
+   "name": "UFC Fight Night",
+   "subtitle": "Procházka vs. Stirling",
+   "start": "2026-11-21T15:00:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-11-21T15:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-11-21T18:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport 1",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "ABHA Arena",
+   "city": "Doha",
+   "country": "Qatar",
+   "fights": [
+    {
+     "a": {
+      "name": "Jiří Procházka",
+      "record": "32-6-1",
+      "country": "Czechia"
+     },
+     "b": {
+      "name": "Navajo Stirling",
+      "record": "11-0-0",
+      "country": "New Zealand"
+     },
+     "weight": "Poids mi-lourds",
+     "title": false,
+     "segment": "main",
+     "main_event": true
+    },
+    {
+     "a": {
+      "name": "Aljamain Sterling",
+      "record": "26-5-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Kevin Vallejos",
+      "record": "18-1-0",
+      "country": "Argentina"
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Dan Hooker",
+      "record": "24-15-0",
+      "country": "New Zealand"
+     },
+     "b": {
+      "name": "Brian Ortega",
+      "record": "16-5-0",
+      "country": "USA"
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Kyoji Horiguchi",
+      "record": "36-6-0",
+      "country": "Japan"
+     },
+     "b": {
+      "name": "Asu Almabayev",
+      "record": "24-3-0",
+      "country": "Kazakhstan"
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Jared Cannonier",
+      "record": "18-10-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Ikram Aliskerov",
+      "record": "18-2-0",
+      "country": "Russia"
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Aleksandre Topuria",
+      "record": "7-1-0",
+      "country": "Georgia"
+     },
+     "b": {
+      "name": "Santiago Luna",
+      "record": "8-1-0",
+      "country": "Mexico"
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Shamil Gaziev",
+      "record": "15-3-0",
+      "country": "Bahrain"
+     },
+     "b": {
+      "name": "Tallison Teixeira",
+      "record": "9-2-0",
+      "country": "Brazil"
+     },
+     "weight": "Poids lourds",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Amir Albazi",
+      "record": "17-3-0",
+      "country": "Iraq"
+     },
+     "b": {
+      "name": "Alessandro Costa",
+      "record": "17-5-0",
+      "country": "Brazil"
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Jake Matthews",
+      "record": "23-8-0",
+      "country": "Australia"
+     },
+     "b": {
+      "name": "Tahir Abdullayev",
+      "record": "20-3-0",
+      "country": "Azerbaijan"
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    }
+   ],
+   "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte.",
+   "url": "https://www.espn.com/mma/fightcenter/_/id/600061665/league/ufc",
+   "source": "ESPN"
+  },
+  {
+   "id": "ksw-2026-11-21-ksw-123",
+   "org": "ksw",
+   "name": "KSW 123",
+   "subtitle": "Bartosinski vs. Lopaczyk",
+   "start": "2026-11-21T19:00:00Z",
+   "segments": [
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-11-21T19:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "Netto Arena",
+   "city": "Szczecin",
+   "country": "Pologne",
+   "fights": [
+    {
+     "a": {
+      "name": "Adrian Bartosinski",
+      "record": "18-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Tymoteusz Lopaczyk",
+      "record": "14-4-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": true,
+     "main_event": true,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Valeriu Mircea",
+      "record": "32-9-1",
+      "country": ""
+     },
+     "b": {
+      "name": "Marcin Held",
+      "record": "31-11-0",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": true,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Madars Bertholds-Fleminas",
+      "record": "14-8-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Mateusz Pawlik",
+      "record": "7-3-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Tomasz Romanowski",
+      "record": "19-12-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Igor Michaliszyn",
+      "record": "12-4-0",
+      "country": ""
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Artur Szczepaniak",
+      "record": "13-4-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Michal Hir",
+      "record": "5-1-0",
+      "country": ""
+     },
+     "weight": "174lb Catchweight",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Alain Van De Merckt",
+      "record": "10-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Szymon Herrmann",
+      "record": "7-0-0",
+      "country": ""
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Wojciech Kawa",
+      "record": "9-5-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Oleksandr Moisa",
+      "record": "5-2-0",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Maciej Kazieczko",
+      "record": "9-5-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Bohdan Danylko",
+      "record": "8-1-0",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    }
+   ],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/KSW-123-Bartosinski-vs-Lopaczyk-114428",
+   "source": "Sherdog"
+  },
+  {
+   "id": "cagewarriors-2026-11-27-cage-warriors-214",
+   "org": "cagewarriors",
+   "name": "Cage Warriors 214",
+   "subtitle": "Unplugged",
+   "start": "2026-11-27T18:00:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-11-27T18:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-11-27T20:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      },
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "BEC Arena",
+   "city": "Manchester",
+   "country": "Angleterre",
+   "fights": [
+    {
+     "a": {
+      "name": "Alexander Loof",
+      "record": "9-4-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Oscar Ownsworth",
+      "record": "10-5-1",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "main_event": true,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Tanio Pagliariccio",
+      "record": "11-5-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Igor Wojtas",
+      "record": "13-9-0",
+      "country": ""
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Jordan O'Neill",
+      "record": "4-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Christopher Bajo",
+      "record": "6-4-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Elsa Cerezo",
+      "record": "1-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Chloe Crozier",
+      "record": "0-0-0",
+      "country": ""
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Nathanael Woods",
+      "record": "2-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Angelo Maria Terenzio",
+      "record": "3-3-0",
+      "country": ""
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Craig Rawlins",
+      "record": "5-6-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Graham Sheehan",
+      "record": "1-1-0",
+      "country": ""
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Mohamed El Karchouh",
+      "record": "0-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Kevin Kehoe",
+      "record": "0-0-0",
+      "country": ""
+     },
+     "weight": "150lb Catchweight",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Victor Yeo",
+      "record": "2-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Charlie Boulton",
+      "record": "4-1-0",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Jordan Molinari",
+      "record": "4-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Mariano Neto",
+      "record": "3-1-0",
+      "country": ""
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Chasen Blair",
+      "record": "7-4-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Nathan Jones",
+      "record": "17-13-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    }
+   ],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/CW-214-Cage-Warriors-214-Unplugged-114549",
+   "source": "Sherdog"
+  },
+  {
+   "id": "hexagone-2026-11-27-hexagone-mma-49",
+   "org": "hexagone",
+   "name": "Hexagone MMA 49",
+   "subtitle": "",
+   "start": "2026-11-27T18:00:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-11-27T18:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-11-27T20:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "RMC Sport 1",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "Glaz Arena",
+   "city": "Cesson-Sevigne",
+   "country": "France",
+   "fights": [
+    {
+     "a": {
+      "name": "Theo Ulrich",
+      "record": "8-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Davy Gallon",
+      "record": "24-10-2",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": true,
+     "main_event": true,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Anthony Morel",
+      "record": "7-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Tamerlan Albiekov",
+      "record": "5-1-0",
+      "country": ""
+     },
+     "weight": "Poids lourds",
+     "title": true,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Antero dos Santos",
+      "record": "7-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Georges Ngoma",
+      "record": "5-5-0",
+      "country": ""
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Vaclav Zemla",
+      "record": "4-0-1",
+      "country": ""
+     },
+     "b": {
+      "name": "Louis Banhiet",
+      "record": "1-2-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Allan Landouzy",
+      "record": "2-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Benjamin Molnar",
+      "record": "14-12-0",
+      "country": ""
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Kalim Mastouri",
+      "record": "0-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Mathieu Abbe",
+      "record": "0-1-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Oceane Samson",
+      "record": "3-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Lindsey Payne",
+      "record": "4-3-0",
+      "country": ""
+     },
+     "weight": "Poids pailles",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Olivier Fleurmon",
+      "record": "1-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Mathieu Szymborski",
+      "record": "1-0-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    }
+   ],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/HXMMA-49-Hexagone-MMA-49-114109",
+   "source": "Sherdog"
+  },
+  {
+   "id": "cagewarriors-2026-11-28-cage-warriors-215",
+   "org": "cagewarriors",
+   "name": "Cage Warriors 215",
+   "subtitle": "Manchester",
+   "start": "2026-11-28T18:00:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-11-28T18:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-11-28T20:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      },
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "BEC Arena",
+   "city": "Manchester",
+   "country": "Angleterre",
+   "fights": [
+    {
+     "a": {
+      "name": "Ieuan Davies",
+      "record": "8-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Jordan Vucenic",
+      "record": "16-4-0",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": true,
+     "main_event": true,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Shay Ingram",
+      "record": "5-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Steffen Rossevatn",
+      "record": "4-1-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Omiel Brown",
+      "record": "13-4-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Konstantinos Ntelis",
+      "record": "11-3-0",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Nathan Fletcher",
+      "record": "11-3-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Anderson Souza Soares",
+      "record": "17-7-0",
+      "country": ""
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Adam Cullen",
+      "record": "12-3-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Jefferson Andre",
+      "record": "15-9-0",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Jack Humphries",
+      "record": "5-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Alexandros Moumtzis",
+      "record": "10-0-0",
+      "country": ""
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Emile Vujakovic",
+      "record": "6-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Mario Mingaj",
+      "record": "7-2-0",
+      "country": ""
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Charlie Dando",
+      "record": "2-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Jordan Walters",
+      "record": "3-0-0",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Joe Fields",
+      "record": "7-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Samir Faiddine",
+      "record": "14-10-0",
+      "country": ""
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Sheldon Ryan",
+      "record": "5-3-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Gary Rooney",
+      "record": "4-1-0",
+      "country": ""
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Connor Wilson",
+      "record": "7-3-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Davi Santos",
+      "record": "7-4-0",
+      "country": ""
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Jack Mcloughlin",
+      "record": "3-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Jack Corr",
+      "record": "4-0-0",
+      "country": ""
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Branden Guest",
+      "record": "1-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Owen Cartridge",
+      "record": "1-0-0",
+      "country": ""
+     },
+     "weight": "Poids mi-lourds",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    }
+   ],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/CW-215-Cage-Warriors-215-Manchester-114550",
+   "source": "Sherdog"
+  },
+  {
+   "id": "ufc-2026-12-05-ufc-fight-night",
+   "org": "ufc",
+   "name": "UFC Fight Night",
+   "subtitle": "Adesanya vs Magomedov",
+   "start": "2026-12-05T15:00:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-12-05T15:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-12-05T18:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport 1",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "ANB Arena",
+   "city": "Riyadh",
+   "country": "Arabie saoudite",
+   "fights": [
+    {
+     "a": {
+      "name": "Israel Adesanya",
+      "record": "24-6-0",
+      "country": "Nigeria"
+     },
+     "b": {
+      "name": "Shara Magomedov",
+      "record": "17-1-0",
+      "country": "Russia"
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": true
+    },
+    {
+     "a": {
+      "name": "Ian Machado Garry",
+      "record": "17-2-0",
+      "country": "Ireland"
+     },
+     "b": {
+      "name": "Yaroslav Amosov",
+      "record": "30-1-0",
+      "country": "Ukraine"
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Serghei Spivac",
+      "record": "18-7-0",
+      "country": "Moldova"
+     },
+     "b": {
+      "name": "Mario Pinto",
+      "record": "13-0-0",
+      "country": "Portugal"
+     },
+     "weight": "Poids lourds",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Levan Chokheli",
+      "record": "15-3-0",
+      "country": "Georgia"
+     },
+     "b": {
+      "name": "Islam Dulatov",
+      "record": "12-1-0",
+      "country": "Germany"
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Mairon Santos",
+      "record": "18-1-0",
+      "country": "Brazil"
+     },
+     "b": {
+      "name": "Akbar Abdullaev",
+      "record": "14-0-0",
+      "country": "Kyrgyzstan"
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Magomed Tuchalov",
+      "record": "7-0-0",
+      "country": "Russia"
+     },
+     "b": {
+      "name": "Ion Cutelaba",
+      "record": "20-12-1",
+      "country": "Moldova"
+     },
+     "weight": "Poids mi-lourds",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Bruno Silva",
+      "record": "15-9-2",
+      "country": "Brazil"
+     },
+     "b": {
+      "name": "Jafel Filho",
+      "record": "17-5-0",
+      "country": "Brazil"
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Uran Satybaldiev",
+      "record": "9-1-0",
+      "country": "Kyrgyzstan"
+     },
+     "b": {
+      "name": "Ivan Gnizditskiy",
+      "record": "7-0-0",
+      "country": "Russia"
+     },
+     "weight": "Poids mi-lourds",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Marco Tulio",
+      "record": "14-3-0",
+      "country": "Brazil"
+     },
+     "b": {
+      "name": "JunYong Park",
+      "record": "19-7-0",
+      "country": "South Korea"
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Pavel Andrusca",
+      "record": "9-0-0",
+      "country": "Moldova"
+     },
+     "b": {
+      "name": "Mehemmedeli Osmanli",
+      "record": "12-2-0",
+      "country": "Azerbaijan"
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Modestino Rodrigues",
+      "record": "8-1-0",
+      "country": "Brazil"
+     },
+     "b": {
+      "name": "Matthieu Letho Duclos",
+      "record": "11-3-0",
+      "country": "France"
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Abdul Hussein",
+      "record": "16-2-0",
+      "country": "Finland"
+     },
+     "b": {
+      "name": "Hecher Sosa",
+      "record": "15-1-0",
+      "country": "Spain"
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    }
+   ],
+   "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte.",
+   "url": "https://www.espn.com/mma/fightcenter/_/id/600062700/league/ufc",
+   "source": "ESPN"
+  },
+  {
+   "id": "cagewarriors-2026-12-05-cage-warriors-216",
+   "org": "cagewarriors",
+   "name": "Cage Warriors 216",
+   "subtitle": "Newcastle",
+   "start": "2026-12-05T18:00:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-12-05T18:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-12-05T20:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      },
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "Vertu Motors Arena",
+   "city": "Newcastle upon Tyne",
+   "country": "Angleterre",
+   "fights": [
+    {
+     "a": {
+      "name": "George Hardwick",
+      "record": "15-4-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Gavin Hughes",
+      "record": "11-5-0",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": true,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Justin Burlinson",
+      "record": "10-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Farshad Nazarnia",
+      "record": "5-1-0",
+      "country": ""
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Jack Foote",
+      "record": "3-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Unknown Fighter",
+      "record": "--",
+      "country": ""
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Chris Bungard",
+      "record": "23-11-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Leon Aliu",
+      "record": "11-6-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Leon Armes",
+      "record": "3-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Manny Akpan",
+      "record": "4-2-0",
+      "country": ""
+     },
+     "weight": "148lb Catchweight",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Milad Ahady",
+      "record": "8-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Alexander O'Sullivan",
+      "record": "5-1-0",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Michael Blair",
+      "record": "5-3-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Thomas Paull",
+      "record": "13-7-0",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Stevie Lee",
+      "record": "1-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Cristiano Oliveira",
+      "record": "3-3-0",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Joshua Abraham",
+      "record": "9-6-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Miguel Haro",
+      "record": "13-11-0",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Ryan Campbell",
+      "record": "4-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Unknown Fighter",
+      "record": "--",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Jamie McGowan",
+      "record": "2-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Unknown Fighter",
+      "record": "--",
+      "country": ""
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Jordan Stronge",
+      "record": "4-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Unknown Fighter",
+      "record": "--",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Geoff Pavey",
+      "record": "3-3-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Lewis Urquhart",
+      "record": "0-1-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Bailey Gilbert",
+      "record": "9-7-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Julien Pierre Lopez",
+      "record": "7-6-1",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    }
+   ],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/CW-216-Cage-Warriors-216-Newcastle-114629",
+   "source": "Sherdog"
+  },
+  {
+   "id": "ares-2026-12-11-ares-46",
+   "org": "ares",
+   "name": "ARES 46",
+   "subtitle": "Jorand vs. Jendrasik",
+   "start": "2026-12-11T18:30:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-12-11T18:30:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "Twitch Canal+",
+       "free": true
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-12-11T19:30:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "Canal+ Sport 360",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "Adidas Arena",
+   "city": "Paris",
+   "country": "France",
+   "fights": [
+    {
+     "a": {
+      "name": "Jade Jorand",
+      "record": "5-3-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Kinga Jendrasik",
+      "record": "3-3-0",
+      "country": ""
+     },
+     "weight": "Poids pailles",
+     "title": true,
+     "main_event": true,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Alexis Nicolas",
+      "record": "2-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Bilal Bakhouche-Chareuf",
+      "record": "4-0-0",
+      "country": ""
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Jean Magny",
+      "record": "0-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Unknown Fighter",
+      "record": "--",
+      "country": ""
+     },
+     "weight": "",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Bogdan Ozdoev",
+      "record": "0-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Unknown Fighter",
+      "record": "--",
+      "country": ""
+     },
+     "weight": "",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    }
+   ],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/ARES-46-Jorand-vs-Jendrasik-114552",
+   "source": "Sherdog"
+  },
+  {
+   "id": "ufc-2026-12-12-ufc-335",
+   "org": "ufc",
+   "name": "UFC 335",
+   "subtitle": "Oliveira vs. Lopes",
+   "start": "2026-12-12T22:00:00Z",
+   "segments": [
+    {
+     "key": "early",
+     "label": "Early prelims",
+     "start": "2026-12-12T22:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-12-13T00:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-12-13T02:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport 1",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "T-Mobile Arena",
+   "city": "Las Vegas",
+   "country": "États-Unis",
+   "fights": [
+    {
+     "a": {
+      "name": "Charles Oliveira",
+      "record": "37-11-0",
+      "country": "Brazil"
+     },
+     "b": {
+      "name": "Diego Lopes",
+      "record": "28-8-0",
+      "country": "Brazil"
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "segment": "main",
+     "main_event": true
+    },
+    {
+     "a": {
+      "name": "Sergei Pavlovich",
+      "record": "21-3-0",
+      "country": "Russia"
+     },
+     "b": {
+      "name": "Alex Pereira",
+      "record": "13-4-0",
+      "country": "Brazil"
+     },
+     "weight": "Poids lourds",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Joe Pyfer",
+      "record": "16-3-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Bo Nickal",
+      "record": "9-1-0",
+      "country": "USA"
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Brandon Moreno",
+      "record": "24-10-2",
+      "country": "Mexico"
+     },
+     "b": {
+      "name": "Charles Johnson",
+      "record": "20-9-0",
+      "country": "USA"
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Maycee Barber",
+      "record": "15-3-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Carli Judice",
+      "record": "7-2-0",
+      "country": "USA"
+     },
+     "weight": "Poids mouches (F)",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Quentin Pasley",
+      "record": "4-0-0",
+      "country": "USA"
+     },
+     "b": {
+      "name": "Junior Tafa",
+      "record": "7-6-0",
+      "country": "Australia"
+     },
+     "weight": "Poids mi-lourds",
+     "title": false,
+     "segment": "early",
+     "main_event": false
+    }
+   ],
+   "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte.",
+   "url": "https://www.espn.com/mma/fightcenter/_/id/600061401/league/ufc",
+   "source": "ESPN"
+  },
+  {
+   "id": "pfl-2026-12-19-pfl-lyon",
+   "org": "pfl",
+   "name": "PFL Lyon",
+   "subtitle": "Lapilus vs. McKee",
+   "start": "2026-12-19T16:00:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2026-12-19T16:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      },
+      {
+       "name": "YouTube PFL",
+       "free": true
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-12-19T20:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport 1",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "LDLC Arena",
+   "city": "Lyon",
+   "country": "France",
+   "fights": [
+    {
+     "a": {
+      "name": "Taylor Lapilus",
+      "record": "25-4-0",
+      "country": "France"
+     },
+     "b": {
+      "name": "Mitch McKee",
+      "record": "11-0-0",
+      "country": "USA"
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "segment": "main",
+     "main_event": true
+    },
+    {
+     "a": {
+      "name": "Boris Mbarga Atangana",
+      "record": "9-0-0",
+      "country": "Belgium"
+     },
+     "b": {
+      "name": "Bryan Battle",
+      "record": "14-3-0",
+      "country": "USA"
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Abdoul Abdouraguimov",
+      "record": "20-1-0",
+      "country": "France"
+     },
+     "b": {
+      "name": "Andreeas Binder",
+      "record": "12-2-0",
+      "country": "Romania"
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Fabian Edwards",
+      "record": "16-5-0",
+      "country": "England"
+     },
+     "b": {
+      "name": "Ilian Bouafia",
+      "record": "8-1-0",
+      "country": "France"
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Baris Adiguzel",
+      "record": "10-2-0",
+      "country": "France"
+     },
+     "b": {
+      "name": "Liam Gittins",
+      "record": "13-6-0",
+      "country": "England"
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Bafode Gassama",
+      "record": "0-0-0",
+      "country": "France"
+     },
+     "b": {
+      "name": "Coby Bradford",
+      "record": "6-4-0",
+      "country": "USA"
+     },
+     "weight": "Poids mi-lourds",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Brandon Brachet",
+      "record": "0-0-0",
+      "country": "France"
+     },
+     "b": {
+      "name": "Adam Meskini",
+      "record": "11-3-0",
+      "country": "France"
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Mathilde Aschenbrenner",
+      "record": "0-0-0",
+      "country": "France"
+     },
+     "b": {
+      "name": "Shelda Chipito",
+      "record": "2-0-0",
+      "country": "Zambia"
+     },
+     "weight": "Poids pailles (F)",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    }
+   ],
+   "notes": "",
+   "url": "https://www.espn.com/mma/fightcenter/_/id/600061422/league/pfl",
+   "source": "ESPN"
+  },
+  {
+   "id": "ksw-2026-12-19-ksw-124",
+   "org": "ksw",
+   "name": "KSW 124",
+   "subtitle": "Pawlak vs. Kuberski",
+   "start": "2026-12-19T19:00:00Z",
+   "segments": [
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2026-12-19T19:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "PreZero Arena",
+   "city": "Gliwice",
+   "country": "Pologne",
+   "fights": [
+    {
+     "a": {
+      "name": "Pawel Pawlak",
+      "record": "26-4-1",
+      "country": ""
+     },
+     "b": {
+      "name": "Piotr Kuberski",
+      "record": "18-1-0",
+      "country": ""
+     },
+     "weight": "Poids moyens",
+     "title": true,
+     "main_event": true,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Patryk Kaczmarczyk",
+      "record": "14-3-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Josef Stummer",
+      "record": "8-2-0",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": true,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Stefan Vojcak",
+      "record": "11-2-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Artur Szpilka",
+      "record": "6-1-0",
+      "country": ""
+     },
+     "weight": "Poids lourds",
+     "title": true,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Rafal Haratyk",
+      "record": "21-6-2",
+      "country": ""
+     },
+     "b": {
+      "name": "Andi Vrtacic",
+      "record": "10-3-0",
+      "country": ""
+     },
+     "weight": "Poids moyens",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Adam Soldaev",
+      "record": "11-3-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Hugo Deux",
+      "record": "7-1-0",
+      "country": ""
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Souheil Kaouchen",
+      "record": "3-0-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Oleksii Polishchuk",
+      "record": "15-7-0",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
+      "name": "Kacper Sochacki",
+      "record": "5-1-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Aleksander Winiarski",
+      "record": "4-1-0",
+      "country": ""
+     },
+     "weight": "Poids mi-lourds",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    }
+   ],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/KSW-124-Pawlak-vs-Kuberski-114438",
+   "source": "Sherdog"
+  },
+  {
+   "id": "hexagone-2027-01-08-hexagone-mma-50",
+   "org": "hexagone",
+   "name": "Hexagone MMA 50",
+   "subtitle": "",
+   "start": "2027-01-08T18:00:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2027-01-08T18:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2027-01-08T20:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "RMC Sport 1",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "Zenith Paris - La Villette",
+   "city": "Paris",
+   "country": "France",
+   "fights": [
+    {
+     "a": {
+      "name": "Nika Kobakhidze",
+      "record": "8-3-0",
+      "country": ""
+     },
+     "b": {
+      "name": "Damien Lapilus",
+      "record": "23-15-3",
+      "country": ""
+     },
+     "weight": "Poids plumes",
+     "title": true,
+     "main_event": true,
+     "segment": "main"
+    }
+   ],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/HXMMA-50-Hexagone-MMA-50-115351",
+   "source": "Sherdog"
+  },
+  {
+   "id": "ufc-2027-01-16-ufc-fight-night",
+   "org": "ufc",
+   "name": "UFC Fight Night",
+   "subtitle": "Dallas",
+   "start": "2027-01-16T22:00:00Z",
+   "segments": [
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2027-01-16T22:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "RMC Sport 1",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "American Airlines Center",
+   "city": "Dallas",
+   "country": "États-Unis",
+   "fights": [],
+   "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte.",
+   "url": "https://www.espn.com/mma/fightcenter/_/id/600062421/league/ufc",
+   "source": "ESPN"
+  },
+  {
+   "id": "ufc-2027-01-31-ufc-336",
+   "org": "ufc",
+   "name": "UFC 336",
+   "subtitle": "Van vs. Kape",
+   "start": "2027-01-31T02:00:00Z",
+   "segments": [
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2027-01-31T02:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport 1",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "Scotiabank Arena",
+   "city": "Toronto",
+   "country": "Canada",
+   "fights": [
+    {
+     "a": {
+      "name": "Joshua Van",
+      "record": "18-2-0",
+      "country": "Myanmar"
+     },
+     "b": {
+      "name": "Manel Kape",
+      "record": "23-7-0",
+      "country": "Portugal"
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "segment": "main",
+     "main_event": true
+    },
+    {
+     "a": {
+      "name": "Carlos Prates",
+      "record": "24-7-0",
+      "country": "Brazil"
+     },
+     "b": {
+      "name": "Michael Morales",
+      "record": "19-0-0",
+      "country": "Ecuador"
+     },
+     "weight": "Poids mi-moyens",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    }
+   ],
+   "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte.",
+   "url": "https://www.espn.com/mma/fightcenter/_/id/600062191/league/ufc",
+   "source": "ESPN"
+  },
+  {
+   "id": "ufc-2027-02-06-ufc-fight-night",
+   "org": "ufc",
+   "name": "UFC Fight Night",
+   "subtitle": "Salkilld vs. Saint Denis",
+   "start": "2027-02-06T22:00:00Z",
+   "segments": [
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2027-02-06T22:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport 1",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "Afterpay Arena",
+   "city": "Sydney",
+   "country": "Australie",
+   "fights": [
+    {
+     "a": {
+      "name": "Quillan Salkilld",
+      "record": "13-1-0",
+      "country": "Australia"
+     },
+     "b": {
+      "name": "Benoît Saint Denis",
+      "record": "17-4-0",
+      "country": "France"
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "segment": "main",
+     "main_event": true
+    },
+    {
+     "a": {
+      "name": "Bogdan Guskov",
+      "record": "18-4-1",
+      "country": "Uzbekistan"
+     },
+     "b": {
+      "name": "Robert Whittaker",
+      "record": "28-9-0",
+      "country": "Australia"
+     },
+     "weight": "Poids mi-lourds",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Kaan Ofli",
+      "record": "15-4-1",
+      "country": "Australia"
+     },
+     "b": {
+      "name": "Joanderson Brito",
+      "record": "20-5-1",
+      "country": "Brazil"
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Marwan Rahiki",
+      "record": "9-1-0",
+      "country": "Morocco"
+     },
+     "b": {
+      "name": "JooSang Yoo",
+      "record": "9-2-0",
+      "country": "South Korea"
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    }
+   ],
+   "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte.",
+   "url": "https://www.espn.com/mma/fightcenter/_/id/600062420/league/ufc",
+   "source": "ESPN"
+  },
+  {
+   "id": "cagewarriors-2027-04-03-cage-warriors",
+   "org": "cagewarriors",
+   "name": "Cage Warriors",
+   "subtitle": "Seville",
+   "start": "2027-04-03T16:00:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2027-04-03T16:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2027-04-03T18:00:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      },
+      {
+       "name": "UFC Fight Pass",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "Seville",
+   "city": "Andalusia",
+   "country": "Espagne",
+   "fights": [],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/CW-Cage-Warriors-Seville-115317",
+   "source": "Sherdog"
+  }
+ ]
+}

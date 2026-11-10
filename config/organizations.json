@@ -1,0 +1,225 @@
+{
+  "_comment": "Configuration des organisations. Les chaînes sont celles de la France ; les heures 'default_times' sont en heure LOCALE du lieu de l'événement et ne servent que si la source ne donne pas d'heure (elles sont alors marquées « estimée »). Modifie ce fichier librement : il est relu à chaque mise à jour.",
+  "organizations": [
+    {
+      "id": "ufc",
+      "name": "UFC",
+      "full_name": "Ultimate Fighting Championship",
+      "color": "#d20a0a",
+      "region": "international",
+      "sources": [
+        {
+          "type": "espn",
+          "league": "ufc"
+        },
+        {
+          "type": "sherdog",
+          "org": "Ultimate-Fighting-Championship-UFC-2"
+        }
+      ],
+      "default_tz": "America/New_York",
+      "default_times": {
+        "prelims": "18:00",
+        "main": "22:00"
+      },
+      "split_single_slot": {
+        "main_size": 5,
+        "main_size_numbered": 5,
+        "numbered_regex": "^UFC \\d+",
+        "main_offset_min": 120
+      },
+      "broadcast": {
+        "early": [
+          {
+            "name": "UFC Fight Pass",
+            "free": false
+          }
+        ],
+        "prelims": [
+          {
+            "name": "RMC Sport",
+            "free": false
+          }
+        ],
+        "main": [
+          {
+            "name": "RMC Sport 1",
+            "free": false
+          }
+        ]
+      },
+      "notes": "Sur certaines soirées, une partie de la main card passe aussi en clair sur RMC Découverte."
+    },
+    {
+      "id": "pfl",
+      "name": "PFL",
+      "full_name": "Professional Fighters League (ex-Bellator)",
+      "color": "#c9a227",
+      "region": "international",
+      "sources": [
+        {
+          "type": "espn",
+          "league": "pfl"
+        },
+        {
+          "type": "sherdog",
+          "org": "Professional-Fighters-League-12241"
+        }
+      ],
+      "default_tz": "America/New_York",
+      "default_times": {
+        "prelims": "18:00",
+        "main": "21:00"
+      },
+      "broadcast": {
+        "prelims": [
+          {
+            "name": "RMC Sport",
+            "free": false
+          },
+          {
+            "name": "YouTube PFL",
+            "free": true
+          }
+        ],
+        "main": [
+          {
+            "name": "RMC Sport 1",
+            "free": false
+          }
+        ]
+      },
+      "notes": ""
+    },
+    {
+      "id": "ares",
+      "name": "ARES",
+      "full_name": "ARES Fighting Championship",
+      "color": "#2f6bff",
+      "region": "france",
+      "sources": [
+        {
+          "type": "sherdog",
+          "org": "ARES-Fighting-Championship-15823"
+        }
+      ],
+      "default_tz": "Europe/Paris",
+      "default_times": {
+        "prelims": "19:30",
+        "main": "20:30"
+      },
+      "broadcast": {
+        "prelims": [
+          {
+            "name": "Twitch Canal+",
+            "free": true
+          }
+        ],
+        "main": [
+          {
+            "name": "Canal+ Sport 360",
+            "free": false
+          }
+        ]
+      },
+      "notes": ""
+    },
+    {
+      "id": "hexagone",
+      "name": "Hexagone",
+      "full_name": "Hexagone MMA",
+      "color": "#00a6a6",
+      "region": "france",
+      "sources": [
+        {
+          "type": "sherdog",
+          "org": "Hexagone-MMA-16693"
+        }
+      ],
+      "default_tz": "Europe/Paris",
+      "default_times": {
+        "prelims": "19:00",
+        "main": "21:00"
+      },
+      "broadcast": {
+        "prelims": [
+          {
+            "name": "RMC Sport",
+            "free": false
+          }
+        ],
+        "main": [
+          {
+            "name": "RMC Sport 1",
+            "free": false
+          }
+        ]
+      },
+      "notes": ""
+    },
+    {
+      "id": "ksw",
+      "name": "KSW",
+      "full_name": "Konfrontacja Sztuk Walki",
+      "color": "#8a8f98",
+      "region": "europe",
+      "sources": [
+        {
+          "type": "sherdog",
+          "org": "Konfrontacja-Sztuk-Walki-668"
+        }
+      ],
+      "default_tz": "Europe/Warsaw",
+      "default_times": {
+        "main": "20:00"
+      },
+      "broadcast": {
+        "main": [
+          {
+            "name": "RMC Sport",
+            "free": false
+          }
+        ]
+      },
+      "notes": ""
+    },
+    {
+      "id": "cagewarriors",
+      "name": "Cage Warriors",
+      "full_name": "Cage Warriors",
+      "color": "#b5121b",
+      "region": "europe",
+      "sources": [
+        {
+          "type": "sherdog",
+          "org": "Cage-Warriors-186",
+          "exclude": "Academy|Amateur"
+        }
+      ],
+      "default_tz": "Europe/London",
+      "default_times": {
+        "prelims": "18:00",
+        "main": "20:00"
+      },
+      "broadcast": {
+        "prelims": [
+          {
+            "name": "UFC Fight Pass",
+            "free": false
+          }
+        ],
+        "main": [
+          {
+            "name": "RMC Sport",
+            "free": false
+          },
+          {
+            "name": "UFC Fight Pass",
+            "free": false
+          }
+        ]
+      },
+      "notes": ""
+    }
+  ]
+}
