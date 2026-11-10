@@ -1,15 +1,15 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Calendrier MMA//FR
+PRODID:-//FIGHTLY//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:MMA — ARES
+X-WR-CALNAME:FIGHTLY — ARES
 X-WR-TIMEZONE:Europe/Paris
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:ares-2026-11-20-ares-45@calendrier-mma
-DTSTAMP:20261109T174619Z
+DTSTAMP:20261110T163703Z
 DTSTART:20261120T183000Z
 DTEND:20261120T223000Z
 SUMMARY:[ARES] ARES 45 : Zebo vs. Baki 2
@@ -25,7 +25,7 @@ DESCRIPTION:Zebo vs. Baki 2\nPrelims : 19h30 (estimée) — Twitch Canal+
 END:VEVENT
 BEGIN:VEVENT
 UID:ares-2026-12-11-ares-46@calendrier-mma
-DTSTAMP:20261109T174619Z
+DTSTAMP:20261110T163703Z
 DTSTART:20261211T183000Z
 DTEND:20261211T223000Z
 SUMMARY:[ARES] ARES 46 : Jorand vs. Jendrasik
@@ -34,7 +34,7 @@ DESCRIPTION:Jorand vs. Jendrasik\nPrelims : 19h30 (estimée) — Twitch C
  anal+ (gratuit)\nMain card : 20h30 (estimée) — Canal+ Sport 360\n\nMai
  n event : Jade Jorand vs Kinga Jendrasik (Poids pailles ★ titre)\nCo-ma
  in : Alexis Nicolas vs Bilal Bakhouche-Chareuf (Poids mi-moyens)\nJean Ma
- gny vs Unknown Fighter\nBogdan Ozdoev vs Unknown Fighter\nhttps://www.she
- rdog.com/events/ARES-46-Jorand-vs-Jendrasik-114552
+ gny vs Kevin Cadoni (Poids mi-moyens)\nBogdan Ozdoev vs Unknown Fighter\n
+ https://www.sherdog.com/events/ARES-46-Jorand-vs-Jendrasik-114552
 END:VEVENT
 END:VCALENDAR

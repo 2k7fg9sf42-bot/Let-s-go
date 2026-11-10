@@ -1,4 +1,4 @@
-/* Calendrier MMA : application statique, sans dépendance. */
+/* FIGHTLY : application statique, sans dépendance. */
 (() => {
   "use strict";
 
@@ -569,7 +569,7 @@
     const end = eventEnd(e);
     const desc = eventDescription(e);
     const ics = [
-      "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Calendrier MMA//FR", "BEGIN:VEVENT",
+      "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//FIGHTLY//FR", "BEGIN:VEVENT",
       `UID:${e.id}@calendrier-mma`, `DTSTAMP:${icsDate(new Date())}`,
       `DTSTART:${icsDate(e.date)}`, `DTEND:${icsDate(end)}`,
       `SUMMARY:${icsEsc(eventSummary(e))}`,

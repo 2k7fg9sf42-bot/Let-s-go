@@ -1,6 +1,6 @@
 /* Service worker : l'app s'ouvre même hors ligne (avec les dernières données vues). */
-const VERSION = "mma-v2";
-const SHELL = ["./", "index.html", "assets/style.css", "assets/app.js", "manifest.webmanifest", "icons/icon-192.png", "icons/favicon-64.png"];
+const VERSION = "fightly-v3";
+const SHELL = ["./", "index.html", "assets/style.css", "assets/app.js", "manifest.webmanifest", "icons/icon-192.png", "icons/logo-mark.png", "icons/favicon-64.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));

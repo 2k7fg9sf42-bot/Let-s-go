@@ -558,7 +558,7 @@ def ics_fold(line: str) -> str:
 def build_ics(events: list[dict], orgs: dict, title: str) -> str:
     now = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     lines = [
-        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Calendrier MMA//FR", "CALSCALE:GREGORIAN",
+        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//FIGHTLY//FR", "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH", f"X-WR-CALNAME:{ics_escape(title)}", "X-WR-TIMEZONE:Europe/Paris",
         "REFRESH-INTERVAL;VALUE=DURATION:P1D", "X-PUBLISHED-TTL:P1D",
     ]
@@ -687,10 +687,10 @@ def main() -> int:
     OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     OUT_ICS_DIR.mkdir(parents=True, exist_ok=True)
-    (OUT_ICS_DIR / "mma.ics").write_text(build_ics(uniq, org_meta, "MMA — toutes les orgas"), encoding="utf-8", newline="")
+    (OUT_ICS_DIR / "mma.ics").write_text(build_ics(uniq, org_meta, "FIGHTLY — toutes les orgas"), encoding="utf-8", newline="")
     for oid, meta in org_meta.items():
         evs = [e for e in uniq if e["org"] == oid]
-        (OUT_ICS_DIR / f"{oid}.ics").write_text(build_ics(evs, org_meta, f"MMA — {meta['name']}"), encoding="utf-8", newline="")
+        (OUT_ICS_DIR / f"{oid}.ics").write_text(build_ics(evs, org_meta, f"FIGHTLY — {meta['name']}"), encoding="utf-8", newline="")
 
     log(f"✓ {len(uniq)} événements écrits dans {OUT_JSON.relative_to(ROOT)}")
     failed = [k for k, v in status.items() if not v["ok"]]

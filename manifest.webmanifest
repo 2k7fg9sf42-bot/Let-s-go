@@ -1,13 +1,13 @@
 {
-  "name": "Calendrier MMA",
-  "short_name": "MMA",
-  "description": "Toutes les soirées MMA à venir, avec l'heure de Paris et les chaînes françaises.",
+  "name": "FIGHTLY",
+  "short_name": "FIGHTLY",
+  "description": "FIGHTLY : toutes les soirées MMA à venir, avec l'heure de Paris et les chaînes françaises.",
   "lang": "fr",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#060d1a",
-  "theme_color": "#060d1a",
+  "background_color": "#080c0f",
+  "theme_color": "#080c0f",
   "icons": [
     {
       "src": "icons/icon-192.png",
