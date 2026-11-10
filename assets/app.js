@@ -594,32 +594,50 @@
     const base = new URL("data/ics/", location.href);
     const httpUrl = (f) => new URL(f, base).href;
     const webcal = (f) => httpUrl(f).replace(/^https?:/, "webcal:");
+    // Lien qui ouvre Google Agenda avec « Ajouter ce calendrier ? » (Android n'ouvre pas les liens webcal://).
+    const googleSub = (f) => `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(webcal(f))}`;
+    const ua = navigator.userAgent;
+    const isAndroid = /Android/i.test(ua);
+    const isApple = /iPhone|iPad|iPod|Macintosh/i.test(ua);
     const copy = async (txt) => {
       try { await navigator.clipboard.writeText(txt); toast("Lien copié"); } catch { prompt("Copie ce lien :", txt); }
     };
     const item = (file, label, color) => el("div", { class: "sub-item" },
       el("span", { class: "name" }, color ? el("span", { class: "chip", style: { "--c": color, padding: "0", border: "0", background: "none" } }, el("span", { class: "dot" })) : null, label),
       el("span", { class: "btns" },
-        el("a", { class: "btn small", href: webcal(file) }, "S'abonner"),
-        el("button", { class: "btn ghost small", type: "button", onclick: () => copy(httpUrl(file)) }, "Copier le lien"),
+        isAndroid
+          ? el("a", { class: "btn small", href: googleSub(file), target: "_blank", rel: "noopener" }, "S'abonner")
+          : el("a", { class: "btn small", href: webcal(file) }, "S'abonner"),
+        !isAndroid && !isApple
+          ? el("a", { class: "btn ghost small", href: googleSub(file), target: "_blank", rel: "noopener" }, "Google")
+          : null,
+        el("button", { class: "btn ghost small", type: "button", onclick: () => copy(httpUrl(file)) }, isAndroid ? "Copier" : "Copier le lien"),
       ),
     );
+    const steps = {
+      apple: el("li", {}, el("strong", {}, "iPhone / Mac : "), "touche « S'abonner », puis confirme. C'est tout."),
+      android: el("li", {}, el("strong", {}, "Android : "), "touche « S'abonner », puis « Ajouter » dans Google Agenda. Les soirées apparaissent dans l'agenda de ton téléphone (Google Agenda, ou Samsung Agenda relié à ton compte Google). Si rien ne s'affiche, active ce calendrier dans les réglages de ton app Agenda."),
+      androidNoGoogle: el("li", {}, el("strong", {}, "Android sans compte Google : "), "installe l'app gratuite ICSx⁵, touche « Copier », puis colle le lien dans ICSx⁵."),
+      computer: el("li", {}, el("strong", {}, "Ordinateur : "), "« S'abonner » ouvre ton agenda (Outlook, Calendrier…). Avec Google Agenda, touche « Google »."),
+    };
+    const order = isAndroid
+      ? [steps.android, steps.androidNoGoogle, steps.apple, steps.computer]
+      : isApple
+        ? [steps.apple, steps.android, steps.computer]
+        : [steps.computer, steps.apple, steps.android];
     body.replaceChildren(
       el("div", { class: "sheet-top" },
         el("h2", { id: "sub-title" }, "Dans ton agenda"),
         el("button", { class: "close", type: "button", "aria-label": "Fermer", onclick: () => dlg.close() }, "✕"),
       ),
-      el("p", {}, "Abonne-toi une fois : les soirées apparaissent dans ton agenda (iPhone, Android, Google Agenda, Outlook) et se mettent à jour toutes seules après chaque lundi."),
+      el("p", {}, "Abonne-toi une fois : les soirées apparaissent dans ton agenda et se mettent à jour toutes seules après chaque lundi."),
       el("div", { class: "sub-list" },
         item("mma.ics", "Toutes les organisations"),
         Object.entries(state.orgs).map(([id, o]) => item(`${id}.ics`, o.name, o.color)),
       ),
       el("h3", {}, "Comment faire"),
-      el("ul", { class: "howto" },
-        el("li", {}, el("strong", {}, "iPhone / Mac : "), "touche « S'abonner », puis confirme."),
-        el("li", {}, el("strong", {}, "Google Agenda (Android) : "), "« Copier le lien », puis sur ordinateur : Google Agenda → Autres agendas → + → À partir de l'URL → colle le lien. Il s'affichera aussi sur ton téléphone."),
-        el("li", {}, el("strong", {}, "Outlook : "), "Ajouter un calendrier → S'abonner à partir du web → colle le lien."),
-      ),
+      el("ul", { class: "howto" }, order),
+      el("p", { class: "muted small" }, "Google Agenda vérifie les mises à jour environ une fois par jour : un changement peut mettre quelques heures à apparaître."),
     );
     dlg.showModal();
   }
