@@ -26,6 +26,9 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config" / "organizations.json"
 OVERRIDES = ROOT / "data" / "overrides.json"
+FRANCOPHONIE = ROOT / "config" / "francophonie.json"
+FIGHTERS_CACHE = ROOT / "data" / "fighters.json"  # nationalités Sherdog déjà connues (url -> pays)
+FIGHTER_COUNTRY: dict[str, str] = {}
 OUT_JSON = ROOT / "data" / "events.json"
 OUT_ICS_DIR = ROOT / "data" / "ics"
 
@@ -319,11 +322,39 @@ def sherdog_events(org: dict, src: dict, start: datetime, end: datetime) -> list
         try:
             time.sleep(1.0)  # politesse envers le site
             ev["fights"] = sherdog_card(fetch(ev["url"]))
+            for f in ev["fights"]:
+                for side in (f["a"], f["b"]):
+                    side["country"] = fighter_country(side.pop("url", ""))
         except Exception as e:  # noqa: BLE001
             log(f"   ! carte indisponible pour {name}: {e}")
             ev["fights"] = []
         out.append(ev)
     return out
+
+
+def fighter_urls(html_block: str) -> list[str]:
+    """Liens /fighter/… dans l'ordre d'apparition, sans doublon."""
+    seen: list[str] = []
+    for u in re.findall(r'href=["\'](/fighter/[^"\']+)["\']', html_block):
+        if u not in seen:
+            seen.append(u)
+    return seen
+
+
+def fighter_country(path: str) -> str:
+    """Nationalité d'un combattant Sherdog, lue sur sa fiche et gardée en mémoire d'une semaine sur l'autre."""
+    if not path:
+        return ""
+    if path in FIGHTER_COUNTRY:
+        return FIGHTER_COUNTRY[path]
+    try:
+        time.sleep(0.8)  # politesse envers le site
+        m = re.search(r'itemprop="nationality">([^<]+)<', fetch(SHERDOG + path))
+    except Exception as e:  # noqa: BLE001
+        log(f"   ! nationalité indisponible pour {path}: {e}")
+        return ""  # pas mis en mémoire : nouvel essai la semaine suivante
+    FIGHTER_COUNTRY[path] = clean(m.group(1)) if m else ""
+    return FIGHTER_COUNTRY[path]
 
 
 def sherdog_card(page: str) -> list[dict]:
@@ -335,10 +366,11 @@ def sherdog_card(page: str) -> list[dict]:
         names = re.findall(r'<h3>\s*<a[^>]*><span itemprop="name">(.*?)</span>', blk, re.S)
         recs = re.findall(r'<span class="record">\s*([\d-]+)', blk)
         w = re.search(r'<span class="weight_class">(.*?)</span>', blk)
+        urls = fighter_urls(blk)
         if len(names) >= 2:
             fights.append({
-                "a": {"name": clean(names[0]), "record": recs[0] if recs else "", "country": ""},
-                "b": {"name": clean(names[1]), "record": recs[1] if len(recs) > 1 else "", "country": ""},
+                "a": {"name": clean(names[0]), "record": recs[0] if recs else "", "country": "", "url": urls[0] if urls else ""},
+                "b": {"name": clean(names[1]), "record": recs[1] if len(recs) > 1 else "", "country": "", "url": urls[1] if len(urls) > 1 else ""},
                 "weight": weight_fr(clean(w.group(1)) if w else ""),
                 "title": "title_fight" in blk,
                 "main_event": True,
@@ -348,11 +380,12 @@ def sherdog_card(page: str) -> list[dict]:
         names = re.findall(r'<span itemprop="name">(.*?)</span>', row, re.S)
         recs = re.findall(r'<span class="record"><em>([\d-]+)</em>', row)
         w = re.search(r'<span class="weight_class">(.*?)</span>', row)
+        urls = fighter_urls(row)
         if len(names) < 2:
             continue
         fights.append({
-            "a": {"name": clean(names[0]), "record": recs[0] if recs else "", "country": ""},
-            "b": {"name": clean(names[1]), "record": recs[1] if len(recs) > 1 else "", "country": ""},
+            "a": {"name": clean(names[0]), "record": recs[0] if recs else "", "country": "", "url": urls[0] if urls else ""},
+            "b": {"name": clean(names[1]), "record": recs[1] if len(recs) > 1 else "", "country": "", "url": urls[1] if len(urls) > 1 else ""},
             "weight": weight_fr(clean(w.group(1)) if w else ""),
             "title": "title_fight" in row,
             "main_event": False,
@@ -464,8 +497,31 @@ def is_tba(name: str) -> bool:
     return bool(re.fullmatch(r"(opponent\s+)?tba|tbd|to be announced", name.strip(), re.I))
 
 
+def load_francophonie() -> tuple[set[str], set[str], set[str]]:
+    if not FRANCOPHONIE.exists():
+        return set(), set(), set()
+    cfg = json.loads(FRANCOPHONIE.read_text(encoding="utf-8"))
+    low = lambda xs: {x.strip().lower() for x in xs}
+    return low(cfg.get("pays", [])), low(cfg.get("toujours", [])), low(cfg.get("jamais", []))
+
+
+FR_PAYS, FR_TOUJOURS, FR_JAMAIS = load_francophonie()
+
+
+def is_francophone(side: dict) -> bool:
+    name = side["name"].strip().lower()
+    if name in FR_TOUJOURS:
+        return True
+    if name in FR_JAMAIS:
+        return False
+    return side.get("country", "").strip().lower() in FR_PAYS
+
+
 def normalize(org: dict, raw: dict) -> dict:
     raw["fights"] = [f for f in raw.get("fights", []) if not (is_tba(f["a"]["name"]) and is_tba(f["b"]["name"]))]
+    for f in raw["fights"]:
+        for side in (f["a"], f["b"]):
+            side["fr"] = is_francophone(side)
     if raw["source"] == "ESPN":
         segments, fights = build_segments_espn(org, raw)
     else:
@@ -628,6 +684,12 @@ def main() -> int:
         except json.JSONDecodeError:
             pass
 
+    if FIGHTERS_CACHE.exists():
+        try:
+            FIGHTER_COUNTRY.update(json.loads(FIGHTERS_CACHE.read_text(encoding="utf-8")))
+        except json.JSONDecodeError:
+            pass
+
     now = datetime.now(timezone.utc)
     start = now - timedelta(hours=12)
     end = now + timedelta(days=args.days)
@@ -685,6 +747,7 @@ def main() -> int:
         "events": uniq,
     }
     OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    FIGHTERS_CACHE.write_text(json.dumps(dict(sorted(FIGHTER_COUNTRY.items())), ensure_ascii=False, indent=0) + "\n", encoding="utf-8")
 
     OUT_ICS_DIR.mkdir(parents=True, exist_ok=True)
     (OUT_ICS_DIR / "mma.ics").write_text(build_ics(uniq, org_meta, "FIGHTLY — toutes les orgas"), encoding="utf-8", newline="")

@@ -196,9 +196,9 @@
     const row = (label, f, isMain) => el("div", { class: `bill-row${isMain ? " is-main" : ""}` },
       el("span", { class: "bill-label" }, label),
       el("span", { class: "bill-names" },
-        el("b", {}, f.a.name),
+        el("b", { class: f.a.fr ? "fr" : null }, f.a.name),
         el("span", { class: "bill-vs" }, "vs"),
-        el("b", {}, f.b.name),
+        el("b", { class: f.b.fr ? "fr" : null }, f.b.name),
         f.title ? el("span", { class: "title-belt" }, "★ Titre") : null,
       ),
     );
@@ -492,14 +492,14 @@
           last = f.segment;
         }
         wrap.append(el("div", { class: `fight${f.main_event ? " me" : ""}` },
-          el("div", { class: "fighter" }, el("b", {}, f.a.name), el("span", {}, [f.a.record, f.a.country].filter(Boolean).join(" · "))),
+          el("div", { class: "fighter" }, el("b", { class: f.a.fr ? "fr" : null }, f.a.name), el("span", {}, [f.a.record, f.a.country].filter(Boolean).join(" · "))),
           el("div", { class: "vs" },
             el("b", {}, "VS"),
             f.main_event ? el("div", {}, "Main event") : f === e.co ? el("div", {}, "Co-main event") : null,
             f.title ? el("div", { class: "belt" }, "★ Titre") : null,
             f.weight || "",
           ),
-          el("div", { class: "fighter r" }, el("b", {}, f.b.name), el("span", {}, [f.b.record, f.b.country].filter(Boolean).join(" · "))),
+          el("div", { class: "fighter r" }, el("b", { class: f.b.fr ? "fr" : null }, f.b.name), el("span", {}, [f.b.record, f.b.country].filter(Boolean).join(" · "))),
         ));
       }
       add(body, wrap);

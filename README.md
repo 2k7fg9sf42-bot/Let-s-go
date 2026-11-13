@@ -71,6 +71,8 @@ Pour lancer une mise à jour à la main : onglet **Actions** → **Run workflow*
 
   Les heures sont en heure de Paris. `match` est un morceau du nom de l'événement.
 
+- **Combattants francophones en gras** : la liste des pays est dans `config/francophonie.json`. Le Canada n'y est pas, pour ne pas mettre en gras les Canadiens anglophones : ajoute les Québécois un par un dans `"toujours"`, et retire quelqu'un avec `"jamais"`. Les nationalités lues sur Sherdog sont gardées en mémoire dans `data/fighters.json`.
+
 - **Pour toute une organisation** (nouvelle chaîne, horaires habituels…), modifie `config/organizations.json`. Tu peux aussi y ajouter une organisation : il suffit de trouver son adresse Sherdog (`sherdog.com/organizations/...`).
 
 ## Version claude.ai (sans GitHub Pages)

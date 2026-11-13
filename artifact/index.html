@@ -2,7 +2,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #0d0f14;
@@ -266,7 +266,7 @@ dialog.sheet::backdrop { background: rgba(5, 7, 10, .6); backdrop-filter: blur(3
 .fight { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; background: var(--card); border: 1px solid var(--line); }
 .fight.me { border-color: color-mix(in srgb, var(--org) 60%, var(--line)); background: color-mix(in srgb, var(--org) 10%, var(--card)); }
 .fighter { min-width: 0; }
-.fighter b { display: block; font-weight: 700; overflow-wrap: anywhere; }
+.fighter b { display: block; font-weight: 500; overflow-wrap: anywhere; }
 .fighter span { font-size: 12px; color: var(--muted); }
 .fighter.r { text-align: right; }
 .vs { text-align: center; font-size: 11px; color: var(--muted); line-height: 1.2; max-width: 110px; }
@@ -325,8 +325,11 @@ dialog.sheet::backdrop { background: rgba(5, 7, 10, .6); backdrop-filter: blur(3
 .bill-names { min-width: 0; font-size: 14px; }
 .bill-names b { font-weight: 600; }
 .bill-row.is-main .bill-names { font: italic 800 23px/1.1 var(--display); text-transform: uppercase; letter-spacing: .3px; }
-.bill-row.is-main .bill-names b { font-weight: 800; }
-.bill-row:not(.is-main) .bill-names b { color: var(--muted); }
+.bill-row.is-main .bill-names b { font-weight: 600; color: color-mix(in srgb, var(--text) 82%, var(--muted)); }
+.bill-row:not(.is-main) .bill-names b { color: var(--muted); font-weight: 500; }
+/* Combattants francophones en gras */
+.bill-names b.fr, .bill-row.is-main .bill-names b.fr, .bill-row:not(.is-main) .bill-names b.fr { font-weight: 800; color: var(--text); }
+.fighter b.fr { font-weight: 800; }
 .bill-vs { color: var(--muted); font-size: 12px; margin: 0 6px; }
 .bill-row.is-main .bill-vs { color: var(--brand); font: italic 800 19px var(--display); margin: 0 8px; }
 .bill-row.is-main .title-belt { font: italic 700 15px var(--display); letter-spacing: .5px; }
@@ -399,6 +402,7 @@ dialog.sheet::backdrop { background: rgba(5, 7, 10, .6); backdrop-filter: blur(3
     <section id="month-view" class="view" hidden></section>
 
     <footer class="foot muted small">
+      <p>Les combattants <strong>francophones</strong> sont écrits en gras.</p>
       <p>Horaires en <strong>heure de Paris</strong>. Les heures marquées <span class="est">≈</span> sont estimées d'après les habitudes de l'organisation (la source ne donne que la date) : vérifie la semaine de l'événement.</p>
       <p>Les chaînes sont celles de la France et peuvent changer d'une soirée à l'autre. Données : <a href="https://www.espn.com/mma/schedule" target="_blank" rel="noopener">ESPN</a> (UFC, PFL) et <a href="https://www.sherdog.com/events" target="_blank" rel="noopener">Sherdog</a> (autres organisations). Mise à jour automatique chaque lundi.</p>
     </footer>
@@ -618,9 +622,9 @@ dialog.sheet::backdrop { background: rgba(5, 7, 10, .6); backdrop-filter: blur(3
     const row = (label, f, isMain) => el("div", { class: `bill-row${isMain ? " is-main" : ""}` },
       el("span", { class: "bill-label" }, label),
       el("span", { class: "bill-names" },
-        el("b", {}, f.a.name),
+        el("b", { class: f.a.fr ? "fr" : null }, f.a.name),
         el("span", { class: "bill-vs" }, "vs"),
-        el("b", {}, f.b.name),
+        el("b", { class: f.b.fr ? "fr" : null }, f.b.name),
         f.title ? el("span", { class: "title-belt" }, "★ Titre") : null,
       ),
     );
@@ -914,14 +918,14 @@ dialog.sheet::backdrop { background: rgba(5, 7, 10, .6); backdrop-filter: blur(3
           last = f.segment;
         }
         wrap.append(el("div", { class: `fight${f.main_event ? " me" : ""}` },
-          el("div", { class: "fighter" }, el("b", {}, f.a.name), el("span", {}, [f.a.record, f.a.country].filter(Boolean).join(" · "))),
+          el("div", { class: "fighter" }, el("b", { class: f.a.fr ? "fr" : null }, f.a.name), el("span", {}, [f.a.record, f.a.country].filter(Boolean).join(" · "))),
           el("div", { class: "vs" },
             el("b", {}, "VS"),
             f.main_event ? el("div", {}, "Main event") : f === e.co ? el("div", {}, "Co-main event") : null,
             f.title ? el("div", { class: "belt" }, "★ Titre") : null,
             f.weight || "",
           ),
-          el("div", { class: "fighter r" }, el("b", {}, f.b.name), el("span", {}, [f.b.record, f.b.country].filter(Boolean).join(" · "))),
+          el("div", { class: "fighter r" }, el("b", { class: f.b.fr ? "fr" : null }, f.b.name), el("span", {}, [f.b.record, f.b.country].filter(Boolean).join(" · "))),
         ));
       }
       add(body, wrap);

@@ -1,0 +1,16 @@
+{
+  "_comment": "Combattants écrits en gras dans l'app. « pays » : nationalités considérées comme francophones (noms en anglais, comme dans les sources). Le Canada n'y est pas, pour ne pas mettre en gras les Canadiens anglophones : ajoute les Québécois un par un dans « toujours ». « jamais » retire quelqu'un malgré sa nationalité. Les noms s'écrivent comme dans l'app.",
+  "pays": [
+    "France", "French Guiana", "Guadeloupe", "Martinique", "Reunion", "Réunion", "Mayotte",
+    "New Caledonia", "French Polynesia", "Saint Martin", "Saint Pierre and Miquelon", "Wallis and Futuna",
+    "Belgium", "Switzerland", "Luxembourg", "Monaco",
+    "Haiti",
+    "Senegal", "Cameroon", "Ivory Coast", "Côte d'Ivoire", "Cote d'Ivoire", "Mali", "Guinea",
+    "Democratic Republic of the Congo", "DR Congo", "Congo", "Republic of the Congo",
+    "Gabon", "Benin", "Togo", "Burkina Faso", "Niger", "Chad", "Central African Republic",
+    "Madagascar", "Comoros", "Djibouti", "Burundi", "Rwanda", "Mauritius", "Seychelles",
+    "Algeria", "Morocco", "Tunisia"
+  ],
+  "toujours": [],
+  "jamais": []
+}
