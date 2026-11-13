@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-13T09:14:25Z",
+ "generated_at": "2026-11-13T09:20:32Z",
  "timezone": "Europe/Paris",
  "horizon_days": 150,
  "organizations": {
@@ -41,7 +41,7 @@
   "cagewarriors": {
    "name": "Cage Warriors",
    "full_name": "Cage Warriors",
-   "color": "#b5121b",
+   "color": "#7c3aed",
    "region": "europe",
    "notes": ""
   }
