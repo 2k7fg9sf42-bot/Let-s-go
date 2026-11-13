@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:pfl-2026-11-14-pfl-dubai@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261114T140000Z
 DTEND:20261114T210000Z
 SUMMARY:[PFL] PFL Dubai : Nemkov vs. Bilostenniy
@@ -18,13 +18,13 @@ DESCRIPTION:Nemkov vs. Bilostenniy\nPrelims : 15h00 — RMC Sport\, YouTu
  be PFL (gratuit)\nMain card : 19h00 — RMC Sport 1\n\nMain event : Vadim
   Nemkov vs Sergei Bilostenniy (Poids lourds)\nCo-main : Patrick Habirora 
  vs Omar El Dafrawy (Poids mi-moyens)\nPouya Rahmani vs Oleg Popov (Poids 
- lourds)\nAbubakar Nurmagomedov vs David Martinez (Poids mi-moyens)\nSergi
- o Pettis vs Joji Goto\nShem Rock vs Connor Hughes (Poids légers)\nhttps:
- //www.espn.com/mma/fightcenter/_/id/600061421/league/pfl
+ lourds)\nLewis McGrillen vs Nawras Abzakh (Poids coqs)\nSergio Pettis vs 
+ Joji Goto\nShem Rock vs Connor Hughes (Poids légers)\nhttps://www.espn.c
+ om/mma/fightcenter/_/id/600061421/league/pfl
 END:VEVENT
 BEGIN:VEVENT
 UID:pfl-2026-12-19-pfl-lyon@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261219T160000Z
 DTEND:20261219T230000Z
 SUMMARY:[PFL] PFL Lyon : Lapilus vs. McKee

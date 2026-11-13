@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:pfl-2026-11-14-pfl-dubai@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261114T140000Z
 DTEND:20261114T210000Z
 SUMMARY:[PFL] PFL Dubai : Nemkov vs. Bilostenniy
@@ -18,13 +18,13 @@ DESCRIPTION:Nemkov vs. Bilostenniy\nPrelims : 15h00 — RMC Sport\, YouTu
  be PFL (gratuit)\nMain card : 19h00 — RMC Sport 1\n\nMain event : Vadim
   Nemkov vs Sergei Bilostenniy (Poids lourds)\nCo-main : Patrick Habirora 
  vs Omar El Dafrawy (Poids mi-moyens)\nPouya Rahmani vs Oleg Popov (Poids 
- lourds)\nAbubakar Nurmagomedov vs David Martinez (Poids mi-moyens)\nSergi
- o Pettis vs Joji Goto\nShem Rock vs Connor Hughes (Poids légers)\nhttps:
- //www.espn.com/mma/fightcenter/_/id/600061421/league/pfl
+ lourds)\nLewis McGrillen vs Nawras Abzakh (Poids coqs)\nSergio Pettis vs 
+ Joji Goto\nShem Rock vs Connor Hughes (Poids légers)\nhttps://www.espn.c
+ om/mma/fightcenter/_/id/600061421/league/pfl
 END:VEVENT
 BEGIN:VEVENT
 UID:cagewarriors-2026-11-14-cage-warriors-213@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261114T180000Z
 DTEND:20261114T230000Z
 SUMMARY:[Cage Warriors] Cage Warriors 213 : London
@@ -40,7 +40,7 @@ DESCRIPTION:London\nPrelims : 19h00 (estimée) — UFC Fight Pass\nMain c
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-2026-11-14-ufc-334@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261114T220000Z
 DTEND:20261115T050000Z
 SUMMARY:[UFC] UFC 334 : Gane vs. Hokit
@@ -57,7 +57,7 @@ DESCRIPTION:Gane vs. Hokit\nEarly prelims : 23h00 — UFC Fight Pass\nPre
 END:VEVENT
 BEGIN:VEVENT
 UID:ares-2026-11-20-ares-45@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261120T183000Z
 DTEND:20261120T223000Z
 SUMMARY:[ARES] ARES 45 : Zebo vs. Baki 2
@@ -65,15 +65,15 @@ LOCATION:Adidas Arena\, Paris\, France
 DESCRIPTION:Zebo vs. Baki 2\nPrelims : 19h30 (estimée) — Twitch Canal+
   (gratuit)\nMain card : 20h30 (estimée) — Canal+ Sport 360\n\nMain eve
  nt : Jordan Zebo vs Baissangour Chamsoudinov (Poids mi-moyens ★ titre)\
- nCo-main : Ghassen Jbalia vs Modibo Diakite (Poids coqs)\nAmir Aliev vs A
- dionai Maciel (Poids coqs)\nNimo Djagbo vs Nikodem Blazejewski (Poids mi-
- moyens)\nMarvin Caperan vs Bruno Pudins (Poids mi-moyens)\nSarah Moussadd
- ak vs Dina da Silva Barbosa (Poids pailles)\nhttps://www.sherdog.com/even
- ts/ARES-45-Zebo-vs-Baki-2-112453
+ nCo-main : Ghassen Jbalia vs Modibo Diakite (Poids coqs)\nAmir Aliev vs M
+ atheus Malta (138lb Catchweight)\nNimo Djagbo vs Sidney Aguero (176lb Cat
+ chweight)\nMarvin Caperan vs Bruno Pudins (Poids mi-moyens)\nSarah Moussa
+ ddak vs Dina da Silva Barbosa (Poids pailles)\nhttps://www.sherdog.com/ev
+ ents/ARES-45-Zebo-vs-Baki-2-112453
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-2026-11-21-ufc-fight-night@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261121T150000Z
 DTEND:20261121T210000Z
 SUMMARY:[UFC] UFC Fight Night : Procházka vs. Stirling
@@ -90,7 +90,7 @@ DESCRIPTION:Procházka vs. Stirling\nPrelims : 16h00 — RMC Sport\nMain
 END:VEVENT
 BEGIN:VEVENT
 UID:ksw-2026-11-21-ksw-123@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261121T190000Z
 DTEND:20261121T220000Z
 SUMMARY:[KSW] KSW 123 : Bartosinski vs. Lopaczyk
@@ -106,7 +106,7 @@ DESCRIPTION:Bartosinski vs. Lopaczyk\nMain card : 20h00 (estimée) — RM
 END:VEVENT
 BEGIN:VEVENT
 UID:cagewarriors-2026-11-27-cage-warriors-214@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261127T180000Z
 DTEND:20261127T230000Z
 SUMMARY:[Cage Warriors] Cage Warriors 214 : Unplugged
@@ -122,7 +122,7 @@ DESCRIPTION:Unplugged\nPrelims : 19h00 (estimée) — UFC Fight Pass\nMai
 END:VEVENT
 BEGIN:VEVENT
 UID:hexagone-2026-11-27-hexagone-mma-49@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261127T180000Z
 DTEND:20261127T230000Z
 SUMMARY:[Hexagone] Hexagone MMA 49
@@ -137,7 +137,7 @@ DESCRIPTION:Prelims : 19h00 (estimée) — RMC Sport\nMain card : 21h00 (
 END:VEVENT
 BEGIN:VEVENT
 UID:cagewarriors-2026-11-28-cage-warriors-215@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261128T180000Z
 DTEND:20261128T230000Z
 SUMMARY:[Cage Warriors] Cage Warriors 215 : Manchester
@@ -153,7 +153,7 @@ DESCRIPTION:Manchester\nPrelims : 19h00 (estimée) — UFC Fight Pass\nMa
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-2026-12-05-ufc-fight-night@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261205T150000Z
 DTEND:20261205T210000Z
 SUMMARY:[UFC] UFC Fight Night : Adesanya vs Magomedov
@@ -170,7 +170,7 @@ DESCRIPTION:Adesanya vs Magomedov\nPrelims : 16h00 — RMC Sport\nMain ca
 END:VEVENT
 BEGIN:VEVENT
 UID:cagewarriors-2026-12-05-cage-warriors-216@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261205T180000Z
 DTEND:20261205T230000Z
 SUMMARY:[Cage Warriors] Cage Warriors 216 : Newcastle
@@ -186,7 +186,7 @@ DESCRIPTION:Newcastle\nPrelims : 19h00 (estimée) — UFC Fight Pass\nMai
 END:VEVENT
 BEGIN:VEVENT
 UID:ares-2026-12-11-ares-46@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261211T183000Z
 DTEND:20261211T223000Z
 SUMMARY:[ARES] ARES 46 : Jorand vs. Jendrasik
@@ -195,12 +195,13 @@ DESCRIPTION:Jorand vs. Jendrasik\nPrelims : 19h30 (estimée) — Twitch C
  anal+ (gratuit)\nMain card : 20h30 (estimée) — Canal+ Sport 360\n\nMai
  n event : Jade Jorand vs Kinga Jendrasik (Poids pailles ★ titre)\nCo-ma
  in : Alexis Nicolas vs Bilal Bakhouche-Chareuf (Poids mi-moyens)\nJean Ma
- gny vs Kevin Cadoni (Poids mi-moyens)\nBogdan Ozdoev vs Unknown Fighter\n
- https://www.sherdog.com/events/ARES-46-Jorand-vs-Jendrasik-114552
+ gny vs Kevin Cadoni (Poids mi-moyens)\nAndrii Misiuk vs Giresse Cabral Ts
+ ague (Poids légers)\nBogdan Ozdoev vs Unknown Fighter\nhttps://www.sherd
+ og.com/events/ARES-46-Jorand-vs-Jendrasik-114552
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-2026-12-12-ufc-335@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261212T220000Z
 DTEND:20261213T050000Z
 SUMMARY:[UFC] UFC 335 : Oliveira vs. Lopes
@@ -217,7 +218,7 @@ DESCRIPTION:Oliveira vs. Lopes\nEarly prelims : 23h00 — UFC Fight Pass\
 END:VEVENT
 BEGIN:VEVENT
 UID:pfl-2026-12-19-pfl-lyon@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261219T160000Z
 DTEND:20261219T230000Z
 SUMMARY:[PFL] PFL Lyon : Lapilus vs. McKee
@@ -232,7 +233,7 @@ DESCRIPTION:Lapilus vs. McKee\nPrelims : 17h00 — RMC Sport\, YouTube PF
 END:VEVENT
 BEGIN:VEVENT
 UID:ksw-2026-12-19-ksw-124@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20261219T190000Z
 DTEND:20261219T220000Z
 SUMMARY:[KSW] KSW 124 : Pawlak vs. Kuberski
@@ -247,7 +248,7 @@ DESCRIPTION:Pawlak vs. Kuberski\nMain card : 20h00 (estimée) — RMC Spo
 END:VEVENT
 BEGIN:VEVENT
 UID:hexagone-2027-01-08-hexagone-mma-50@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20270108T180000Z
 DTEND:20270108T230000Z
 SUMMARY:[Hexagone] Hexagone MMA 50
@@ -258,8 +259,20 @@ DESCRIPTION:Prelims : 19h00 (estimée) — RMC Sport\nMain card : 21h00 (
  gone-MMA-50-115351
 END:VEVENT
 BEGIN:VEVENT
+UID:ares-2027-01-16-ares-47@calendrier-mma
+DTSTAMP:20261113T091508Z
+DTSTART:20270116T183000Z
+DTEND:20270116T223000Z
+SUMMARY:[ARES] ARES 47 : Masmoudi vs. Oudelha
+LOCATION:Marseille Sports Palace\, Marseille\, France
+DESCRIPTION:Masmoudi vs. Oudelha\nPrelims : 19h30 (estimée) — Twitch C
+ anal+ (gratuit)\nMain card : 20h30 (estimée) — Canal+ Sport 360\n\nMai
+ n event : Walid Masmoudi vs Ghiles Oudelha (Poids légers ★ titre)\nhtt
+ ps://www.sherdog.com/events/ARES-47-Masmoudi-vs-Oudelha-115377
+END:VEVENT
+BEGIN:VEVENT
 UID:ufc-2027-01-16-ufc-fight-night@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20270116T220000Z
 DTEND:20270117T010000Z
 SUMMARY:[UFC] UFC Fight Night : Dallas
@@ -271,7 +284,7 @@ DESCRIPTION:Dallas\nMain card : 23h00 (estimée) — RMC Sport 1\n\nSur c
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-2027-01-31-ufc-336@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20270131T020000Z
 DTEND:20270131T050000Z
 SUMMARY:[UFC] UFC 336 : Van vs. Kape
@@ -284,22 +297,24 @@ DESCRIPTION:Van vs. Kape\nMain card : 03h00 — RMC Sport 1\n\nMain event
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-2027-02-06-ufc-fight-night@calendrier-mma
-DTSTAMP:20261110T163703Z
-DTSTART:20270206T220000Z
+DTSTAMP:20261113T091508Z
+DTSTART:20270206T190000Z
 DTEND:20270207T010000Z
 SUMMARY:[UFC] UFC Fight Night : Salkilld vs. Saint Denis
 LOCATION:Afterpay Arena\, Sydney\, Australie
-DESCRIPTION:Salkilld vs. Saint Denis\nMain card : 23h00 — RMC Sport 1\n
- \nMain event : Quillan Salkilld vs Benoît Saint Denis (Poids légers)\nC
- o-main : Bogdan Guskov vs Robert Whittaker (Poids mi-lourds)\nKaan Ofli v
- s Joanderson Brito (Poids plumes)\nMarwan Rahiki vs JooSang Yoo (Poids pl
- umes)\n\nSur certaines soirées\, une partie de la main card passe aussi 
- en clair sur RMC Découverte.\nhttps://www.espn.com/mma/fightcenter/_/id/
- 600062420/league/ufc
+DESCRIPTION:Salkilld vs. Saint Denis\nPrelims : 20h00 — RMC Sport\nMain
+  card : 23h00 — RMC Sport 1\n\nMain event : Quillan Salkilld vs Benoît
+  Saint Denis (Poids légers)\nCo-main : Bogdan Guskov vs Robert Whittaker
+  (Poids mi-lourds)\nMarwan Rahiki vs JooSang Yoo (Poids plumes)\nKaan Ofl
+ i vs Joanderson Brito (Poids plumes)\nGeorge Mangos vs Dagiisuren Chagnaa
+ dorj (Poids plumes)\nRabindra Dhant vs Ryo Tajima (Poids coqs)\n\nSur cer
+ taines soirées\, une partie de la main card passe aussi en clair sur RMC
+  Découverte.\nhttps://www.espn.com/mma/fightcenter/_/id/600062420/league
+ /ufc
 END:VEVENT
 BEGIN:VEVENT
 UID:cagewarriors-2027-04-03-cage-warriors@calendrier-mma
-DTSTAMP:20261110T163703Z
+DTSTAMP:20261113T091508Z
 DTSTART:20270403T160000Z
 DTEND:20270403T210000Z
 SUMMARY:[Cage Warriors] Cage Warriors : Seville

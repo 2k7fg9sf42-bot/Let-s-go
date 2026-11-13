@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T16:36:44Z",
+ "generated_at": "2026-11-13T09:14:25Z",
  "timezone": "Europe/Paris",
  "horizon_days": 150,
  "organizations": {
@@ -60,7 +60,7 @@
   "ares": {
    "ok": true,
    "source": "sherdog",
-   "count": 2
+   "count": 3
   },
   "hexagone": {
    "ok": true,
@@ -123,12 +123,14 @@
      "a": {
       "name": "Vadim Nemkov",
       "record": "20-2-0",
-      "country": "Russia"
+      "country": "Russia",
+      "fr": false
      },
      "b": {
       "name": "Sergei Bilostenniy",
       "record": "15-4-0",
-      "country": "Russia"
+      "country": "Russia",
+      "fr": false
      },
      "weight": "Poids lourds",
      "title": false,
@@ -139,12 +141,15 @@
      "a": {
       "name": "Patrick Habirora",
       "record": "9-0-0",
-      "country": "Belgium"
+      "country": "Belgium",
+      "fr": true,
+      "cc": "BE"
      },
      "b": {
       "name": "Omar El Dafrawy",
       "record": "16-6-0",
-      "country": "Egypt"
+      "country": "Egypt",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -155,12 +160,14 @@
      "a": {
       "name": "Pouya Rahmani",
       "record": "6-0-0",
-      "country": "United Arab Emirates"
+      "country": "United Arab Emirates",
+      "fr": false
      },
      "b": {
       "name": "Oleg Popov",
       "record": "23-2-0",
-      "country": "Russia"
+      "country": "Russia",
+      "fr": false
      },
      "weight": "Poids lourds",
      "title": false,
@@ -169,16 +176,18 @@
     },
     {
      "a": {
-      "name": "Abubakar Nurmagomedov",
-      "record": "17-4-1",
-      "country": "Russia"
+      "name": "Lewis McGrillen",
+      "record": "13-2-0",
+      "country": "England",
+      "fr": false
      },
      "b": {
-      "name": "David Martinez",
-      "record": "17-6-0",
-      "country": "Australia"
+      "name": "Nawras Abzakh",
+      "record": "15-6-0",
+      "country": "Jordan",
+      "fr": false
      },
-     "weight": "Poids mi-moyens",
+     "weight": "Poids coqs",
      "title": false,
      "segment": "main",
      "main_event": false
@@ -187,12 +196,14 @@
      "a": {
       "name": "Sergio Pettis",
       "record": "25-8-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Joji Goto",
       "record": "21-9-1",
-      "country": "Japan"
+      "country": "Japan",
+      "fr": false
      },
      "weight": "",
      "title": false,
@@ -203,12 +214,14 @@
      "a": {
       "name": "Shem Rock",
       "record": "12-3-1",
-      "country": "Ireland"
+      "country": "Ireland",
+      "fr": false
      },
      "b": {
       "name": "Connor Hughes",
       "record": "12-3-0",
-      "country": "England"
+      "country": "England",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -217,16 +230,18 @@
     },
     {
      "a": {
-      "name": "Lewis McGrillen",
-      "record": "13-2-0",
-      "country": "England"
+      "name": "Saygid Izagakhmaev",
+      "record": "22-4-0",
+      "country": "Russia",
+      "fr": false
      },
      "b": {
-      "name": "Nawras Abzakh",
-      "record": "15-6-0",
-      "country": "Jordan"
+      "name": "David Martinez",
+      "record": "17-6-0",
+      "country": "Australia",
+      "fr": false
      },
-     "weight": "Poids coqs",
+     "weight": "Poids mi-moyens",
      "title": false,
      "segment": "prelims",
      "main_event": false
@@ -235,28 +250,14 @@
      "a": {
       "name": "Khasan Magomedsharipov",
       "record": "11-0-0",
-      "country": "Russia"
+      "country": "Russia",
+      "fr": false
      },
      "b": {
       "name": "Adam Borics",
       "record": "20-4-0",
-      "country": "Hungary"
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "segment": "prelims",
-     "main_event": false
-    },
-    {
-     "a": {
-      "name": "Asaël Adjoudj",
-      "record": "11-1-0",
-      "country": "Algeria"
-     },
-     "b": {
-      "name": "Movlid Khaybulaev",
-      "record": "24-0-1",
-      "country": "Russia"
+      "country": "Hungary",
+      "fr": false
      },
      "weight": "Poids plumes",
      "title": false,
@@ -267,12 +268,14 @@
      "a": {
       "name": "Ernesto Rodriguez",
       "record": "11-2-0",
-      "country": "Cuba"
+      "country": "Cuba",
+      "fr": false
      },
      "b": {
       "name": "Rhys McKee",
       "record": "15-7-1",
-      "country": "Ireland"
+      "country": "Ireland",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -283,12 +286,14 @@
      "a": {
       "name": "Alexei Pergande",
       "record": "8-0-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Akhmed Magomedov",
       "record": "11-2-0",
-      "country": "Russia"
+      "country": "Russia",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -297,30 +302,17 @@
     },
     {
      "a": {
-      "name": "Khamzat Abaev",
-      "record": "6-1-0",
-      "country": "Belgium"
-     },
-     "b": {
-      "name": "Leon Hill",
-      "record": "10-2-0",
-      "country": "Ireland"
-     },
-     "weight": "Poids mi-moyens",
-     "title": false,
-     "segment": "prelims",
-     "main_event": false
-    },
-    {
-     "a": {
       "name": "Denis Goltsov",
       "record": "37-9-0",
-      "country": "Russia"
+      "country": "Russia",
+      "fr": false
      },
      "b": {
       "name": "Maxwell Djantou Nana",
       "record": "9-2-0",
-      "country": "Cameroon"
+      "country": "Cameroon",
+      "fr": true,
+      "cc": "CM"
      },
      "weight": "Poids lourds",
      "title": false,
@@ -331,12 +323,15 @@
      "a": {
       "name": "Khabib Nabiev",
       "record": "12-0-0",
-      "country": "Russia"
+      "country": "Russia",
+      "fr": false
      },
      "b": {
       "name": "Styve Ngono",
       "record": "8-1-0",
-      "country": "Cameroon"
+      "country": "Cameroon",
+      "fr": true,
+      "cc": "CM"
      },
      "weight": "Poids mi-lourds",
      "title": false,
@@ -347,12 +342,14 @@
      "a": {
       "name": "Aleksandra Savicheva",
       "record": "8-2-0",
-      "country": "Russia"
+      "country": "Russia",
+      "fr": false
      },
      "b": {
       "name": "Jacinta Austin",
       "record": "9-2-0",
-      "country": "Australia"
+      "country": "Australia",
+      "fr": false
      },
      "weight": "Poids pailles (F)",
      "title": false,
@@ -408,12 +405,14 @@
      "a": {
       "name": "Nik Bagley",
       "record": "10-1-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Bruno Souza",
       "record": "16-4-0",
-      "country": ""
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids plumes",
      "title": true,
@@ -424,12 +423,14 @@
      "a": {
       "name": "Jawany Scott",
       "record": "8-2-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Willians Nogueira",
       "record": "9-3-0",
-      "country": ""
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids mouches",
      "title": true,
@@ -440,12 +441,14 @@
      "a": {
       "name": "Tariq Pell",
       "record": "8-2-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Wellington Lopes",
       "record": "8-5-0",
-      "country": ""
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "161lb Catchweight",
      "title": false,
@@ -456,12 +459,14 @@
      "a": {
       "name": "Shirzad Qadrian",
       "record": "8-1-0",
-      "country": ""
+      "country": "Iran",
+      "fr": false
      },
      "b": {
       "name": "Manoel Costa",
       "record": "18-3-0",
-      "country": ""
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -472,12 +477,14 @@
      "a": {
       "name": "Steven Hill",
       "record": "7-4-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Sado Ucar",
       "record": "20-9-0",
-      "country": ""
+      "country": "Turkey",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -488,12 +495,14 @@
      "a": {
       "name": "Ollie Sarwa",
       "record": "9-1-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Ieuan Mackenzie",
       "record": "6-3-0",
-      "country": ""
+      "country": "Wales",
+      "fr": false
      },
      "weight": "140lb Catchweight",
      "title": false,
@@ -504,12 +513,14 @@
      "a": {
       "name": "Bobby Chikavhu",
       "record": "3-0-0",
-      "country": ""
+      "country": "Zimbabwe",
+      "fr": false
      },
      "b": {
       "name": "Christos Ploumpis",
       "record": "2-1-0",
-      "country": ""
+      "country": "Greece",
+      "fr": false
      },
      "weight": "130lb Catchweight",
      "title": false,
@@ -520,12 +531,14 @@
      "a": {
       "name": "Ben Edwards",
       "record": "1-0-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "James Wamsley",
       "record": "0-1-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -536,12 +549,14 @@
      "a": {
       "name": "Callum Haughian",
       "record": "2-1-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Will Fox",
       "record": "0-0-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -605,12 +620,15 @@
      "a": {
       "name": "Ciryl Gane",
       "record": "14-2-0",
-      "country": "France"
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Josh Hokit",
       "record": "10-0-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "weight": "Poids lourds",
      "title": false,
@@ -621,12 +639,14 @@
      "a": {
       "name": "Kayla Harrison",
       "record": "19-1-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Amanda Nunes",
       "record": "23-5-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids coqs (F)",
      "title": false,
@@ -637,12 +657,14 @@
      "a": {
       "name": "Caio Borralho",
       "record": "18-2-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "b": {
       "name": "Yousri Belgaroui",
       "record": "11-3-0",
-      "country": "Netherlands"
+      "country": "Netherlands",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
@@ -653,12 +675,14 @@
      "a": {
       "name": "Uroš Medić",
       "record": "14-3-0",
-      "country": "Serbia"
+      "country": "Serbia",
+      "fr": false
      },
      "b": {
       "name": "Kevin Holland",
       "record": "29-15-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -669,12 +693,14 @@
      "a": {
       "name": "Bilal Hasan",
       "record": "10-0-0",
-      "country": "Indonesia"
+      "country": "Indonesia",
+      "fr": false
      },
      "b": {
       "name": "Luis Gurule",
       "record": "11-4-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "weight": "Poids mouches",
      "title": false,
@@ -685,12 +711,14 @@
      "a": {
       "name": "Stephen Thompson",
       "record": "17-9-1",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Charles Radtke",
       "record": "12-5-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -701,12 +729,14 @@
      "a": {
       "name": "Drew Dober",
       "record": "29-15-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Chris Duncan",
       "record": "15-3-0",
-      "country": "Scotland"
+      "country": "Scotland",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -717,12 +747,14 @@
      "a": {
       "name": "Jim Miller",
       "record": "39-19-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Terrance McKinney",
       "record": "18-9-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -733,12 +765,14 @@
      "a": {
       "name": "Donte Johnson",
       "record": "9-0-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Cesar Almeida",
       "record": "7-3-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
@@ -749,12 +783,14 @@
      "a": {
       "name": "Jared Gordon",
       "record": "21-9-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Melquizael Costa",
       "record": "26-8-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -765,12 +801,14 @@
      "a": {
       "name": "Macy Chiasson",
       "record": "11-6-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Bia Mesquita",
       "record": "8-0-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids coqs (F)",
      "title": false,
@@ -779,14 +817,16 @@
     },
     {
      "a": {
-      "name": "Adrian Yañez",
-      "record": "18-6-1",
-      "country": "USA"
+      "name": "Alatengheili",
+      "record": "18-10-2",
+      "country": "China",
+      "fr": false
      },
      "b": {
       "name": "Juan Diaz",
       "record": "16-1-1",
-      "country": "Peru"
+      "country": "Peru",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -797,12 +837,14 @@
      "a": {
       "name": "Evan Elder",
       "record": "10-2-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Samuel Sanches",
       "record": "11-1-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -854,12 +896,16 @@
      "a": {
       "name": "Jordan Zebo",
       "record": "11-1-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Baissangour Chamsoudinov",
       "record": "9-1-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids mi-moyens",
      "title": true,
@@ -870,12 +916,16 @@
      "a": {
       "name": "Ghassen Jbalia",
       "record": "6-1-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Modibo Diakite",
       "record": "4-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids coqs",
      "title": false,
@@ -886,14 +936,16 @@
      "a": {
       "name": "Amir Aliev",
       "record": "8-1-0",
-      "country": ""
+      "country": "Russia",
+      "fr": false
      },
      "b": {
-      "name": "Adionai Maciel",
-      "record": "12-2-0",
-      "country": ""
+      "name": "Matheus Malta",
+      "record": "13-7-0",
+      "country": "Brazil",
+      "fr": false
      },
-     "weight": "Poids coqs",
+     "weight": "138lb Catchweight",
      "title": false,
      "main_event": false,
      "segment": "main"
@@ -902,14 +954,17 @@
      "a": {
       "name": "Nimo Djagbo",
       "record": "1-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
-      "name": "Nikodem Blazejewski",
-      "record": "0-1-0",
-      "country": ""
+      "name": "Sidney Aguero",
+      "record": "1-3-0",
+      "country": "Brazil",
+      "fr": false
      },
-     "weight": "Poids mi-moyens",
+     "weight": "176lb Catchweight",
      "title": false,
      "main_event": false,
      "segment": "main"
@@ -918,12 +973,15 @@
      "a": {
       "name": "Marvin Caperan",
       "record": "1-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Bruno Pudins",
       "record": "0-1-0",
-      "country": ""
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -934,12 +992,15 @@
      "a": {
       "name": "Sarah Moussaddak",
       "record": "1-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Dina da Silva Barbosa",
       "record": "3-2-0",
-      "country": ""
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids pailles",
      "title": false,
@@ -950,12 +1011,15 @@
      "a": {
       "name": "Lamp Toure",
       "record": "1-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Valeriu Asaftei",
       "record": "1-0-0",
-      "country": ""
+      "country": "Moldova",
+      "fr": false
      },
      "weight": "Poids plumes",
      "title": false,
@@ -966,12 +1030,15 @@
      "a": {
       "name": "Alou Camara",
       "record": "4-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Garcia Pinto Kinkela",
       "record": "2-0-0",
-      "country": ""
+      "country": "Angola",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
@@ -982,12 +1049,15 @@
      "a": {
       "name": "Ibrahima Wade",
       "record": "3-1-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Jovan Todorovic",
       "record": "2-1-0",
-      "country": ""
+      "country": "Montenegro",
+      "fr": false
      },
      "weight": "Poids mi-lourds",
      "title": false,
@@ -1039,12 +1109,14 @@
      "a": {
       "name": "Jiří Procházka",
       "record": "32-6-1",
-      "country": "Czechia"
+      "country": "Czechia",
+      "fr": false
      },
      "b": {
       "name": "Navajo Stirling",
       "record": "11-0-0",
-      "country": "New Zealand"
+      "country": "New Zealand",
+      "fr": false
      },
      "weight": "Poids mi-lourds",
      "title": false,
@@ -1055,12 +1127,14 @@
      "a": {
       "name": "Aljamain Sterling",
       "record": "26-5-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Kevin Vallejos",
       "record": "18-1-0",
-      "country": "Argentina"
+      "country": "Argentina",
+      "fr": false
      },
      "weight": "Poids plumes",
      "title": false,
@@ -1071,12 +1145,14 @@
      "a": {
       "name": "Dan Hooker",
       "record": "24-15-0",
-      "country": "New Zealand"
+      "country": "New Zealand",
+      "fr": false
      },
      "b": {
       "name": "Brian Ortega",
       "record": "16-5-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -1087,12 +1163,14 @@
      "a": {
       "name": "Kyoji Horiguchi",
       "record": "36-6-0",
-      "country": "Japan"
+      "country": "Japan",
+      "fr": false
      },
      "b": {
       "name": "Asu Almabayev",
       "record": "24-3-0",
-      "country": "Kazakhstan"
+      "country": "Kazakhstan",
+      "fr": false
      },
      "weight": "Poids mouches",
      "title": false,
@@ -1103,12 +1181,14 @@
      "a": {
       "name": "Jared Cannonier",
       "record": "18-10-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Ikram Aliskerov",
       "record": "18-2-0",
-      "country": "Russia"
+      "country": "Russia",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
@@ -1119,12 +1199,14 @@
      "a": {
       "name": "Aleksandre Topuria",
       "record": "7-1-0",
-      "country": "Georgia"
+      "country": "Georgia",
+      "fr": false
      },
      "b": {
       "name": "Santiago Luna",
       "record": "8-1-0",
-      "country": "Mexico"
+      "country": "Mexico",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -1135,12 +1217,14 @@
      "a": {
       "name": "Shamil Gaziev",
       "record": "15-3-0",
-      "country": "Bahrain"
+      "country": "Bahrain",
+      "fr": false
      },
      "b": {
       "name": "Tallison Teixeira",
       "record": "9-2-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids lourds",
      "title": false,
@@ -1151,12 +1235,14 @@
      "a": {
       "name": "Amir Albazi",
       "record": "17-3-0",
-      "country": "Iraq"
+      "country": "Iraq",
+      "fr": false
      },
      "b": {
       "name": "Alessandro Costa",
       "record": "17-5-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids mouches",
      "title": false,
@@ -1167,12 +1253,14 @@
      "a": {
       "name": "Jake Matthews",
       "record": "23-8-0",
-      "country": "Australia"
+      "country": "Australia",
+      "fr": false
      },
      "b": {
       "name": "Tahir Abdullayev",
       "record": "20-3-0",
-      "country": "Azerbaijan"
+      "country": "Azerbaijan",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -1212,12 +1300,14 @@
      "a": {
       "name": "Adrian Bartosinski",
       "record": "18-1-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "b": {
       "name": "Tymoteusz Lopaczyk",
       "record": "14-4-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": true,
@@ -1228,12 +1318,14 @@
      "a": {
       "name": "Valeriu Mircea",
       "record": "32-9-1",
-      "country": ""
+      "country": "Moldova",
+      "fr": false
      },
      "b": {
       "name": "Marcin Held",
       "record": "31-11-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": true,
@@ -1244,12 +1336,14 @@
      "a": {
       "name": "Madars Bertholds-Fleminas",
       "record": "14-8-0",
-      "country": ""
+      "country": "Latvia",
+      "fr": false
      },
      "b": {
       "name": "Mateusz Pawlik",
       "record": "7-3-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -1260,12 +1354,14 @@
      "a": {
       "name": "Tomasz Romanowski",
       "record": "19-12-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "b": {
       "name": "Igor Michaliszyn",
       "record": "12-4-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
@@ -1276,12 +1372,14 @@
      "a": {
       "name": "Artur Szczepaniak",
       "record": "13-4-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "b": {
       "name": "Michal Hir",
       "record": "5-1-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "weight": "174lb Catchweight",
      "title": false,
@@ -1292,12 +1390,15 @@
      "a": {
       "name": "Alain Van De Merckt",
       "record": "10-2-0",
-      "country": ""
+      "country": "Belgium",
+      "fr": true,
+      "cc": "BE"
      },
      "b": {
       "name": "Szymon Herrmann",
       "record": "7-0-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
@@ -1308,12 +1409,14 @@
      "a": {
       "name": "Wojciech Kawa",
       "record": "9-5-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "b": {
       "name": "Oleksandr Moisa",
       "record": "5-2-0",
-      "country": ""
+      "country": "Ukraine",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -1324,12 +1427,14 @@
      "a": {
       "name": "Maciej Kazieczko",
       "record": "9-5-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "b": {
       "name": "Bohdan Danylko",
       "record": "8-1-0",
-      "country": ""
+      "country": "Ukraine",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -1385,12 +1490,14 @@
      "a": {
       "name": "Alexander Loof",
       "record": "9-4-0",
-      "country": ""
+      "country": "Sweden",
+      "fr": false
      },
      "b": {
       "name": "Oscar Ownsworth",
       "record": "10-5-1",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "weight": "Poids plumes",
      "title": false,
@@ -1401,12 +1508,14 @@
      "a": {
       "name": "Tanio Pagliariccio",
       "record": "11-5-0",
-      "country": ""
+      "country": "Italy",
+      "fr": false
      },
      "b": {
       "name": "Igor Wojtas",
       "record": "13-9-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "weight": "Poids mouches",
      "title": false,
@@ -1417,12 +1526,14 @@
      "a": {
       "name": "Jordan O'Neill",
       "record": "4-0-0",
-      "country": ""
+      "country": "Ireland",
+      "fr": false
      },
      "b": {
       "name": "Christopher Bajo",
       "record": "6-4-0",
-      "country": ""
+      "country": "Sweden",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -1433,12 +1544,14 @@
      "a": {
       "name": "Elsa Cerezo",
       "record": "1-0-0",
-      "country": ""
+      "country": "Spain",
+      "fr": false
      },
      "b": {
       "name": "Chloe Crozier",
       "record": "0-0-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "weight": "Poids mouches",
      "title": false,
@@ -1449,12 +1562,14 @@
      "a": {
       "name": "Nathanael Woods",
       "record": "2-1-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Angelo Maria Terenzio",
       "record": "3-3-0",
-      "country": ""
+      "country": "Italy",
+      "fr": false
      },
      "weight": "Poids mouches",
      "title": false,
@@ -1464,82 +1579,38 @@
     {
      "a": {
       "name": "Craig Rawlins",
-      "record": "5-6-0",
-      "country": ""
+      "record": "6-6-0",
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Graham Sheehan",
       "record": "1-1-0",
-      "country": ""
+      "country": "Ireland",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
      "main_event": false,
-     "segment": "prelims"
+     "segment": "main"
     },
     {
      "a": {
       "name": "Mohamed El Karchouh",
       "record": "0-0-0",
-      "country": ""
+      "country": "Spain",
+      "fr": false
      },
      "b": {
       "name": "Kevin Kehoe",
       "record": "0-0-0",
-      "country": ""
+      "country": "Ireland",
+      "fr": false
      },
      "weight": "150lb Catchweight",
      "title": false,
      "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
-      "name": "Victor Yeo",
-      "record": "2-0-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Charlie Boulton",
-      "record": "4-1-0",
-      "country": ""
-     },
-     "weight": "Poids plumes",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
-      "name": "Jordan Molinari",
-      "record": "4-2-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Mariano Neto",
-      "record": "3-1-0",
-      "country": ""
-     },
-     "weight": "Poids mouches",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
-      "name": "Chasen Blair",
-      "record": "7-4-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Nathan Jones",
-      "record": "17-13-0",
-      "country": ""
-     },
-     "weight": "Poids mi-moyens",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
+     "segment": "main"
     }
    ],
    "notes": "",
@@ -1586,12 +1657,16 @@
      "a": {
       "name": "Theo Ulrich",
       "record": "8-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Davy Gallon",
       "record": "24-10-2",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids légers",
      "title": true,
@@ -1602,12 +1677,16 @@
      "a": {
       "name": "Anthony Morel",
       "record": "7-2-0",
-      "country": ""
+      "country": "Reunion",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Tamerlan Albiekov",
       "record": "5-1-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids lourds",
      "title": true,
@@ -1618,12 +1697,14 @@
      "a": {
       "name": "Antero dos Santos",
       "record": "7-0-0",
-      "country": ""
+      "country": "Angola",
+      "fr": false
      },
      "b": {
       "name": "Georges Ngoma",
       "record": "5-5-0",
-      "country": ""
+      "country": "Congo, The Democratic Republic of the",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -1634,12 +1715,15 @@
      "a": {
       "name": "Vaclav Zemla",
       "record": "4-0-1",
-      "country": ""
+      "country": "Czech Republic",
+      "fr": false
      },
      "b": {
       "name": "Louis Banhiet",
       "record": "1-2-0",
-      "country": ""
+      "country": "Cote d'Ivoire",
+      "fr": true,
+      "cc": "CI"
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -1650,12 +1734,15 @@
      "a": {
       "name": "Allan Landouzy",
       "record": "2-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Benjamin Molnar",
       "record": "14-12-0",
-      "country": ""
+      "country": "Hungary",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -1666,12 +1753,16 @@
      "a": {
       "name": "Kalim Mastouri",
       "record": "0-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Mathieu Abbe",
       "record": "0-1-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -1682,12 +1773,15 @@
      "a": {
       "name": "Oceane Samson",
       "record": "3-1-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Lindsey Payne",
       "record": "4-3-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "weight": "Poids pailles",
      "title": false,
@@ -1698,12 +1792,16 @@
      "a": {
       "name": "Olivier Fleurmon",
       "record": "1-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Mathieu Szymborski",
       "record": "1-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -1759,12 +1857,14 @@
      "a": {
       "name": "Ieuan Davies",
       "record": "8-0-0",
-      "country": ""
+      "country": "Wales",
+      "fr": false
      },
      "b": {
       "name": "Jordan Vucenic",
       "record": "16-4-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": true,
@@ -1775,12 +1875,14 @@
      "a": {
       "name": "Shay Ingram",
       "record": "5-1-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Steffen Rossevatn",
       "record": "4-1-0",
-      "country": ""
+      "country": "Norway",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -1791,12 +1893,14 @@
      "a": {
       "name": "Omiel Brown",
       "record": "13-4-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Konstantinos Ntelis",
       "record": "11-3-0",
-      "country": ""
+      "country": "Greece",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -1807,12 +1911,14 @@
      "a": {
       "name": "Nathan Fletcher",
       "record": "11-3-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Anderson Souza Soares",
       "record": "17-7-0",
-      "country": ""
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -1823,12 +1929,14 @@
      "a": {
       "name": "Adam Cullen",
       "record": "12-3-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Jefferson Andre",
       "record": "15-9-0",
-      "country": ""
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -1839,12 +1947,14 @@
      "a": {
       "name": "Jack Humphries",
       "record": "5-0-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Alexandros Moumtzis",
       "record": "10-0-0",
-      "country": ""
+      "country": "Greece",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -1855,12 +1965,14 @@
      "a": {
       "name": "Emile Vujakovic",
       "record": "6-2-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Mario Mingaj",
       "record": "7-2-0",
-      "country": ""
+      "country": "Albania",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
@@ -1871,12 +1983,14 @@
      "a": {
       "name": "Charlie Dando",
       "record": "2-0-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Jordan Walters",
       "record": "3-0-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "weight": "Poids plumes",
      "title": false,
@@ -1887,12 +2001,15 @@
      "a": {
       "name": "Joe Fields",
       "record": "7-0-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Samir Faiddine",
       "record": "14-10-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids mouches",
      "title": false,
@@ -1903,12 +2020,14 @@
      "a": {
       "name": "Sheldon Ryan",
       "record": "5-3-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Gary Rooney",
       "record": "4-1-0",
-      "country": ""
+      "country": "Ireland",
+      "fr": false
      },
      "weight": "Poids mouches",
      "title": false,
@@ -1919,12 +2038,14 @@
      "a": {
       "name": "Connor Wilson",
       "record": "7-3-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Davi Santos",
       "record": "7-4-0",
-      "country": ""
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids mouches",
      "title": false,
@@ -1935,12 +2056,14 @@
      "a": {
       "name": "Jack Mcloughlin",
       "record": "3-1-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Jack Corr",
       "record": "4-0-0",
-      "country": ""
+      "country": "Northern Ireland",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -1951,14 +2074,34 @@
      "a": {
       "name": "Branden Guest",
       "record": "1-2-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Owen Cartridge",
       "record": "1-0-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "weight": "Poids mi-lourds",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
+      "name": "Teddy Adlington-Stringer",
+      "record": "6-1-0",
+      "country": "England",
+      "fr": false
+     },
+     "b": {
+      "name": "Stefano Catacoli",
+      "record": "10-4-0",
+      "country": "England",
+      "fr": false
+     },
+     "weight": "Poids légers",
      "title": false,
      "main_event": false,
      "segment": "prelims"
@@ -2008,12 +2151,14 @@
      "a": {
       "name": "Israel Adesanya",
       "record": "24-6-0",
-      "country": "Nigeria"
+      "country": "Nigeria",
+      "fr": false
      },
      "b": {
       "name": "Shara Magomedov",
       "record": "17-1-0",
-      "country": "Russia"
+      "country": "Russia",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
@@ -2024,12 +2169,14 @@
      "a": {
       "name": "Ian Machado Garry",
       "record": "17-2-0",
-      "country": "Ireland"
+      "country": "Ireland",
+      "fr": false
      },
      "b": {
       "name": "Yaroslav Amosov",
       "record": "30-1-0",
-      "country": "Ukraine"
+      "country": "Ukraine",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -2040,12 +2187,14 @@
      "a": {
       "name": "Serghei Spivac",
       "record": "18-7-0",
-      "country": "Moldova"
+      "country": "Moldova",
+      "fr": false
      },
      "b": {
       "name": "Mario Pinto",
       "record": "13-0-0",
-      "country": "Portugal"
+      "country": "Portugal",
+      "fr": false
      },
      "weight": "Poids lourds",
      "title": false,
@@ -2056,60 +2205,68 @@
      "a": {
       "name": "Levan Chokheli",
       "record": "15-3-0",
-      "country": "Georgia"
+      "country": "Georgia",
+      "fr": false
      },
      "b": {
       "name": "Islam Dulatov",
       "record": "12-1-0",
-      "country": "Germany"
+      "country": "Germany",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
-     "segment": "main",
+     "segment": "prelims",
      "main_event": false
     },
     {
      "a": {
       "name": "Mairon Santos",
       "record": "18-1-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "b": {
       "name": "Akbar Abdullaev",
       "record": "14-0-0",
-      "country": "Kyrgyzstan"
+      "country": "Kyrgyzstan",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
-     "segment": "main",
+     "segment": "prelims",
      "main_event": false
     },
     {
      "a": {
       "name": "Magomed Tuchalov",
       "record": "7-0-0",
-      "country": "Russia"
+      "country": "Russia",
+      "fr": false
      },
      "b": {
       "name": "Ion Cutelaba",
       "record": "20-12-1",
-      "country": "Moldova"
+      "country": "Moldova",
+      "fr": false
      },
      "weight": "Poids mi-lourds",
      "title": false,
-     "segment": "main",
+     "segment": "prelims",
      "main_event": false
     },
     {
      "a": {
       "name": "Bruno Silva",
       "record": "15-9-2",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "b": {
       "name": "Jafel Filho",
       "record": "17-5-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids mouches",
      "title": false,
@@ -2120,12 +2277,14 @@
      "a": {
       "name": "Uran Satybaldiev",
       "record": "9-1-0",
-      "country": "Kyrgyzstan"
+      "country": "Kyrgyzstan",
+      "fr": false
      },
      "b": {
       "name": "Ivan Gnizditskiy",
       "record": "7-0-0",
-      "country": "Russia"
+      "country": "Russia",
+      "fr": false
      },
      "weight": "Poids mi-lourds",
      "title": false,
@@ -2136,12 +2295,14 @@
      "a": {
       "name": "Marco Tulio",
       "record": "14-3-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "b": {
       "name": "JunYong Park",
       "record": "19-7-0",
-      "country": "South Korea"
+      "country": "South Korea",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
@@ -2152,12 +2313,14 @@
      "a": {
       "name": "Pavel Andrusca",
       "record": "9-0-0",
-      "country": "Moldova"
+      "country": "Moldova",
+      "fr": false
      },
      "b": {
       "name": "Mehemmedeli Osmanli",
       "record": "12-2-0",
-      "country": "Azerbaijan"
+      "country": "Azerbaijan",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -2168,12 +2331,15 @@
      "a": {
       "name": "Modestino Rodrigues",
       "record": "8-1-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "b": {
       "name": "Matthieu Letho Duclos",
       "record": "11-3-0",
-      "country": "France"
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids moyens",
      "title": false,
@@ -2184,12 +2350,14 @@
      "a": {
       "name": "Abdul Hussein",
       "record": "16-2-0",
-      "country": "Finland"
+      "country": "Finland",
+      "fr": false
      },
      "b": {
       "name": "Hecher Sosa",
       "record": "15-1-0",
-      "country": "Spain"
+      "country": "Spain",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -2245,12 +2413,14 @@
      "a": {
       "name": "George Hardwick",
       "record": "15-4-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Gavin Hughes",
       "record": "11-5-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -2261,12 +2431,14 @@
      "a": {
       "name": "Justin Burlinson",
       "record": "10-2-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Farshad Nazarnia",
       "record": "5-1-0",
-      "country": ""
+      "country": "Iran",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
@@ -2277,12 +2449,14 @@
      "a": {
       "name": "Jack Foote",
       "record": "3-0-0",
-      "country": ""
+      "country": "Scotland",
+      "fr": false
      },
      "b": {
       "name": "Unknown Fighter",
       "record": "--",
-      "country": ""
+      "country": "",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -2293,12 +2467,14 @@
      "a": {
       "name": "Chris Bungard",
       "record": "23-11-0",
-      "country": ""
+      "country": "Scotland",
+      "fr": false
      },
      "b": {
       "name": "Leon Aliu",
       "record": "11-6-0",
-      "country": ""
+      "country": "Albania",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -2309,12 +2485,14 @@
      "a": {
       "name": "Milad Ahady",
       "record": "8-1-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Alexander O'Sullivan",
       "record": "5-1-0",
-      "country": ""
+      "country": "Ireland",
+      "fr": false
      },
      "weight": "Poids plumes",
      "title": false,
@@ -2325,12 +2503,14 @@
      "a": {
       "name": "Michael Blair",
       "record": "5-3-0",
-      "country": ""
+      "country": "Scotland",
+      "fr": false
      },
      "b": {
       "name": "Thomas Paull",
       "record": "13-7-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -2341,12 +2521,14 @@
      "a": {
       "name": "Stevie Lee",
       "record": "1-0-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Cristiano Oliveira",
       "record": "3-3-0",
-      "country": ""
+      "country": "Portugal",
+      "fr": false
      },
      "weight": "Poids plumes",
      "title": false,
@@ -2357,12 +2539,14 @@
      "a": {
       "name": "Joshua Abraham",
       "record": "9-6-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Miguel Haro",
       "record": "13-11-0",
-      "country": ""
+      "country": "Spain",
+      "fr": false
      },
      "weight": "Poids plumes",
      "title": false,
@@ -2373,12 +2557,14 @@
      "a": {
       "name": "Ryan Campbell",
       "record": "4-1-0",
-      "country": ""
+      "country": "Scotland",
+      "fr": false
      },
      "b": {
       "name": "Unknown Fighter",
       "record": "--",
-      "country": ""
+      "country": "",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -2389,12 +2575,14 @@
      "a": {
       "name": "Jamie McGowan",
       "record": "2-0-0",
-      "country": ""
+      "country": "Scotland",
+      "fr": false
      },
      "b": {
       "name": "Unknown Fighter",
       "record": "--",
-      "country": ""
+      "country": "",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -2403,14 +2591,34 @@
     },
     {
      "a": {
+      "name": "Jordan Stronge",
+      "record": "4-1-0",
+      "country": "Scotland",
+      "fr": false
+     },
+     "b": {
+      "name": "Unknown Fighter",
+      "record": "--",
+      "country": "",
+      "fr": false
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": false,
+     "segment": "prelims"
+    },
+    {
+     "a": {
       "name": "Geoff Pavey",
       "record": "3-3-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Lewis Urquhart",
       "record": "0-1-0",
-      "country": ""
+      "country": "Scotland",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -2421,12 +2629,15 @@
      "a": {
       "name": "Bailey Gilbert",
       "record": "9-7-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Julien Pierre Lopez",
       "record": "7-6-1",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids plumes",
      "title": false,
@@ -2437,46 +2648,16 @@
      "a": {
       "name": "Zanyar Kamaran",
       "record": "1-1-0",
-      "country": ""
+      "country": "Bulgaria",
+      "fr": false
      },
      "b": {
       "name": "Kai Holmes",
       "record": "3-2-0",
-      "country": ""
+      "country": "England",
+      "fr": false
      },
      "weight": "Poids plumes",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
-      "name": "Leon Armes",
-      "record": "3-2-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Manny Akpan",
-      "record": "4-2-0",
-      "country": ""
-     },
-     "weight": "148lb Catchweight",
-     "title": false,
-     "main_event": false,
-     "segment": "prelims"
-    },
-    {
-     "a": {
-      "name": "Jordan Stronge",
-      "record": "4-1-0",
-      "country": ""
-     },
-     "b": {
-      "name": "Unknown Fighter",
-      "record": "--",
-      "country": ""
-     },
-     "weight": "Poids légers",
      "title": false,
      "main_event": false,
      "segment": "prelims"
@@ -2526,12 +2707,15 @@
      "a": {
       "name": "Jade Jorand",
       "record": "5-3-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Kinga Jendrasik",
       "record": "3-3-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "weight": "Poids pailles",
      "title": true,
@@ -2542,12 +2726,16 @@
      "a": {
       "name": "Alexis Nicolas",
       "record": "2-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Bilal Bakhouche-Chareuf",
       "record": "4-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -2558,12 +2746,15 @@
      "a": {
       "name": "Jean Magny",
       "record": "0-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Kevin Cadoni",
       "record": "1-1-0",
-      "country": ""
+      "country": "Italy",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -2572,14 +2763,35 @@
     },
     {
      "a": {
+      "name": "Andrii Misiuk",
+      "record": "6-0-0",
+      "country": "Ukraine",
+      "fr": false
+     },
+     "b": {
+      "name": "Giresse Cabral Tsague",
+      "record": "1-0-0",
+      "country": "Senegal",
+      "fr": true,
+      "cc": "SN"
+     },
+     "weight": "Poids légers",
+     "title": false,
+     "main_event": false,
+     "segment": "main"
+    },
+    {
+     "a": {
       "name": "Bogdan Ozdoev",
       "record": "0-0-0",
-      "country": ""
+      "country": "Russia",
+      "fr": false
      },
      "b": {
       "name": "Unknown Fighter",
       "record": "--",
-      "country": ""
+      "country": "",
+      "fr": false
      },
      "weight": "",
      "title": false,
@@ -2643,12 +2855,14 @@
      "a": {
       "name": "Charles Oliveira",
       "record": "37-11-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "b": {
       "name": "Diego Lopes",
       "record": "28-8-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids légers",
      "title": false,
@@ -2659,12 +2873,14 @@
      "a": {
       "name": "Sergei Pavlovich",
       "record": "21-3-0",
-      "country": "Russia"
+      "country": "Russia",
+      "fr": false
      },
      "b": {
       "name": "Alex Pereira",
       "record": "13-4-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids lourds",
      "title": false,
@@ -2675,12 +2891,14 @@
      "a": {
       "name": "Joe Pyfer",
       "record": "16-3-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Bo Nickal",
       "record": "9-1-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
@@ -2691,12 +2909,14 @@
      "a": {
       "name": "Brandon Moreno",
       "record": "24-10-2",
-      "country": "Mexico"
+      "country": "Mexico",
+      "fr": false
      },
      "b": {
       "name": "Charles Johnson",
       "record": "20-9-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "weight": "Poids mouches",
      "title": false,
@@ -2707,12 +2927,14 @@
      "a": {
       "name": "Maycee Barber",
       "record": "15-3-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Carli Judice",
       "record": "7-2-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "weight": "Poids mouches (F)",
      "title": false,
@@ -2723,12 +2945,14 @@
      "a": {
       "name": "Quentin Pasley",
       "record": "4-0-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "b": {
       "name": "Junior Tafa",
       "record": "7-6-0",
-      "country": "Australia"
+      "country": "Australia",
+      "fr": false
      },
      "weight": "Poids mi-lourds",
      "title": false,
@@ -2784,12 +3008,15 @@
      "a": {
       "name": "Taylor Lapilus",
       "record": "25-4-0",
-      "country": "France"
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Mitch McKee",
       "record": "11-0-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -2800,12 +3027,15 @@
      "a": {
       "name": "Boris Mbarga Atangana",
       "record": "9-0-0",
-      "country": "Belgium"
+      "country": "Belgium",
+      "fr": true,
+      "cc": "BE"
      },
      "b": {
       "name": "Bryan Battle",
       "record": "14-3-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
@@ -2816,12 +3046,15 @@
      "a": {
       "name": "Abdoul Abdouraguimov",
       "record": "20-1-0",
-      "country": "France"
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Andreeas Binder",
       "record": "12-2-0",
-      "country": "Romania"
+      "country": "Romania",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -2832,12 +3065,15 @@
      "a": {
       "name": "Fabian Edwards",
       "record": "16-5-0",
-      "country": "England"
+      "country": "England",
+      "fr": false
      },
      "b": {
       "name": "Ilian Bouafia",
       "record": "8-1-0",
-      "country": "France"
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids moyens",
      "title": false,
@@ -2848,12 +3084,15 @@
      "a": {
       "name": "Baris Adiguzel",
       "record": "10-2-0",
-      "country": "France"
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Liam Gittins",
       "record": "13-6-0",
-      "country": "England"
+      "country": "England",
+      "fr": false
      },
      "weight": "Poids coqs",
      "title": false,
@@ -2864,12 +3103,15 @@
      "a": {
       "name": "Bafode Gassama",
       "record": "4-0-0",
-      "country": "France"
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Coby Bradford",
       "record": "6-4-0",
-      "country": "USA"
+      "country": "USA",
+      "fr": false
      },
      "weight": "Poids mi-lourds",
      "title": false,
@@ -2879,13 +3121,17 @@
     {
      "a": {
       "name": "Brandon Brachet",
-      "record": "0-0-0",
-      "country": "France"
+      "record": "9-1-0",
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Adam Meskini",
       "record": "11-3-0",
-      "country": "France"
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids plumes",
      "title": false,
@@ -2895,13 +3141,16 @@
     {
      "a": {
       "name": "Mathilde Aschenbrenner",
-      "record": "0-0-0",
-      "country": "France"
+      "record": "3-0-0",
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Shelda Chipito",
       "record": "2-0-0",
-      "country": "Zambia"
+      "country": "Zambia",
+      "fr": false
      },
      "weight": "Poids pailles (F)",
      "title": false,
@@ -2941,12 +3190,14 @@
      "a": {
       "name": "Pawel Pawlak",
       "record": "26-4-1",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "b": {
       "name": "Piotr Kuberski",
       "record": "18-1-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": true,
@@ -2957,12 +3208,14 @@
      "a": {
       "name": "Patryk Kaczmarczyk",
       "record": "14-3-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "b": {
       "name": "Josef Stummer",
       "record": "8-2-0",
-      "country": ""
+      "country": "Czech Republic",
+      "fr": false
      },
      "weight": "Poids plumes",
      "title": true,
@@ -2973,12 +3226,14 @@
      "a": {
       "name": "Stefan Vojcak",
       "record": "11-2-0",
-      "country": ""
+      "country": "Slovakia",
+      "fr": false
      },
      "b": {
       "name": "Artur Szpilka",
       "record": "6-1-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "weight": "Poids lourds",
      "title": true,
@@ -2989,12 +3244,14 @@
      "a": {
       "name": "Rafal Haratyk",
       "record": "21-6-2",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "b": {
       "name": "Andi Vrtacic",
       "record": "10-3-0",
-      "country": ""
+      "country": "Croatia",
+      "fr": false
      },
      "weight": "Poids moyens",
      "title": false,
@@ -3005,12 +3262,15 @@
      "a": {
       "name": "Adam Soldaev",
       "record": "11-3-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "b": {
       "name": "Hugo Deux",
       "record": "7-1-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids légers",
      "title": false,
@@ -3021,12 +3281,15 @@
      "a": {
       "name": "Souheil Kaouchen",
       "record": "3-0-0",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Oleksii Polishchuk",
       "record": "15-7-0",
-      "country": ""
+      "country": "Ukraine",
+      "fr": false
      },
      "weight": "Poids plumes",
      "title": false,
@@ -3037,12 +3300,14 @@
      "a": {
       "name": "Kacper Sochacki",
       "record": "5-1-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "b": {
       "name": "Aleksander Winiarski",
       "record": "4-1-0",
-      "country": ""
+      "country": "Poland",
+      "fr": false
      },
      "weight": "Poids mi-lourds",
      "title": false,
@@ -3094,12 +3359,15 @@
      "a": {
       "name": "Nika Kobakhidze",
       "record": "8-3-0",
-      "country": ""
+      "country": "Georgia",
+      "fr": false
      },
      "b": {
       "name": "Damien Lapilus",
       "record": "23-15-3",
-      "country": ""
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids plumes",
      "title": true,
@@ -3109,6 +3377,67 @@
    ],
    "notes": "",
    "url": "https://www.sherdog.com/events/HXMMA-50-Hexagone-MMA-50-115351",
+   "source": "Sherdog"
+  },
+  {
+   "id": "ares-2027-01-16-ares-47",
+   "org": "ares",
+   "name": "ARES 47",
+   "subtitle": "Masmoudi vs. Oudelha",
+   "start": "2027-01-16T18:30:00Z",
+   "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2027-01-16T18:30:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "Twitch Canal+",
+       "free": true
+      }
+     ]
+    },
+    {
+     "key": "main",
+     "label": "Main card",
+     "start": "2027-01-16T19:30:00Z",
+     "estimated": true,
+     "channels": [
+      {
+       "name": "Canal+ Sport 360",
+       "free": false
+      }
+     ]
+    }
+   ],
+   "venue": "Marseille Sports Palace",
+   "city": "Marseille",
+   "country": "France",
+   "fights": [
+    {
+     "a": {
+      "name": "Walid Masmoudi",
+      "record": "5-0-0",
+      "country": "Tunisia",
+      "fr": true,
+      "cc": "TN"
+     },
+     "b": {
+      "name": "Ghiles Oudelha",
+      "record": "16-8-0",
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
+     },
+     "weight": "Poids légers",
+     "title": true,
+     "main_event": true,
+     "segment": "main"
+    }
+   ],
+   "notes": "",
+   "url": "https://www.sherdog.com/events/ARES-47-Masmoudi-vs-Oudelha-115377",
    "source": "Sherdog"
   },
   {
@@ -3167,12 +3496,14 @@
      "a": {
       "name": "Joshua Van",
       "record": "18-2-0",
-      "country": "Myanmar"
+      "country": "Myanmar",
+      "fr": false
      },
      "b": {
       "name": "Manel Kape",
       "record": "23-7-0",
-      "country": "Portugal"
+      "country": "Portugal",
+      "fr": false
      },
      "weight": "Poids mouches",
      "title": false,
@@ -3183,12 +3514,14 @@
      "a": {
       "name": "Carlos Prates",
       "record": "24-7-0",
-      "country": "Brazil"
+      "country": "Brazil",
+      "fr": false
      },
      "b": {
       "name": "Michael Morales",
       "record": "19-0-0",
-      "country": "Ecuador"
+      "country": "Ecuador",
+      "fr": false
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -3205,8 +3538,20 @@
    "org": "ufc",
    "name": "UFC Fight Night",
    "subtitle": "Salkilld vs. Saint Denis",
-   "start": "2027-02-06T22:00:00Z",
+   "start": "2027-02-06T19:00:00Z",
    "segments": [
+    {
+     "key": "prelims",
+     "label": "Prelims",
+     "start": "2027-02-06T19:00:00Z",
+     "estimated": false,
+     "channels": [
+      {
+       "name": "RMC Sport",
+       "free": false
+      }
+     ]
+    },
     {
      "key": "main",
      "label": "Main card",
@@ -3228,12 +3573,15 @@
      "a": {
       "name": "Quillan Salkilld",
       "record": "13-1-0",
-      "country": "Australia"
+      "country": "Australia",
+      "fr": false
      },
      "b": {
       "name": "Benoît Saint Denis",
       "record": "17-4-0",
-      "country": "France"
+      "country": "France",
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids légers",
      "title": false,
@@ -3244,12 +3592,14 @@
      "a": {
       "name": "Bogdan Guskov",
       "record": "18-4-1",
-      "country": "Uzbekistan"
+      "country": "Uzbekistan",
+      "fr": false
      },
      "b": {
       "name": "Robert Whittaker",
       "record": "28-9-0",
-      "country": "Australia"
+      "country": "Australia",
+      "fr": false
      },
      "weight": "Poids mi-lourds",
      "title": false,
@@ -3258,14 +3608,17 @@
     },
     {
      "a": {
-      "name": "Kaan Ofli",
-      "record": "15-4-1",
-      "country": "Australia"
+      "name": "Marwan Rahiki",
+      "record": "9-1-0",
+      "country": "Morocco",
+      "fr": true,
+      "cc": "MA"
      },
      "b": {
-      "name": "Joanderson Brito",
-      "record": "20-5-1",
-      "country": "Brazil"
+      "name": "JooSang Yoo",
+      "record": "9-2-0",
+      "country": "South Korea",
+      "fr": false
      },
      "weight": "Poids plumes",
      "title": false,
@@ -3274,18 +3627,92 @@
     },
     {
      "a": {
-      "name": "Marwan Rahiki",
-      "record": "9-1-0",
-      "country": "Morocco"
+      "name": "Kaan Ofli",
+      "record": "15-4-1",
+      "country": "Australia",
+      "fr": false
      },
      "b": {
-      "name": "JooSang Yoo",
-      "record": "9-2-0",
-      "country": "South Korea"
+      "name": "Joanderson Brito",
+      "record": "20-5-1",
+      "country": "Brazil",
+      "fr": false
      },
      "weight": "Poids plumes",
      "title": false,
      "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "George Mangos",
+      "record": "7-1-0",
+      "country": "Australia",
+      "fr": false
+     },
+     "b": {
+      "name": "Dagiisuren Chagnaadorj",
+      "record": "11-2-0",
+      "country": "Mongolia",
+      "fr": false
+     },
+     "weight": "Poids plumes",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Rabindra Dhant",
+      "record": "10-1-0",
+      "country": "Nepal",
+      "fr": false
+     },
+     "b": {
+      "name": "Ryo Tajima",
+      "record": "12-3-0",
+      "country": "Japan",
+      "fr": false
+     },
+     "weight": "Poids coqs",
+     "title": false,
+     "segment": "main",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Jiniushiyue",
+      "record": "13-4-0",
+      "country": "China",
+      "fr": false
+     },
+     "b": {
+      "name": "Takaya Suzuki",
+      "record": "8-1-0",
+      "country": "Japan",
+      "fr": false
+     },
+     "weight": "Poids mouches",
+     "title": false,
+     "segment": "prelims",
+     "main_event": false
+    },
+    {
+     "a": {
+      "name": "Meng Bo",
+      "record": "23-8-0",
+      "country": "China",
+      "fr": false
+     },
+     "b": {
+      "name": "Bo Hyun Park",
+      "record": "0-1-0",
+      "country": "South Korea",
+      "fr": false
+     },
+     "weight": "Poids pailles (F)",
+     "title": false,
+     "segment": "prelims",
      "main_event": false
     }
    ],
