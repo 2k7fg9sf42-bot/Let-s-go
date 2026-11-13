@@ -187,6 +187,22 @@
     return e.subtitle && !/\bvs\.?\b/i.test(e.subtitle) ? e.subtitle : "";
   }
 
+  // Petit drapeau à côté des combattants francophones (le français est dessiné, les autres en emoji).
+  function flagNode(side) {
+    if (!side.fr || !side.cc) return null;
+    if (side.cc === "FR") return el("span", { class: "flag flag-fr", role: "img", "aria-label": "France", title: "France" });
+    const emoji = String.fromCodePoint(...[...side.cc].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65));
+    return el("span", { class: "flag flag-emoji", role: "img", "aria-label": side.country, title: side.country }, emoji);
+  }
+
+  // Le drapeau reste collé au dernier mot du nom, pour ne jamais passer seul à la ligne.
+  function nameWithFlag(side) {
+    const flag = flagNode(side);
+    if (!flag) return [side.name];
+    const i = side.name.lastIndexOf(" ");
+    return [side.name.slice(0, i + 1), el("span", { class: "nowrap" }, side.name.slice(i + 1), flag)];
+  }
+
   // Main event et co-main event, noms complets.
   function billNode(e, extraClass = "") {
     if (!e.me) {
@@ -196,9 +212,9 @@
     const row = (label, f, isMain) => el("div", { class: `bill-row${isMain ? " is-main" : ""}` },
       el("span", { class: "bill-label" }, label),
       el("span", { class: "bill-names" },
-        el("b", { class: f.a.fr ? "fr" : null }, f.a.name),
+        el("b", { class: f.a.fr ? "fr" : null }, nameWithFlag(f.a)),
         el("span", { class: "bill-vs" }, "vs"),
-        el("b", { class: f.b.fr ? "fr" : null }, f.b.name),
+        el("b", { class: f.b.fr ? "fr" : null }, nameWithFlag(f.b)),
         f.title ? el("span", { class: "title-belt" }, "★ Titre") : null,
       ),
     );
@@ -492,14 +508,14 @@
           last = f.segment;
         }
         wrap.append(el("div", { class: `fight${f.main_event ? " me" : ""}` },
-          el("div", { class: "fighter" }, el("b", { class: f.a.fr ? "fr" : null }, f.a.name), el("span", {}, [f.a.record, f.a.country].filter(Boolean).join(" · "))),
+          el("div", { class: "fighter" }, el("b", { class: f.a.fr ? "fr" : null }, f.a.name), el("span", {}, [f.a.record, f.a.country].filter(Boolean).join(" · "), flagNode(f.a))),
           el("div", { class: "vs" },
             el("b", {}, "VS"),
             f.main_event ? el("div", {}, "Main event") : f === e.co ? el("div", {}, "Co-main event") : null,
             f.title ? el("div", { class: "belt" }, "★ Titre") : null,
             f.weight || "",
           ),
-          el("div", { class: "fighter r" }, el("b", { class: f.b.fr ? "fr" : null }, f.b.name), el("span", {}, [f.b.record, f.b.country].filter(Boolean).join(" · "))),
+          el("div", { class: "fighter r" }, el("b", { class: f.b.fr ? "fr" : null }, f.b.name), el("span", {}, [f.b.record, f.b.country].filter(Boolean).join(" · "), flagNode(f.b))),
         ));
       }
       add(body, wrap);

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-13T09:03:11Z",
+ "generated_at": "2026-11-13T09:14:25Z",
  "timezone": "Europe/Paris",
  "horizon_days": 150,
  "organizations": {
@@ -142,7 +142,8 @@
       "name": "Patrick Habirora",
       "record": "9-0-0",
       "country": "Belgium",
-      "fr": true
+      "fr": true,
+      "cc": "BE"
      },
      "b": {
       "name": "Omar El Dafrawy",
@@ -310,7 +311,8 @@
       "name": "Maxwell Djantou Nana",
       "record": "9-2-0",
       "country": "Cameroon",
-      "fr": true
+      "fr": true,
+      "cc": "CM"
      },
      "weight": "Poids lourds",
      "title": false,
@@ -328,7 +330,8 @@
       "name": "Styve Ngono",
       "record": "8-1-0",
       "country": "Cameroon",
-      "fr": true
+      "fr": true,
+      "cc": "CM"
      },
      "weight": "Poids mi-lourds",
      "title": false,
@@ -618,7 +621,8 @@
       "name": "Ciryl Gane",
       "record": "14-2-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Josh Hokit",
@@ -893,13 +897,15 @@
       "name": "Jordan Zebo",
       "record": "11-1-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Baissangour Chamsoudinov",
       "record": "9-1-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids mi-moyens",
      "title": true,
@@ -911,13 +917,15 @@
       "name": "Ghassen Jbalia",
       "record": "6-1-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Modibo Diakite",
       "record": "4-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids coqs",
      "title": false,
@@ -947,7 +955,8 @@
       "name": "Nimo Djagbo",
       "record": "1-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Sidney Aguero",
@@ -965,7 +974,8 @@
       "name": "Marvin Caperan",
       "record": "1-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Bruno Pudins",
@@ -983,7 +993,8 @@
       "name": "Sarah Moussaddak",
       "record": "1-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Dina da Silva Barbosa",
@@ -1001,7 +1012,8 @@
       "name": "Lamp Toure",
       "record": "1-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Valeriu Asaftei",
@@ -1019,7 +1031,8 @@
       "name": "Alou Camara",
       "record": "4-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Garcia Pinto Kinkela",
@@ -1037,7 +1050,8 @@
       "name": "Ibrahima Wade",
       "record": "3-1-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Jovan Todorovic",
@@ -1377,7 +1391,8 @@
       "name": "Alain Van De Merckt",
       "record": "10-2-0",
       "country": "Belgium",
-      "fr": true
+      "fr": true,
+      "cc": "BE"
      },
      "b": {
       "name": "Szymon Herrmann",
@@ -1643,13 +1658,15 @@
       "name": "Theo Ulrich",
       "record": "8-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Davy Gallon",
       "record": "24-10-2",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids légers",
      "title": true,
@@ -1661,13 +1678,15 @@
       "name": "Anthony Morel",
       "record": "7-2-0",
       "country": "Reunion",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Tamerlan Albiekov",
       "record": "5-1-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids lourds",
      "title": true,
@@ -1703,7 +1722,8 @@
       "name": "Louis Banhiet",
       "record": "1-2-0",
       "country": "Cote d'Ivoire",
-      "fr": true
+      "fr": true,
+      "cc": "CI"
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -1715,7 +1735,8 @@
       "name": "Allan Landouzy",
       "record": "2-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Benjamin Molnar",
@@ -1733,13 +1754,15 @@
       "name": "Kalim Mastouri",
       "record": "0-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Mathieu Abbe",
       "record": "0-1-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -1751,7 +1774,8 @@
       "name": "Oceane Samson",
       "record": "3-1-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Lindsey Payne",
@@ -1769,13 +1793,15 @@
       "name": "Olivier Fleurmon",
       "record": "1-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Mathieu Szymborski",
       "record": "1-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -1982,7 +2008,8 @@
       "name": "Samir Faiddine",
       "record": "14-10-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids mouches",
      "title": false,
@@ -2311,7 +2338,8 @@
       "name": "Matthieu Letho Duclos",
       "record": "11-3-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids moyens",
      "title": false,
@@ -2608,7 +2636,8 @@
       "name": "Julien Pierre Lopez",
       "record": "7-6-1",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids plumes",
      "title": false,
@@ -2679,7 +2708,8 @@
       "name": "Jade Jorand",
       "record": "5-3-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Kinga Jendrasik",
@@ -2697,13 +2727,15 @@
       "name": "Alexis Nicolas",
       "record": "2-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Bilal Bakhouche-Chareuf",
       "record": "4-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids mi-moyens",
      "title": false,
@@ -2715,7 +2747,8 @@
       "name": "Jean Magny",
       "record": "0-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Kevin Cadoni",
@@ -2739,7 +2772,8 @@
       "name": "Giresse Cabral Tsague",
       "record": "1-0-0",
       "country": "Senegal",
-      "fr": true
+      "fr": true,
+      "cc": "SN"
      },
      "weight": "Poids légers",
      "title": false,
@@ -2975,7 +3009,8 @@
       "name": "Taylor Lapilus",
       "record": "25-4-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Mitch McKee",
@@ -2993,7 +3028,8 @@
       "name": "Boris Mbarga Atangana",
       "record": "9-0-0",
       "country": "Belgium",
-      "fr": true
+      "fr": true,
+      "cc": "BE"
      },
      "b": {
       "name": "Bryan Battle",
@@ -3011,7 +3047,8 @@
       "name": "Abdoul Abdouraguimov",
       "record": "20-1-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Andreeas Binder",
@@ -3035,7 +3072,8 @@
       "name": "Ilian Bouafia",
       "record": "8-1-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids moyens",
      "title": false,
@@ -3047,7 +3085,8 @@
       "name": "Baris Adiguzel",
       "record": "10-2-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Liam Gittins",
@@ -3065,7 +3104,8 @@
       "name": "Bafode Gassama",
       "record": "4-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Coby Bradford",
@@ -3083,13 +3123,15 @@
       "name": "Brandon Brachet",
       "record": "9-1-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Adam Meskini",
       "record": "11-3-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids plumes",
      "title": false,
@@ -3101,7 +3143,8 @@
       "name": "Mathilde Aschenbrenner",
       "record": "3-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Shelda Chipito",
@@ -3226,7 +3269,8 @@
       "name": "Hugo Deux",
       "record": "7-1-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids légers",
      "title": false,
@@ -3238,7 +3282,8 @@
       "name": "Souheil Kaouchen",
       "record": "3-0-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "b": {
       "name": "Oleksii Polishchuk",
@@ -3321,7 +3366,8 @@
       "name": "Damien Lapilus",
       "record": "23-15-3",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids plumes",
      "title": true,
@@ -3374,13 +3420,15 @@
       "name": "Walid Masmoudi",
       "record": "5-0-0",
       "country": "Tunisia",
-      "fr": true
+      "fr": true,
+      "cc": "TN"
      },
      "b": {
       "name": "Ghiles Oudelha",
       "record": "16-8-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids légers",
      "title": true,
@@ -3532,7 +3580,8 @@
       "name": "Benoît Saint Denis",
       "record": "17-4-0",
       "country": "France",
-      "fr": true
+      "fr": true,
+      "cc": "FR"
      },
      "weight": "Poids légers",
      "title": false,
@@ -3562,7 +3611,8 @@
       "name": "Marwan Rahiki",
       "record": "9-1-0",
       "country": "Morocco",
-      "fr": true
+      "fr": true,
+      "cc": "MA"
      },
      "b": {
       "name": "JooSang Yoo",

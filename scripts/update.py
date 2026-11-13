@@ -508,6 +508,21 @@ def load_francophonie() -> tuple[set[str], set[str], set[str]]:
 FR_PAYS, FR_TOUJOURS, FR_JAMAIS = load_francophonie()
 
 
+# Code pays (ISO) pour le petit drapeau affiché à côté des francophones
+FLAG_CODES = {
+    "france": "FR", "french guiana": "FR", "guadeloupe": "FR", "martinique": "FR", "reunion": "FR",
+    "réunion": "FR", "mayotte": "FR", "new caledonia": "FR", "french polynesia": "FR", "saint martin": "FR",
+    "saint pierre and miquelon": "FR", "wallis and futuna": "FR",
+    "belgium": "BE", "switzerland": "CH", "luxembourg": "LU", "monaco": "MC", "haiti": "HT", "canada": "CA",
+    "senegal": "SN", "cameroon": "CM", "ivory coast": "CI", "côte d'ivoire": "CI", "cote d'ivoire": "CI",
+    "mali": "ML", "guinea": "GN", "democratic republic of the congo": "CD", "dr congo": "CD",
+    "congo": "CG", "republic of the congo": "CG", "gabon": "GA", "benin": "BJ", "togo": "TG",
+    "burkina faso": "BF", "niger": "NE", "chad": "TD", "central african republic": "CF",
+    "madagascar": "MG", "comoros": "KM", "djibouti": "DJ", "burundi": "BI", "rwanda": "RW",
+    "mauritius": "MU", "seychelles": "SC", "algeria": "DZ", "morocco": "MA", "tunisia": "TN",
+}
+
+
 def is_francophone(side: dict) -> bool:
     name = side["name"].strip().lower()
     if name in FR_TOUJOURS:
@@ -522,6 +537,8 @@ def normalize(org: dict, raw: dict) -> dict:
     for f in raw["fights"]:
         for side in (f["a"], f["b"]):
             side["fr"] = is_francophone(side)
+            if side["fr"]:
+                side["cc"] = FLAG_CODES.get(side.get("country", "").strip().lower(), "")
     if raw["source"] == "ESPN":
         segments, fights = build_segments_espn(org, raw)
     else:

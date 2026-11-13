@@ -261,7 +261,7 @@ dialog.sheet::backdrop { background: rgba(5, 7, 10, .6); backdrop-filter: blur(3
 .fight.me { border-color: color-mix(in srgb, var(--org) 60%, var(--line)); background: color-mix(in srgb, var(--org) 10%, var(--card)); }
 .fighter { min-width: 0; }
 .fighter b { display: block; font-weight: 500; overflow-wrap: anywhere; }
-.fighter span { font-size: 12px; color: var(--muted); }
+.fighter > span { font-size: 12px; color: var(--muted); }
 .fighter.r { text-align: right; }
 .vs { text-align: center; font-size: 11px; color: var(--muted); line-height: 1.2; max-width: 110px; }
 .vs b { display: block; font: 800 15px/1 var(--display); color: var(--text); }
@@ -324,6 +324,15 @@ dialog.sheet::backdrop { background: rgba(5, 7, 10, .6); backdrop-filter: blur(3
 /* Combattants francophones en gras */
 .bill-names b.fr, .bill-row.is-main .bill-names b.fr, .bill-row:not(.is-main) .bill-names b.fr { font-weight: 800; color: var(--text); }
 .fighter b.fr { font-weight: 800; }
+.nowrap { white-space: nowrap; }
+.flag { display: inline-block; margin-left: 6px; vertical-align: .08em; }
+.flag-fr {
+  width: 15px; height: 10px; border-radius: 2px;
+  background: linear-gradient(90deg, #0055a4 0 33.4%, #ffffff 33.4% 66.6%, #ef4135 66.6%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .25);
+}
+.bill-row.is-main .flag-fr { width: 18px; height: 12px; }
+.flag-emoji { font-style: normal; font-size: .85em; line-height: 1; vertical-align: 0; }
 .bill-vs { color: var(--muted); font-size: 12px; margin: 0 6px; }
 .bill-row.is-main .bill-vs { color: var(--brand); font: italic 800 19px var(--display); margin: 0 8px; }
 .bill-row.is-main .title-belt { font: italic 700 15px var(--display); letter-spacing: .5px; }
